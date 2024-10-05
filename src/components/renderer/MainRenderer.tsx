@@ -3,6 +3,7 @@ import Exoplanet from "@components/objects/Exoplanet";
 import Orbit from "@components/objects/Orbit";
 import Star from "@components/objects/Star";
 import { useFrustumCheck } from "@hooks/useFrustumCheck";
+import { useUpdateRaDec } from "@hooks/useUpdateRaDec";
 import { useThree } from "@react-three/fiber";
 import { camZoomAtom, diameterAtom } from "@store/jotai";
 import { getESMAX } from "@utils/getESMAX";
@@ -23,6 +24,7 @@ export default function MainRenderer({ starDatas, planetDatas }: Props) {
   const diameter = useAtomValue(diameterAtom);
 
   useFrustumCheck(camera as PerspectiveCamera, scene);
+  useUpdateRaDec(camera as PerspectiveCamera);
 
   useEffect(() => {
     const perspectiveCamera = camera as PerspectiveCamera;

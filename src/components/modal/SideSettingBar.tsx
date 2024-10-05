@@ -1,9 +1,10 @@
-import { camZoomAtom, diameterAtom } from "@store/jotai";
-import { useAtom } from "jotai";
+import { camZoomAtom, diameterAtom, hwoRaDecAtom } from "@store/jotai";
+import { useAtom, useAtomValue } from "jotai";
 
 export default function SideSettingBar(): React.JSX.Element {
   const [camZoom, setCamZoom] = useAtom(camZoomAtom);
   const [diameter, setDiameter] = useAtom(diameterAtom);
+  const hwoRaDec = useAtomValue(hwoRaDecAtom);
 
   return (
     <div className="absolute right-4 top-10 w-60 z-50">
@@ -42,6 +43,11 @@ export default function SideSettingBar(): React.JSX.Element {
                 onChange={(e) => setDiameter(Number(e.target.value))}
                 className="px-2 w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer bg-opacity-30"
               />
+            </div>
+            <div className="self-start ml-2 mt-2">
+              <div>Orientation</div>
+              <p className="text-sm">Right Ascension (RA): {hwoRaDec.ra}</p>
+              <p className="text-sm">Declination (DEC): {hwoRaDec.dec}</p>
             </div>
             <div className="self-start ml-2 mt-8">
               <p className="text-xs mb-4">
