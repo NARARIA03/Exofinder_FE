@@ -7,8 +7,10 @@ import {
 } from "../store/jotai";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { useThree } from "@react-three/fiber";
 
 export const useFrustumCheck = (camera: PerspectiveCamera, scene: Scene) => {
+  const { size: canvasSize } = useThree();
   const diameter = useAtomValue(diameterAtom);
   const [visibleExoplanet, setVisibleExoplanet] = useAtom(visibleExoplanetAtom);
   const setVisibleStarCount = useSetAtom(visibleStarCountAtom);
@@ -62,8 +64,23 @@ export const useFrustumCheck = (camera: PerspectiveCamera, scene: Scene) => {
                 true
               );
 
+              // 지구가 가리지 않는 경우에만 추가
               if (intersects.length === 0) {
-                objectsInView.push(object);
+                // 원형 마스크의 경계에 따라 추가 검사 수행
+                const screenPosition = object.position.clone().project(camera);
+                const screenX = (screenPosition.x * canvasSize.width) / 2;
+                const screenY = (screenPosition.y * canvasSize.height) / 2;
+
+                const distanceFromCenter = Math.sqrt(
+                  screenX * screenX + screenY * screenY
+                );
+                const maxRadius =
+                  (Math.min(canvasSize.width, canvasSize.height) / 2) * 0.95; // 원형 마스크 경계
+
+                // 원 안쪽에 있는 경우만 추가
+                if (distanceFromCenter <= maxRadius) {
+                  objectsInView.push(object);
+                }
               }
             }
           }
@@ -99,6 +116,8 @@ export const useFrustumCheck = (camera: PerspectiveCamera, scene: Scene) => {
     };
   }, [
     camera,
+    canvasSize.height,
+    canvasSize.width,
     diameter,
     scene,
     setVisibleExoplanet,

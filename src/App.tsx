@@ -3,6 +3,7 @@ import ExoplanetList from "@components/modal/ExoplanetList";
 import GoToHWO from "@components/modal/GoToHWO";
 import SideSettingBar from "@components/modal/SideSettingBar";
 import MainRenderer from "@components/renderer/MainRenderer";
+import Postprocessing from "@components/renderer/PostProcessing";
 import ZoomRenderer from "@components/renderer/ZoomRenderer";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
@@ -46,6 +47,7 @@ export default function App() {
             planetDatas={planetDatas}
             controlRef={controlRef}
           />
+          <Postprocessing />
         </Canvas>
         <SideSettingBar />
         <ExoplanetList />
