@@ -16,3 +16,5 @@ export const CORONA_DISABLE_TIP =
   "This planet has not been observed through Direct Imaging, so the coronagraph cannot be used.";
 export const PREV_NEXT_BTN_TOOLTIP =
   "If there are multiple planets orbiting this host star, press this button to check the details of other planets!";
+export const POSITION_TOOLTIP =
+  "The HWO telescope is located at the L2 Lagrange point, which changes position as the Earth orbits the Sun. Since the orbit of the L2 point is much shorter compared to the distance from the Solar System to exoplanets, the observation date doesn't significantly affect exoplanet observation but has a major impact on Earth's position. Try changing the observation date to locate Earth!";

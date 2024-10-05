@@ -4,6 +4,7 @@ import {
   CORONA_DISABLE_TIP,
   DIAMETER_TIP,
   ORIENTATION_TIP,
+  POSITION_TOOLTIP,
   ZOOM_TIP,
 } from "@constants/tooltip";
 import {
@@ -13,6 +14,7 @@ import {
   diameterAtom,
   hwoRaDecAtom,
   isCoronaOnAtom,
+  observationDateAtom,
 } from "@store/jotai";
 import { useAtom, useAtomValue } from "jotai";
 import { useCallback } from "react";
@@ -24,6 +26,7 @@ export default function SideSettingBar(): React.JSX.Element {
   const hwoRaDec = useAtomValue(hwoRaDecAtom);
   const ableCorona = useAtomValue(ableCoronaOnAtom);
   const [isCoronaOn, setIsCoronaOn] = useAtom(isCoronaOnAtom);
+  const [observationDate, setObservationDate] = useAtom(observationDateAtom);
 
   const handleCoronaToggle = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -81,6 +84,35 @@ export default function SideSettingBar(): React.JSX.Element {
                   </div>
                   <p className="text-sm">Right Ascension (RA): {hwoRaDec.ra}</p>
                   <p className="text-sm">Declination (DEC): {hwoRaDec.dec}</p>
+                </div>
+
+                <div className="self-start ml-2 mt-2">
+                  <div>
+                    Position <QuestionComp text={POSITION_TOOLTIP} />
+                  </div>
+                  <div className="text-sm">
+                    Observation Date
+                    <button
+                      className={`text-sm ml-2 px-1 py-0.5 ${
+                        observationDate === "Mar"
+                          ? "bg-yellow-300"
+                          : "bg-gray-400"
+                      }`}
+                      onClick={() => setObservationDate("Mar")}
+                    >
+                      1-Mar
+                    </button>
+                    <button
+                      className={`text-sm px-1 py-0.5 ${
+                        observationDate === "Sep"
+                          ? "bg-yellow-300"
+                          : "bg-gray-400"
+                      } `}
+                      onClick={() => setObservationDate("Sep")}
+                    >
+                      1-Sep
+                    </button>
+                  </div>
                 </div>
               </>
             ) : (
