@@ -1,9 +1,15 @@
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useRef } from "react";
+import { initializeData } from "@utils/initializeData";
+import { Suspense, useMemo, useRef } from "react";
 
 export default function App() {
   const controlRef = useRef<any>(null);
+
+  const [starDatas, planetDatas] = useMemo(() => initializeData(), []);
+  console.log(starDatas.length);
+  console.log(planetDatas.length);
+
   return (
     <div className="w-screen h-screen bg-black">
       <Suspense
