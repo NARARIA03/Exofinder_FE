@@ -14,3 +14,6 @@ export const hwoRaDecAtom = atom<{ ra: number; dec: number }>({
 
 export const hoverExoplanetNameAtom = atom<string>("");
 export const clickExoplanetNameAtom = atom<string>("");
+
+export const isCoronaOnAtom = atom<boolean>(false);
+export const ableCoronaOnAtom = atom<boolean>(false);

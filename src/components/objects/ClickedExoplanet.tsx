@@ -4,6 +4,8 @@ import { useMemo, useRef } from "react";
 import { getPlanetOrbit } from "@utils/getPlanetOrbit";
 import { useFrame } from "@react-three/fiber";
 import { Line, Text } from "@react-three/drei";
+import { useAtomValue } from "jotai";
+import { ableCoronaOnAtom, isCoronaOnAtom } from "@store/jotai";
 
 interface Props {
   planetData: PlanetData;
@@ -12,13 +14,35 @@ interface Props {
 
 export default function ClickedExoplanet({ planetData, hostPos }: Props) {
   const planetGeo = useMemo(
-    () => new THREE.SphereGeometry(100 * planetData.planetRadius, 16, 16),
+    () => new THREE.SphereGeometry(1000 * planetData.planetRadius, 16, 16),
     [planetData.planetRadius]
   );
-  const planetMat = useMemo(
-    () => new THREE.MeshBasicMaterial({ color: "#00f" }),
+  const planetCoronaMat = useMemo(
+    () =>
+      new THREE.MeshStandardMaterial({
+        color: "#00f",
+        emissive: "#00f",
+        emissiveIntensity: 2.0,
+        roughness: 0.3,
+        metalness: 0.0,
+      }),
     []
   );
+
+  const planetNoCoronaMat = useMemo(
+    () =>
+      new THREE.MeshStandardMaterial({
+        color: "#0000ff",
+        emissive: "#000",
+        emissiveIntensity: 0,
+        roughness: 1.0,
+        metalness: 0.0,
+      }),
+    []
+  );
+
+  const isCoronaOn = useAtomValue(isCoronaOnAtom);
+  const ableCoronaOn = useAtomValue(ableCoronaOnAtom);
 
   const semiMajorAxis =
     planetData.semiMajorAxis > 1
@@ -68,7 +92,13 @@ export default function ClickedExoplanet({ planetData, hostPos }: Props) {
           position={points[curOrbitIdxRef.current]}
           ref={planetMeshRef}
           geometry={planetGeo}
-          material={planetMat}
+          material={
+            ableCoronaOn
+              ? isCoronaOn
+                ? planetCoronaMat
+                : planetNoCoronaMat
+              : planetCoronaMat
+          }
         />
         <Text
           position={[

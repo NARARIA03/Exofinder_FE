@@ -2,11 +2,13 @@ import { PlanetData, StarData } from "@@types/dataTypes";
 import ClickedExoplanet from "@components/objects/ClickedExoplanet";
 import { useThree } from "@react-three/fiber";
 import {
+  ableCoronaOnAtom,
   camZoomAtom,
   clickExoplanetNameAtom,
   hoverExoplanetNameAtom,
+  isCoronaOnAtom,
 } from "@store/jotai";
-import { useAtomValue, useSetAtom } from "jotai";
+import { useAtom, useAtomValue, useSetAtom } from "jotai";
 import { useEffect, useMemo } from "react";
 import * as THREE from "three";
 
@@ -22,22 +24,33 @@ export default function ZoomRenderer({
   controlRef,
 }: Props) {
   const zoomedStarGeo = useMemo(
-    () => new THREE.SphereGeometry(3000, 16, 16),
+    () => new THREE.SphereGeometry(10000, 16, 16),
     []
   );
-  const zoomedStarMat = useMemo(
+  const zoomedBrightnessStarMat = useMemo(
     () =>
       new THREE.MeshStandardMaterial({
         color: "#ff0",
         emissive: "#ff0",
+        emissiveIntensity: 2,
+      }),
+    []
+  );
+
+  const zoomedNoBrightnessStarMat = useMemo(
+    () =>
+      new THREE.MeshBasicMaterial({
+        color: "#000",
       }),
     []
   );
 
   const { camera } = useThree();
+  const isCoronaOn = useAtomValue(isCoronaOnAtom);
   const clickExoplanetName = useAtomValue(clickExoplanetNameAtom);
   const setCamZoom = useSetAtom(camZoomAtom);
   const setHoverExoplanetName = useSetAtom(hoverExoplanetNameAtom);
+  const [ableCoronaOn, setAbleCoronaOn] = useAtom(ableCoronaOnAtom);
 
   // get hostData, systemPlanetDatas and maxSemiMajorAxis
   const { hostData, systemPlanetDatas, maxSemiMajorAxis } = useMemo(() => {
@@ -65,6 +78,18 @@ export default function ZoomRenderer({
 
     return { hostData, systemPlanetDatas, maxSemiMajorAxis };
   }, [clickExoplanetName, planetDatas, starDatas]);
+
+  useEffect(() => {
+    if (
+      systemPlanetDatas.some(
+        (planetData) => planetData.discoveryMethod === "Imaging"
+      )
+    ) {
+      setAbleCoronaOn(true);
+    } else {
+      setAbleCoronaOn(false);
+    }
+  }, [systemPlanetDatas, setAbleCoronaOn]);
 
   // click, go to hwo camera moving logic
   useEffect(() => {
@@ -112,7 +137,13 @@ export default function ZoomRenderer({
       <mesh
         position={hostData.coordinate}
         geometry={zoomedStarGeo}
-        material={zoomedStarMat}
+        material={
+          ableCoronaOn
+            ? isCoronaOn
+              ? zoomedNoBrightnessStarMat
+              : zoomedBrightnessStarMat
+            : zoomedBrightnessStarMat
+        }
       />
       {systemPlanetDatas.map((planetData) => (
         <ClickedExoplanet
