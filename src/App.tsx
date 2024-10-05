@@ -1,3 +1,4 @@
+import SideSettingBar from "@components/modal/SideSettingBar";
 import MainRenderer from "@components/renderer/MainRenderer";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
@@ -37,6 +38,7 @@ export default function App() {
           />
           <MainRenderer starDatas={starDatas} planetDatas={planetDatas} />
         </Canvas>
+        <SideSettingBar />
       </Suspense>
     </div>
   );
