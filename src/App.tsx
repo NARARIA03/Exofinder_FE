@@ -1,3 +1,4 @@
+import MainRenderer from "@components/renderer/MainRenderer";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { initializeData } from "@utils/initializeData";
@@ -34,6 +35,7 @@ export default function App() {
             enableDamping={true}
             dampingFactor={0.1}
           />
+          <MainRenderer starDatas={starDatas} planetDatas={planetDatas} />
         </Canvas>
       </Suspense>
     </div>
