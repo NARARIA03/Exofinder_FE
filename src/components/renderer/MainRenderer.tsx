@@ -37,7 +37,17 @@ export default function MainRenderer({ starDatas, planetDatas }: Props) {
           return (
             <Fragment key={planetData.planetName}>
               <Exoplanet planetData={planetData} />
-              <Orbit planetData={planetData} />
+              <Orbit planetData={planetData} color="green" />
+            </Fragment>
+          );
+        } else if (
+          getSNR(planetData, diameter + 1) &&
+          getESMAX(planetData, diameter + 1)
+        ) {
+          return (
+            <Fragment key={planetData.planetName}>
+              <Exoplanet planetData={planetData} />
+              <Orbit planetData={planetData} color="red" />
             </Fragment>
           );
         }
