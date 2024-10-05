@@ -1,7 +1,12 @@
 import { PlanetData } from "@@types/dataTypes";
+import { getPlanetHabitable } from "@apis/getPlanetHabitable";
 import QuestionComp from "@components/tooltip/QuestionComp";
 import { PREV_NEXT_BTN_TOOLTIP } from "@constants/tooltip";
-import { selectedExoplanetNameAtom, zoomPlanetNamesAtom } from "@store/jotai";
+import {
+  habitableDataAtom,
+  selectedExoplanetNameAtom,
+  zoomPlanetNamesAtom,
+} from "@store/jotai";
 import { useAtom, useAtomValue } from "jotai";
 import { useEffect, useState } from "react";
 import { GrCaretNext, GrCaretPrevious } from "react-icons/gr";
@@ -17,6 +22,7 @@ export default function ExoplanetInfo({ planetDatas }: Props) {
   const [selectedExoplanetName, setSelectedExoplanetName] = useAtom(
     selectedExoplanetNameAtom
   );
+  const [habitableData, setHabitableData] = useAtom(habitableDataAtom);
   const [idx, setIdx] = useState<number>(0);
 
   const handleNextBtn = () => {
@@ -32,6 +38,25 @@ export default function ExoplanetInfo({ planetDatas }: Props) {
       setIdx((prev) => prev - 1);
     }
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      if (zoomPlanetNames) {
+        const data = await getPlanetHabitable(
+          planetDatas.find(
+            (planetData) => planetData.planetName === zoomPlanetNames[0]
+          )?.hostName
+        );
+        if (data) {
+          setHabitableData(data);
+        }
+      }
+    };
+    if (zoomPlanetNames) {
+      console.log("백엔드로 요청!");
+      fetchData();
+    }
+  }, [planetDatas, setHabitableData, zoomPlanetNames]);
 
   useEffect(() => {
     if (zoomPlanetNames) {
@@ -139,6 +164,11 @@ export default function ExoplanetInfo({ planetDatas }: Props) {
         <div className="flex items-center mt-8">
           <PiApproximateEqualsBold className="w-6 h-6" />
           <ImEarth className="w-8 h-8 ml-1" />
+          <p className="text-xl font-bold ml-2">
+            :{" "}
+            {habitableData?.find((data) => data.planet === zoomPlanetNames[idx])
+              ?.habitablePercent || "???"}
+          </p>
         </div>
       </div>
     </div>

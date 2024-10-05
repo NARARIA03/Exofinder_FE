@@ -19,3 +19,11 @@ export const selectedExoplanetNameAtom = atom<string>("");
 
 export const isCoronaOnAtom = atom<boolean>(false);
 export const ableCoronaOnAtom = atom<boolean>(false);
+
+export const habitableDataAtom = atom<
+  | {
+      planet: string;
+      habitablePercent: string | number;
+    }[]
+  | null
+>(null);
