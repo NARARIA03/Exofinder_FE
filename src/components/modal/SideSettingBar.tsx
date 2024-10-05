@@ -54,8 +54,10 @@ export default function SideSettingBar(): React.JSX.Element {
                 What is HWO?
                 <a
                   href="https://science.nasa.gov/astrophysics/programs/habitable-worlds-observatory"
-                  className=" box mx-2
+                  className="box mx-2
                  text-blue-500"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   click here
                 </a>
