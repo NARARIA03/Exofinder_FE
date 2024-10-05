@@ -6,21 +6,23 @@ import {
   visibleStarCountAtom,
 } from "../store/jotai";
 import { useEffect, useRef } from "react";
+import * as THREE from "three";
 
 export const useFrustumCheck = (camera: PerspectiveCamera, scene: Scene) => {
   const diameter = useAtomValue(diameterAtom);
   const [visibleExoplanet, setVisibleExoplanet] = useAtom(visibleExoplanetAtom);
   const setVisibleStarCount = useSetAtom(visibleStarCountAtom);
 
-  // 초기값
+  // init value
   const prevCamMatrix = useRef(new Matrix4());
   const prevDiameter = useRef(6);
+  const raycaster = useRef(new THREE.Raycaster());
 
   useEffect(() => {
     const calcFrustumCheck = () => {
       const currentCameraMatrix = new Matrix4().copy(camera.matrixWorld);
 
-      // 카메라가 이전과 달라진 경우 && diameter 값이 바뀐 경우만 카메라 범위 내 행성 정보 업데이트
+      // camera diff || diameter diff -> update visibleExoplanet state
       if (
         !currentCameraMatrix.equals(prevCamMatrix.current) ||
         diameter !== prevDiameter.current
@@ -28,8 +30,8 @@ export const useFrustumCheck = (camera: PerspectiveCamera, scene: Scene) => {
         const frustum = new Frustum();
         const cameraViewProjectionMatrix = new Matrix4();
 
-        // 카메라의 뷰 프로젝션 매트릭스를 얻어서 frustum 업데이트
-        camera.updateMatrixWorld(); // 카메라의 매트릭스 업데이트
+        // get camera view projection matrix -> update frustum
+        camera.updateMatrixWorld(); // update camera matrix
         camera.updateProjectionMatrix();
         cameraViewProjectionMatrix.multiplyMatrices(
           camera.projectionMatrix,
@@ -37,13 +39,32 @@ export const useFrustumCheck = (camera: PerspectiveCamera, scene: Scene) => {
         );
         frustum.setFromProjectionMatrix(cameraViewProjectionMatrix);
 
-        // 씬 안의 모든 오브젝트의 경계와 비교
+        const earthMesh = scene.getObjectByName("Earth");
+        if (!earthMesh) return;
+
+        // diff all object in scene
         const objectsInView: Mesh[] = [];
         scene.traverse((object) => {
-          if (object instanceof Mesh && object.visible) {
+          if (
+            object instanceof Mesh &&
+            object.visible &&
+            object.name !== "Earth"
+          ) {
             const objectBoundingBox = new Box3().setFromObject(object);
             if (frustum.intersectsBox(objectBoundingBox)) {
-              objectsInView.push(object);
+              // Raycaster 설정 (카메라에서 행성으로 향하는 방향)
+              raycaster.current.set(
+                camera.position,
+                object.position.clone().sub(camera.position).normalize()
+              );
+              const intersects = raycaster.current.intersectObject(
+                earthMesh,
+                true
+              );
+
+              if (intersects.length === 0) {
+                objectsInView.push(object);
+              }
             }
           }
         });
