@@ -3,7 +3,6 @@ import { Vector3 } from "three";
 export type PlanetData = {
   planetName: string;
   hostName: string;
-  hostPosition: [number, number, number];
   planetRadius: number;
   starRadius: number;
   distance: number;

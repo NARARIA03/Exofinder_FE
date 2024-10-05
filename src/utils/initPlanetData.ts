@@ -33,7 +33,6 @@ export const initPlanetData = (starDatas: StarData[]) => {
       planetsTmp.push({
         planetName: planetName,
         hostName: starName,
-        hostPosition: coordinate,
         planetRadius: planetRadius,
         starRadius: starRadius,
         distance: distance,

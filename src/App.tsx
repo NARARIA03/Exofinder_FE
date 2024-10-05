@@ -1,6 +1,8 @@
 import ExoplanetList from "@components/modal/ExoplanetList";
+import GoToHWO from "@components/modal/GoToHWO";
 import SideSettingBar from "@components/modal/SideSettingBar";
 import MainRenderer from "@components/renderer/MainRenderer";
+import ZoomRenderer from "@components/renderer/ZoomRenderer";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { initializeData } from "@utils/initializeData";
@@ -38,9 +40,15 @@ export default function App() {
             dampingFactor={0.1}
           />
           <MainRenderer starDatas={starDatas} planetDatas={planetDatas} />
+          <ZoomRenderer
+            starDatas={starDatas}
+            planetDatas={planetDatas}
+            controlRef={controlRef}
+          />
         </Canvas>
         <SideSettingBar />
         <ExoplanetList />
+        <GoToHWO />
       </Suspense>
     </div>
   );

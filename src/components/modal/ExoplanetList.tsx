@@ -4,7 +4,7 @@ import {
   visibleExoplanetAtom,
   visibleStarCountAtom,
 } from "@store/jotai";
-import { useAtomValue, useSetAtom } from "jotai";
+import { useAtom, useAtomValue, useSetAtom } from "jotai";
 import { useCallback } from "react";
 
 export default function ExoplanetList() {
@@ -12,7 +12,9 @@ export default function ExoplanetList() {
   const uniqueVisibleExoplanets = Array.from(new Set(visibleExoplanets));
   const visibleStarCount = useAtomValue(visibleStarCountAtom);
   const setHoverExoplanetName = useSetAtom(hoverExoplanetNameAtom);
-  const setClickExoplanetName = useSetAtom(clickExoplanetNameAtom);
+  const [clickExoplanetName, setClickExoplanetName] = useAtom(
+    clickExoplanetNameAtom
+  );
 
   const handleMouseEnter = useCallback(
     (planetName: string) => setHoverExoplanetName(planetName),
@@ -28,6 +30,8 @@ export default function ExoplanetList() {
     (planetName: string) => setClickExoplanetName(planetName),
     [setClickExoplanetName]
   );
+
+  if (clickExoplanetName) return null;
 
   return (
     <div>
