@@ -52,7 +52,6 @@ export default function MainRenderer({ starDatas, planetDatas }: Props) {
         ) {
           return (
             <Fragment key={planetData.planetName}>
-              <Exoplanet planetData={planetData} />
               <Orbit planetData={planetData} color="red" />
             </Fragment>
           );
