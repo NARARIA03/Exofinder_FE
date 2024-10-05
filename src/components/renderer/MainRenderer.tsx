@@ -4,12 +4,7 @@ import Orbit from "@components/objects/Orbit";
 import Star from "@components/objects/Star";
 import { useFrustumCheck } from "@hooks/useFrustumCheck";
 import { useThree } from "@react-three/fiber";
-import {
-  camZoomAtom,
-  diameterAtom,
-  visibleExoplanetAtom,
-  visibleStarCountAtom,
-} from "@store/jotai";
+import { camZoomAtom, diameterAtom } from "@store/jotai";
 import { getESMAX } from "@utils/getESMAX";
 import { getSNR } from "@utils/getSNR";
 import { useAtomValue } from "jotai";
@@ -26,8 +21,6 @@ export default function MainRenderer({ starDatas, planetDatas }: Props) {
   const { camera, scene } = useThree();
   const camZoom = useAtomValue(camZoomAtom);
   const diameter = useAtomValue(diameterAtom);
-  const visibleExoplanet = useAtomValue(visibleExoplanetAtom);
-  const visibleStarCnt = useAtomValue(visibleStarCountAtom);
 
   useFrustumCheck(camera as PerspectiveCamera, scene);
 
@@ -36,11 +29,6 @@ export default function MainRenderer({ starDatas, planetDatas }: Props) {
     perspectiveCamera.zoom = camZoom;
     perspectiveCamera.updateProjectionMatrix();
   }, [camera, camZoom]);
-
-  useEffect(() => {
-    console.log(visibleExoplanet);
-    console.log(visibleStarCnt);
-  }, [visibleExoplanet, visibleStarCnt]);
 
   return (
     <>

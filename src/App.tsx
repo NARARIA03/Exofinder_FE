@@ -1,3 +1,4 @@
+import ExoplanetList from "@components/modal/ExoplanetList";
 import SideSettingBar from "@components/modal/SideSettingBar";
 import MainRenderer from "@components/renderer/MainRenderer";
 import { OrbitControls } from "@react-three/drei";
@@ -39,6 +40,7 @@ export default function App() {
           <MainRenderer starDatas={starDatas} planetDatas={planetDatas} />
         </Canvas>
         <SideSettingBar />
+        <ExoplanetList />
       </Suspense>
     </div>
   );
