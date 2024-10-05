@@ -1,4 +1,5 @@
 import {
+  clickExoplanetNameAtom,
   hoverExoplanetNameAtom,
   visibleExoplanetAtom,
   visibleStarCountAtom,
@@ -11,6 +12,7 @@ export default function ExoplanetList() {
   const uniqueVisibleExoplanets = Array.from(new Set(visibleExoplanets));
   const visibleStarCount = useAtomValue(visibleStarCountAtom);
   const setHoverExoplanetName = useSetAtom(hoverExoplanetNameAtom);
+  const setClickExoplanetName = useSetAtom(clickExoplanetNameAtom);
 
   const handleMouseEnter = useCallback(
     (planetName: string) => setHoverExoplanetName(planetName),
@@ -20,6 +22,11 @@ export default function ExoplanetList() {
   const handleMouseLeave = useCallback(
     () => setHoverExoplanetName(""),
     [setHoverExoplanetName]
+  );
+
+  const handleClick = useCallback(
+    (planetName: string) => setClickExoplanetName(planetName),
+    [setClickExoplanetName]
   );
 
   return (
@@ -37,6 +44,7 @@ export default function ExoplanetList() {
               key={`${name}${idx}`}
               onMouseEnter={() => handleMouseEnter(name)}
               onMouseLeave={handleMouseLeave}
+              onClick={() => handleClick(name)}
             >
               {name}
             </li>

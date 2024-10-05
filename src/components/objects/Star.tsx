@@ -2,6 +2,8 @@ import * as THREE from "three";
 import React, { useEffect, useMemo, useRef } from "react";
 import { StarData } from "@@types/dataTypes";
 import { Points } from "@react-three/drei";
+import { useAtomValue } from "jotai";
+import { clickExoplanetNameAtom } from "@store/jotai";
 
 interface Props {
   starData: StarData;
@@ -29,6 +31,8 @@ function Star({ starData }: Props) {
     []
   );
 
+  const clickExoplanetName = useAtomValue(clickExoplanetNameAtom);
+
   const meshRef = useRef<THREE.Mesh>(null);
 
   useEffect(() => {
@@ -40,6 +44,7 @@ function Star({ starData }: Props) {
   return (
     <mesh ref={meshRef}>
       <mesh
+        visible={clickExoplanetName === ""}
         position={starData.coordinate}
         geometry={starGeo}
         material={starMat}

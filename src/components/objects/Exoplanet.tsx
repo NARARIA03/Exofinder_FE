@@ -3,7 +3,7 @@ import * as THREE from "three";
 import { PlanetData } from "@@types/dataTypes";
 import { Text } from "@react-three/drei";
 import { useAtomValue } from "jotai";
-import { hoverExoplanetNameAtom } from "@store/jotai";
+import { clickExoplanetNameAtom, hoverExoplanetNameAtom } from "@store/jotai";
 import gsap from "gsap";
 
 interface Props {
@@ -22,6 +22,7 @@ function Exoplanet({ planetData }: Props) {
   );
 
   const hoverExoplanetName = useAtomValue(hoverExoplanetNameAtom);
+  const clickExoplanetName = useAtomValue(clickExoplanetNameAtom);
 
   const meshRef = useRef<THREE.Mesh>(null);
 
@@ -47,7 +48,7 @@ function Exoplanet({ planetData }: Props) {
   }, [hoverExoplanetName, planetData.distance]);
 
   return (
-    <mesh>
+    <mesh visible={clickExoplanetName === ""}>
       <mesh
         ref={meshRef}
         position={planetData.points[0]}
