@@ -1,4 +1,5 @@
 import { PlanetData, StarData } from "@@types/dataTypes";
+import Earth from "@components/objects/Earth";
 import Exoplanet from "@components/objects/Exoplanet";
 import Orbit from "@components/objects/Orbit";
 import Star from "@components/objects/Star";
@@ -57,6 +58,7 @@ export default function MainRenderer({ starDatas, planetDatas }: Props) {
           );
         }
       })}
+      <Earth />
     </>
   );
 }

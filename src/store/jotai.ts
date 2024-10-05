@@ -27,3 +27,5 @@ export const habitableDataAtom = atom<
     }[]
   | null
 >(null);
+
+export const observationDateAtom = atom<"Mar" | "Sep">("Mar");
