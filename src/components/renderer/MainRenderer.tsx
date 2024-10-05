@@ -1,5 +1,6 @@
 import { PlanetData, StarData } from "@@types/dataTypes";
 import Exoplanet from "@components/objects/Exoplanet";
+import Orbit from "@components/objects/Orbit";
 import Star from "@components/objects/Star";
 import { Fragment } from "react/jsx-runtime";
 
@@ -18,6 +19,7 @@ export default function MainRenderer({ starDatas, planetDatas }: Props) {
         return (
           <Fragment key={planetData.planetName}>
             <Exoplanet planetData={planetData} />
+            <Orbit planetData={planetData} />
           </Fragment>
         );
       })}
