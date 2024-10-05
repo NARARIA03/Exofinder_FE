@@ -14,3 +14,5 @@ export const CORONA_ABLE_TIP =
 
 export const CORONA_DISABLE_TIP =
   "This planet has not been observed through Direct Imaging, so the coronagraph cannot be used.";
+export const PREV_NEXT_BTN_TOOLTIP =
+  "If there are multiple planets orbiting this host star, press this button to check the details of other planets!";

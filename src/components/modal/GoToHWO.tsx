@@ -1,17 +1,25 @@
-import { clickExoplanetNameAtom, isCoronaOnAtom } from "@store/jotai";
+import {
+  clickExoplanetNameAtom,
+  isCoronaOnAtom,
+  selectedExoplanetNameAtom,
+  zoomPlanetNamesAtom,
+} from "@store/jotai";
 import { useAtom, useSetAtom } from "jotai";
-import { useCallback } from "react";
 
 export default function GoToHWO() {
   const [clickExoplanetName, setClickExoplanetName] = useAtom(
     clickExoplanetNameAtom
   );
   const setIsCoronaOn = useSetAtom(isCoronaOnAtom);
+  const setZoomPlanetNames = useSetAtom(zoomPlanetNamesAtom);
+  const setSelectedExoplanetName = useSetAtom(selectedExoplanetNameAtom);
 
-  const handleClick = useCallback(() => {
+  const handleClick = () => {
     setClickExoplanetName("");
     setIsCoronaOn(false);
-  }, [setClickExoplanetName, setIsCoronaOn]);
+    setZoomPlanetNames(null);
+    setSelectedExoplanetName("");
+  };
 
   if (!clickExoplanetName) return null;
 

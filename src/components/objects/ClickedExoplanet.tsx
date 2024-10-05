@@ -10,9 +10,14 @@ import { ableCoronaOnAtom, isCoronaOnAtom } from "@store/jotai";
 interface Props {
   planetData: PlanetData;
   hostPos: [number, number, number];
+  isSelect: boolean;
 }
 
-export default function ClickedExoplanet({ planetData, hostPos }: Props) {
+export default function ClickedExoplanet({
+  planetData,
+  hostPos,
+  isSelect,
+}: Props) {
   const planetGeo = useMemo(
     () => new THREE.SphereGeometry(1000 * planetData.planetRadius, 16, 16),
     [planetData.planetRadius]
@@ -86,7 +91,11 @@ export default function ClickedExoplanet({ planetData, hostPos }: Props) {
 
   return (
     <>
-      <Line points={points} color={"white"} linewidth={2} />
+      <Line
+        points={points}
+        color={isSelect ? "yellow" : "white"}
+        linewidth={2}
+      />
       <mesh>
         <mesh
           position={points[curOrbitIdxRef.current]}

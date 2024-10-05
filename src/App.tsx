@@ -1,3 +1,4 @@
+import ExoplanetInfo from "@components/modal/ExoplanetInfo";
 import ExoplanetList from "@components/modal/ExoplanetList";
 import GoToHWO from "@components/modal/GoToHWO";
 import SideSettingBar from "@components/modal/SideSettingBar";
@@ -49,6 +50,7 @@ export default function App() {
         <SideSettingBar />
         <ExoplanetList />
         <GoToHWO />
+        <ExoplanetInfo planetDatas={planetDatas} />
       </Suspense>
     </div>
   );

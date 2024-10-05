@@ -7,6 +7,8 @@ import {
   clickExoplanetNameAtom,
   hoverExoplanetNameAtom,
   isCoronaOnAtom,
+  selectedExoplanetNameAtom,
+  zoomPlanetNamesAtom,
 } from "@store/jotai";
 import { useAtom, useAtomValue, useSetAtom } from "jotai";
 import { useEffect, useMemo } from "react";
@@ -48,8 +50,10 @@ export default function ZoomRenderer({
   const { camera } = useThree();
   const isCoronaOn = useAtomValue(isCoronaOnAtom);
   const clickExoplanetName = useAtomValue(clickExoplanetNameAtom);
+  const selectedExoplanetName = useAtomValue(selectedExoplanetNameAtom);
   const setCamZoom = useSetAtom(camZoomAtom);
   const setHoverExoplanetName = useSetAtom(hoverExoplanetNameAtom);
+  const setZoomPlanetNames = useSetAtom(zoomPlanetNamesAtom);
   const [ableCoronaOn, setAbleCoronaOn] = useAtom(ableCoronaOnAtom);
 
   // get hostData, systemPlanetDatas and maxSemiMajorAxis
@@ -75,9 +79,12 @@ export default function ZoomRenderer({
         maxSemiMajorAxis = Math.max(planet.semiMajorAxis, maxSemiMajorAxis);
       }
     });
+    setZoomPlanetNames(
+      systemPlanetDatas.map((planetData) => planetData.planetName)
+    );
 
     return { hostData, systemPlanetDatas, maxSemiMajorAxis };
-  }, [clickExoplanetName, planetDatas, starDatas]);
+  }, [clickExoplanetName, planetDatas, setZoomPlanetNames, starDatas]);
 
   useEffect(() => {
     if (
@@ -150,6 +157,7 @@ export default function ZoomRenderer({
           key={planetData.planetName}
           planetData={planetData}
           hostPos={hostData.coordinate}
+          isSelect={selectedExoplanetName === planetData.planetName}
         />
       ))}
     </mesh>
