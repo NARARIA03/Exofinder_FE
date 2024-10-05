@@ -2,6 +2,9 @@ import React, { useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
 import { PlanetData } from "@@types/dataTypes";
 import { Text } from "@react-three/drei";
+import { useAtomValue } from "jotai";
+import { hoverExoplanetNameAtom } from "@store/jotai";
+import gsap from "gsap";
 
 interface Props {
   planetData: PlanetData;
@@ -17,6 +20,9 @@ function Exoplanet({ planetData }: Props) {
       }),
     []
   );
+
+  const hoverExoplanetName = useAtomValue(hoverExoplanetNameAtom);
+
   const meshRef = useRef<THREE.Mesh>(null);
 
   useEffect(() => {
@@ -24,6 +30,21 @@ function Exoplanet({ planetData }: Props) {
       meshRef.current.userData = { planetName: planetData.planetName };
     }
   }, [planetData]);
+
+  useEffect(() => {
+    if (meshRef.current) {
+      if (hoverExoplanetName === meshRef.current.userData.planetName) {
+        gsap.to(meshRef.current.scale, {
+          x: 10 * planetData.distance,
+          y: 10 * planetData.distance,
+          z: 10 * planetData.distance,
+          duration: 1,
+        });
+      } else {
+        gsap.to(meshRef.current.scale, { x: 1, y: 1, z: 1, duration: 1 });
+      }
+    }
+  }, [hoverExoplanetName, planetData.distance]);
 
   return (
     <mesh>

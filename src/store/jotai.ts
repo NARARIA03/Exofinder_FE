@@ -11,3 +11,5 @@ export const hwoRaDecAtom = atom<{ ra: number; dec: number }>({
   ra: 0,
   dec: 0,
 });
+
+export const hoverExoplanetNameAtom = atom<string>("");

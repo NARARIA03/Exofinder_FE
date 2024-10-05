@@ -1,10 +1,26 @@
-import { visibleExoplanetAtom, visibleStarCountAtom } from "@store/jotai";
-import { useAtomValue } from "jotai";
+import {
+  hoverExoplanetNameAtom,
+  visibleExoplanetAtom,
+  visibleStarCountAtom,
+} from "@store/jotai";
+import { useAtomValue, useSetAtom } from "jotai";
+import { useCallback } from "react";
 
 export default function ExoplanetList() {
   const visibleExoplanets = useAtomValue(visibleExoplanetAtom);
   const uniqueVisibleExoplanets = Array.from(new Set(visibleExoplanets));
   const visibleStarCount = useAtomValue(visibleStarCountAtom);
+  const setHoverExoplanetName = useSetAtom(hoverExoplanetNameAtom);
+
+  const handleMouseEnter = useCallback(
+    (planetName: string) => setHoverExoplanetName(planetName),
+    [setHoverExoplanetName]
+  );
+
+  const handleMouseLeave = useCallback(
+    () => setHoverExoplanetName(""),
+    [setHoverExoplanetName]
+  );
 
   return (
     <div>
@@ -15,8 +31,13 @@ export default function ExoplanetList() {
           <p> stars: {visibleStarCount}</p>
         </div>
         <ul className="bg-opacity-30 overflow-scroll h-64 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent scroll-pt-12">
-          {uniqueVisibleExoplanets.map((name) => (
-            <li className="text-black p-2 m-1 cursor-pointer" key={`${name}`}>
+          {uniqueVisibleExoplanets.map((name, idx) => (
+            <li
+              className="text-black p-2 m-1 cursor-pointer"
+              key={`${name}${idx}`}
+              onMouseEnter={() => handleMouseEnter(name)}
+              onMouseLeave={handleMouseLeave}
+            >
               {name}
             </li>
           ))}
