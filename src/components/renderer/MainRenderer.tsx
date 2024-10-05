@@ -2,8 +2,14 @@ import { PlanetData, StarData } from "@@types/dataTypes";
 import Exoplanet from "@components/objects/Exoplanet";
 import Orbit from "@components/objects/Orbit";
 import Star from "@components/objects/Star";
+import { useFrustumCheck } from "@hooks/useFrustumCheck";
 import { useThree } from "@react-three/fiber";
-import { camZoomAtom, diameterAtom } from "@store/jotai";
+import {
+  camZoomAtom,
+  diameterAtom,
+  visibleExoplanetAtom,
+  visibleStarCountAtom,
+} from "@store/jotai";
 import { getESMAX } from "@utils/getESMAX";
 import { getSNR } from "@utils/getSNR";
 import { useAtomValue } from "jotai";
@@ -17,9 +23,13 @@ interface Props {
 }
 
 export default function MainRenderer({ starDatas, planetDatas }: Props) {
-  const { camera } = useThree();
+  const { camera, scene } = useThree();
   const camZoom = useAtomValue(camZoomAtom);
   const diameter = useAtomValue(diameterAtom);
+  const visibleExoplanet = useAtomValue(visibleExoplanetAtom);
+  const visibleStarCnt = useAtomValue(visibleStarCountAtom);
+
+  useFrustumCheck(camera as PerspectiveCamera, scene);
 
   useEffect(() => {
     const perspectiveCamera = camera as PerspectiveCamera;
@@ -27,10 +37,15 @@ export default function MainRenderer({ starDatas, planetDatas }: Props) {
     perspectiveCamera.updateProjectionMatrix();
   }, [camera, camZoom]);
 
+  useEffect(() => {
+    console.log(visibleExoplanet);
+    console.log(visibleStarCnt);
+  }, [visibleExoplanet, visibleStarCnt]);
+
   return (
     <>
       {starDatas.map((starData) => (
-        <Star starData={starData} />
+        <Star key={`${starData.starName}`} starData={starData} />
       ))}
       {planetDatas.map((planetData) => {
         if (getSNR(planetData, diameter) && getESMAX(planetData, diameter)) {

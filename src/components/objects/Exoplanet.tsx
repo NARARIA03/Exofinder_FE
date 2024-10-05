@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
 import { PlanetData } from "@@types/dataTypes";
 import { Text } from "@react-three/drei";
@@ -17,10 +17,18 @@ function Exoplanet({ planetData }: Props) {
       }),
     []
   );
+  const meshRef = useRef<THREE.Mesh>(null);
+
+  useEffect(() => {
+    if (meshRef.current) {
+      meshRef.current.userData = { planetName: planetData.planetName };
+    }
+  }, [planetData]);
 
   return (
     <mesh>
       <mesh
+        ref={meshRef}
         position={planetData.points[0]}
         geometry={planetGeo}
         material={planetMat}

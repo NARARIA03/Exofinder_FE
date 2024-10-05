@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import { StarData } from "@@types/dataTypes";
 import { Points } from "@react-three/drei";
 
@@ -29,8 +29,16 @@ function Star({ starData }: Props) {
     []
   );
 
+  const meshRef = useRef<THREE.Mesh>(null);
+
+  useEffect(() => {
+    if (meshRef.current) {
+      meshRef.current.userData = { starName: starData.starName };
+    }
+  }, [starData]);
+
   return (
-    <mesh>
+    <mesh ref={meshRef}>
       <mesh
         position={starData.coordinate}
         geometry={starGeo}
