@@ -1,5 +1,7 @@
 import { PlanetData, StarData } from "@@types/dataTypes";
+import Exoplanet from "@components/objects/Exoplanet";
 import Star from "@components/objects/Star";
+import { Fragment } from "react/jsx-runtime";
 
 interface Props {
   starDatas: StarData[];
@@ -12,6 +14,13 @@ export default function MainRenderer({ starDatas, planetDatas }: Props) {
       {starDatas.map((starData) => (
         <Star starData={starData} />
       ))}
+      {planetDatas.map((planetData) => {
+        return (
+          <Fragment key={planetData.planetName}>
+            <Exoplanet planetData={planetData} />
+          </Fragment>
+        );
+      })}
     </>
   );
 }
