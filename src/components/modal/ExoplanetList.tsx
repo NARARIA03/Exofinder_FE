@@ -8,6 +8,8 @@ import {
 } from "@store/jotai";
 import { useAtom, useAtomValue, useSetAtom } from "jotai";
 import { useCallback, useEffect, useState } from "react";
+import { FaCaretSquareUp } from "react-icons/fa";
+import { FaCaretSquareDown } from "react-icons/fa";
 
 export default function ExoplanetList() {
   const visibleExoplanets = useAtomValue(visibleExoplanetAtom);
@@ -68,8 +70,18 @@ export default function ExoplanetList() {
           <p>planets: {uniqueVisibleExoplanets.length}</p>
         </div>
         <div className="absolute top-14 right-2">
-          <button onClick={handleDesc}>DESC</button>
-          <button onClick={handleAsc}>ASC</button>
+          <button onClick={handleDesc}>
+            <FaCaretSquareDown
+              size={24}
+              className={`mx-1 ${isASC && "text-slate-700"}`}
+            />
+          </button>
+          <button onClick={handleAsc}>
+            <FaCaretSquareUp
+              size={24}
+              className={`mx-1 ${!isASC && "text-slate-700"}`}
+            />
+          </button>
         </div>
 
         <ul className="bg-opacity-30 overflow-y-scroll max-h-56 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent scroll-pt-12">
