@@ -41,7 +41,7 @@
 3. **HWO Settings Panel:**
    - If there are exoplanets observed using Direct Imaging in the zoomed-in system, the corona graph can be activated.
    - For exoplanets not observed by Direct Imaging but detected through other methods, the planets are visualized virtually, and the corona graph cannot be activated.
-   3-1. **Coronagraph:**
+   - 3-1. **Coronagraph:**
         - The number of exoplanets detected using coronagraphs is currently limited, but improved hardware capabilities of the Habitable Worlds Observatory (HWO) are expected to significantly increase this number.
         - The effective area for the coronagraph method was estimated based on distances and signal-to-noise ratio (SNR) values of previously observed exoplanets.
         - In the accompanying figure, blue points indicate planets observed with existing coronagraphic methods, while green points represent exoplanets detected by alternative methods.
