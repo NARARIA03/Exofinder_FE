@@ -1,4 +1,5 @@
 import QuestionComp from "@components/tooltip/QuestionComp";
+import { SPECTRAL_TOOLTIP } from "@constants/tooltip";
 import {
   clickExoplanetNameAtom,
   hoverSpecTypeAtom,
@@ -25,7 +26,7 @@ export default function SpecType() {
   return (
     <div className="fixed flex p-3 flex-col top-3 left-3 bg-slate-400 rounded-xl justify-center items-start z-50">
       <div className="font-semibold">
-        Spectral Type <QuestionComp text={""} />
+        Spectral Type <QuestionComp text={SPECTRAL_TOOLTIP} />
       </div>
       <div>Count: {spectralCount}</div>
       <ul className="flex justify-center items-center mx-auto">

@@ -48,7 +48,7 @@ function Star({ starData }: Props) {
       material.opacity = clarity;
       material.transparent = true;
 
-      console.log(`Updated opacity: ${clarity}`); // 디버깅용 로그
+      // console.log(`Updated opacity: ${clarity}`);
     }
   }, [starData.distance]);
 
