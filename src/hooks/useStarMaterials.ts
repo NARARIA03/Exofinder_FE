@@ -8,6 +8,8 @@ export const useStarMaterials = () => {
         color: "#2727e4",
         emissive: "#2727e4",
         emissiveIntensity: 3,
+        depthTest: false,
+        depthWrite: false,
       }),
     []
   );
@@ -17,6 +19,8 @@ export const useStarMaterials = () => {
         color: "#004dc9",
         emissive: "#004dc9",
         emissiveIntensity: 3,
+        depthTest: false,
+        depthWrite: false,
       }),
     []
   );
@@ -26,6 +30,8 @@ export const useStarMaterials = () => {
         color: "#61a3cc",
         emissive: "#61a3cc",
         emissiveIntensity: 3,
+        depthTest: false,
+        depthWrite: false,
       }),
     []
   );
@@ -35,6 +41,8 @@ export const useStarMaterials = () => {
         color: "#d4e394",
         emissive: "#d4e394",
         emissiveIntensity: 3,
+        depthTest: false,
+        depthWrite: false,
       }),
     []
   );
@@ -44,6 +52,8 @@ export const useStarMaterials = () => {
         color: "#eaff4f",
         emissive: "#eaff4f",
         emissiveIntensity: 3,
+        depthTest: false,
+        depthWrite: false,
       }),
     []
   );
@@ -53,6 +63,8 @@ export const useStarMaterials = () => {
         color: "#d6b900",
         emissive: "#d6b900",
         emissiveIntensity: 3,
+        depthTest: false,
+        depthWrite: false,
       }),
     []
   );
@@ -62,6 +74,8 @@ export const useStarMaterials = () => {
         color: "#e37100",
         emissive: "#e37100",
         emissiveIntensity: 3,
+        depthTest: false,
+        depthWrite: false,
       }),
     []
   );
@@ -71,6 +85,8 @@ export const useStarMaterials = () => {
         color: "#ffffff",
         emissive: "#ffffff",
         emissiveIntensity: 3,
+        depthTest: false,
+        depthWrite: false,
       }),
     []
   );

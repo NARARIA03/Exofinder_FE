@@ -14,6 +14,7 @@ import {
 import { useAtom, useAtomValue, useSetAtom } from "jotai";
 import { useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
+import gsap from "gsap";
 
 interface Props {
   starDatas: StarData[];
@@ -26,10 +27,6 @@ export default function ZoomRenderer({
   planetDatas,
   controlRef,
 }: Props) {
-  const zoomedStarGeo = useMemo(
-    () => new THREE.SphereGeometry(7000, 16, 16),
-    []
-  );
   const {
     starMatO,
     starMatB,
@@ -41,10 +38,11 @@ export default function ZoomRenderer({
     starMatDefault,
   } = useStarMaterials();
 
-  const zoomedNoBrightnessStarMat = useMemo(
+  const coronaMat = useMemo(
     () =>
       new THREE.MeshBasicMaterial({
         color: "#000",
+        depthWrite: true,
       }),
     []
   );
@@ -59,6 +57,7 @@ export default function ZoomRenderer({
   const [ableCoronaOn, setAbleCoronaOn] = useAtom(ableCoronaOnAtom);
 
   const meshRef = useRef<THREE.Mesh>(null);
+  const coronaRef = useRef<THREE.Mesh>(null);
 
   // get hostData, systemPlanetDatas and maxSemiMajorAxis
   const { hostData, systemPlanetDatas, maxSemiMajorAxis } = useMemo(() => {
@@ -89,6 +88,22 @@ export default function ZoomRenderer({
 
     return { hostData, systemPlanetDatas, maxSemiMajorAxis };
   }, [clickExoplanetName, planetDatas, setZoomPlanetNames, starDatas]);
+
+  const zoomedStarGeo = useMemo(() => {
+    if (!hostData || !hostData.starRadius) {
+      return new THREE.SphereGeometry(5000, 16, 16);
+    }
+    const calculatedRadius = hostData.starRadius * 10000;
+    return new THREE.SphereGeometry(calculatedRadius, 16, 16);
+  }, [hostData]);
+
+  const coronaGeo = useMemo(() => {
+    if (!hostData || !hostData.starRadius) {
+      return new THREE.SphereGeometry(7000, 16, 16);
+    }
+    const coronaRadius = hostData.starRadius * 10000;
+    return new THREE.SphereGeometry(coronaRadius, 16, 16);
+  }, [hostData]);
 
   useEffect(() => {
     if (
@@ -140,6 +155,26 @@ export default function ZoomRenderer({
     maxSemiMajorAxis,
   ]);
 
+  useEffect(() => {
+    if (coronaRef.current) {
+      if (isCoronaOn) {
+        gsap.to(coronaRef.current.scale, {
+          x: 1.5,
+          y: 1.5,
+          z: 1.5,
+          duration: 3,
+        });
+      } else {
+        gsap.to(coronaRef.current.scale, {
+          x: 0.001,
+          y: 0.001,
+          z: 0.001,
+          duration: 3,
+        });
+      }
+    }
+  }, [isCoronaOn]);
+
   if (!clickExoplanetName) return null;
   else if (!hostData) return null;
 
@@ -149,101 +184,73 @@ export default function ZoomRenderer({
         ref={meshRef}
         position={hostData.coordinate}
         geometry={zoomedStarGeo}
-        material={
-          ableCoronaOn
-            ? isCoronaOn
-              ? zoomedNoBrightnessStarMat
-              : hostData.hostSpecType &&
-                typeof hostData.hostSpecType === "string"
-              ? (() => {
-                  const specType = hostData.hostSpecType.slice(0, 1);
-                  switch (specType) {
-                    case "O":
-                      if (meshRef.current) {
-                        meshRef.current.userData = { specType: "O" };
-                      }
-                      return starMatO;
-                    case "B":
-                      if (meshRef.current) {
-                        meshRef.current.userData = { specType: "B" };
-                      }
-                      return starMatB;
-                    case "A":
-                      if (meshRef.current) {
-                        meshRef.current.userData = { specType: "A" };
-                      }
-                      return starMatA;
-                    case "F":
-                      if (meshRef.current) {
-                        meshRef.current.userData = { specType: "F" };
-                      }
-                      return starMatF;
-                    case "G":
-                      if (meshRef.current) {
-                        meshRef.current.userData = { specType: "G" };
-                      }
-                      return starMatG;
-                    case "K":
-                      if (meshRef.current) {
-                        meshRef.current.userData = { specType: "K" };
-                      }
-                      return starMatK;
-                    case "M":
-                      if (meshRef.current) {
-                        meshRef.current.userData = { specType: "M" };
-                      }
-                      return starMatM;
-                    default:
-                      return starMatDefault;
-                  }
-                })()
-              : starMatDefault
-            : hostData.hostSpecType && typeof hostData.hostSpecType === "string"
-            ? (() => {
-                const specType = hostData.hostSpecType.slice(0, 1);
-                switch (specType) {
-                  case "O":
-                    if (meshRef.current) {
-                      meshRef.current.userData = { specType: "O" };
-                    }
-                    return starMatO;
-                  case "B":
-                    if (meshRef.current) {
-                      meshRef.current.userData = { specType: "B" };
-                    }
-                    return starMatB;
-                  case "A":
-                    if (meshRef.current) {
-                      meshRef.current.userData = { specType: "A" };
-                    }
-                    return starMatA;
-                  case "F":
-                    if (meshRef.current) {
-                      meshRef.current.userData = { specType: "F" };
-                    }
-                    return starMatF;
-                  case "G":
-                    if (meshRef.current) {
-                      meshRef.current.userData = { specType: "G" };
-                    }
-                    return starMatG;
-                  case "K":
-                    if (meshRef.current) {
-                      meshRef.current.userData = { specType: "K" };
-                    }
-                    return starMatK;
-                  case "M":
-                    if (meshRef.current) {
-                      meshRef.current.userData = { specType: "M" };
-                    }
-                    return starMatM;
-                  default:
-                    return starMatDefault;
+        material={(() => {
+          let selectedMaterial = starMatDefault; // basic material
+          if (
+            hostData.hostSpecType &&
+            typeof hostData.hostSpecType === "string"
+          ) {
+            const specType = hostData.hostSpecType.slice(0, 1);
+            switch (specType) {
+              case "O":
+                if (meshRef.current) {
+                  meshRef.current.userData = { specType: "O" };
                 }
-              })()
-            : starMatDefault
-        }
+                selectedMaterial = starMatO;
+                break;
+              case "B":
+                if (meshRef.current) {
+                  meshRef.current.userData = { specType: "B" };
+                }
+                selectedMaterial = starMatB;
+                break;
+              case "A":
+                if (meshRef.current) {
+                  meshRef.current.userData = { specType: "A" };
+                }
+                selectedMaterial = starMatA;
+                break;
+              case "F":
+                if (meshRef.current) {
+                  meshRef.current.userData = { specType: "F" };
+                }
+                selectedMaterial = starMatF;
+                break;
+              case "G":
+                if (meshRef.current) {
+                  meshRef.current.userData = { specType: "G" };
+                }
+                selectedMaterial = starMatG;
+                break;
+              case "K":
+                if (meshRef.current) {
+                  meshRef.current.userData = { specType: "K" };
+                }
+                selectedMaterial = starMatK;
+                break;
+              case "M":
+                if (meshRef.current) {
+                  meshRef.current.userData = { specType: "M" };
+                }
+                selectedMaterial = starMatM;
+                break;
+              default:
+                selectedMaterial = starMatDefault;
+                break;
+            }
+            return selectedMaterial;
+          }
+        })()}
       />
+      {ableCoronaOn && (
+        <mesh
+          ref={coronaRef}
+          position={hostData.coordinate}
+          geometry={coronaGeo}
+          material={coronaMat}
+          scale={[0.001, 0.001, 0.001]} // 처음에 보이지 않게 설정
+        />
+      )}
       {systemPlanetDatas.map((planetData) => (
         <ClickedExoplanet
           key={planetData.planetName}

@@ -19,7 +19,7 @@ export default function ClickedExoplanet({
   isSelect,
 }: Props) {
   const planetGeo = useMemo(
-    () => new THREE.SphereGeometry(400 * planetData.planetRadius, 16, 16),
+    () => new THREE.SphereGeometry(800 * planetData.planetRadius, 16, 16),
     [planetData.planetRadius]
   );
   const planetCoronaMat = useMemo(
@@ -30,6 +30,8 @@ export default function ClickedExoplanet({
         emissiveIntensity: 2.0,
         roughness: 0.3,
         metalness: 0.0,
+        depthTest: false,
+        depthWrite: false,
       }),
     []
   );
@@ -95,6 +97,8 @@ export default function ClickedExoplanet({
         points={points}
         color={isSelect ? "yellow" : "white"}
         linewidth={2}
+        depthTest={false}
+        depthWrite={false}
       />
       <mesh>
         <mesh

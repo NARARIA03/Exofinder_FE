@@ -55,7 +55,7 @@ export default function ExoplanetInfo({ planetDatas }: Props) {
             habitableData[idx].outerBoundHabitableZone
           } AU] of the host star. Finally, the probability of habitable planet based on the planet eccentricity and density is ${(
             parseFloat(habitableData[idx].habitablePercent) * 100
-          ).toFixed(2)}%”.`
+          ).toFixed(2)}%.`
         );
       } else if (habitableData[idx].habitablePercent === "0") {
         setDetailExoplanetInfo(

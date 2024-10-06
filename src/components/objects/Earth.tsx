@@ -15,6 +15,8 @@ function Earth() {
     const earthText = textureLoader.load("/FrontEnd/assets/earth.jpg");
     return new THREE.MeshBasicMaterial({
       map: earthText,
+      depthTest: false,
+      depthWrite: false,
     });
   }, []);
 
