@@ -1,4 +1,5 @@
 import ErrorBoundary from "@components/common/ErrorBoundary";
+import Crosshair from "@components/modal/Chrosshair";
 import ExoplanetInfo from "@components/modal/ExoplanetInfo";
 import ExoplanetList from "@components/modal/ExoplanetList";
 import GoToHWO from "@components/modal/GoToHWO";
@@ -20,7 +21,7 @@ export default function App() {
   console.log(planetDatas.length);
 
   return (
-    <div className="w-screen h-screen bg-black">
+    <div className="w-screen h-screen bg-black relative">
       <Suspense
         fallback={
           <div className="w-screen h-screen flex justify-center items-center">
@@ -51,6 +52,7 @@ export default function App() {
           />
           <Postprocessing />
         </Canvas>
+        <Crosshair />
         <ErrorBoundary>
           <SideSettingBar />
         </ErrorBoundary>
