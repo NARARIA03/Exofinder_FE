@@ -6,6 +6,7 @@ import { useAtomValue } from "jotai";
 import { clickExoplanetNameAtom, hoverSpecTypeAtom } from "@store/jotai";
 import { useStarMaterials } from "@hooks/useStarMaterials";
 import gsap from "gsap";
+import { getClarity } from "@utils/getClarity";
 
 interface Props {
   starData: StarData;
@@ -42,6 +43,17 @@ function Star({ starData }: Props) {
 
   useEffect(() => {
     if (meshRef.current) {
+      const clarity = getClarity(starData.distance);
+      const material = meshRef.current.material as THREE.MeshStandardMaterial;
+      material.opacity = clarity;
+      material.transparent = true;
+
+      console.log(`Updated opacity: ${clarity}`); // 디버깅용 로그
+    }
+  }, [starData.distance]);
+
+  useEffect(() => {
+    if (meshRef.current) {
       meshRef.current.userData = {
         starName: starData.starName,
         specType: starData.hostSpecType
@@ -53,8 +65,6 @@ function Star({ starData }: Props) {
 
   useEffect(() => {
     if (meshRef.current) {
-      console.log("hoverSpecType:", hoverSpecType);
-      console.log(meshRef.current.userData.specType);
       if (meshRef.current.userData.specType === hoverSpecType) {
         gsap.to(meshRef.current.scale, {
           x: 5 * starData.distance,

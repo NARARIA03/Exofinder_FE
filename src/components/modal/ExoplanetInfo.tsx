@@ -53,7 +53,6 @@ export default function ExoplanetInfo({ planetDatas }: Props) {
       }
     };
     if (zoomPlanetNames) {
-      console.log("백엔드로 요청!");
       fetchData();
     }
   }, [planetDatas, setHabitableData, zoomPlanetNames]);

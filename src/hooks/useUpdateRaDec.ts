@@ -19,7 +19,7 @@ export const useUpdateRaDec = (camera: THREE.PerspectiveCamera) => {
     if (ra < 0) ra += 360;
     ra = Math.round(ra);
     if (prevRa.current !== ra || prevDec.current !== dec) {
-      console.log("RA, DEC 변경 감지!");
+      console.log("Detect RA, DEC change");
       setHwoRaDec({ dec, ra });
       prevRa.current = ra;
       prevDec.current = dec;
