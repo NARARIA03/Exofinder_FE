@@ -1,3 +1,4 @@
+import ErrorBoundary from "@components/common/ErrorBoundary";
 import ExoplanetInfo from "@components/modal/ExoplanetInfo";
 import ExoplanetList from "@components/modal/ExoplanetList";
 import GoToHWO from "@components/modal/GoToHWO";
@@ -49,7 +50,9 @@ export default function App() {
           />
           <Postprocessing />
         </Canvas>
-        <SideSettingBar />
+        <ErrorBoundary>
+          <SideSettingBar />
+        </ErrorBoundary>
         <ExoplanetList />
         <GoToHWO />
         <ExoplanetInfo planetDatas={planetDatas} />

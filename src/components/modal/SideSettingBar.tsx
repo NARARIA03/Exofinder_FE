@@ -12,6 +12,7 @@ import {
   camZoomAtom,
   clickExoplanetNameAtom,
   diameterAtom,
+  diameterPlus1CntAtom,
   hwoRaDecAtom,
   isCoronaOnAtom,
   observationDateAtom,
@@ -22,6 +23,7 @@ import { useCallback } from "react";
 export default function SideSettingBar(): React.JSX.Element {
   const [camZoom, setCamZoom] = useAtom(camZoomAtom);
   const [diameter, setDiameter] = useAtom(diameterAtom);
+  const diameterPlus1Cnt = useAtomValue(diameterPlus1CntAtom);
   const clickExoplanetName = useAtomValue(clickExoplanetNameAtom);
   const hwoRaDec = useAtomValue(hwoRaDecAtom);
   const ableCorona = useAtomValue(ableCoronaOnAtom);
@@ -59,7 +61,7 @@ export default function SideSettingBar(): React.JSX.Element {
                     className="px-2 w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer bg-opacity-30"
                   />
                 </div>
-                <div className="w-full px-2 mb-4">
+                <div className="w-full px-2 mb-4 pb-10 relative">
                   <label
                     htmlFor="diameter"
                     className="block text-black text-md"
@@ -77,6 +79,17 @@ export default function SideSettingBar(): React.JSX.Element {
                     onChange={(e) => setDiameter(Number(e.target.value))}
                     className="px-2 w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer bg-opacity-30"
                   />
+                  <div
+                    className="absolute bottom-3 left-0 flex flex-col items-center"
+                    style={{
+                      left: `calc(${(diameter / 20) * 100}% + 40px)`, // Position the arrow relative to the slider
+                    }}
+                  >
+                    <span className="text-xs text-red-600 text-end">↑</span>
+                    <span className="text-xs text-red-600 text-end">
+                      +{diameterPlus1Cnt}
+                    </span>
+                  </div>
                 </div>
                 <div className="self-start ml-2 mt-2">
                   <div>

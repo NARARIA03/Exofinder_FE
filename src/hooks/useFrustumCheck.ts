@@ -2,6 +2,7 @@ import { useAtom, useAtomValue, useSetAtom } from "jotai";
 import { Box3, Frustum, Matrix4, Mesh, PerspectiveCamera, Scene } from "three";
 import {
   diameterAtom,
+  diameterPlus1CntAtom,
   visibleExoplanetAtom,
   visibleStarCountAtom,
 } from "../store/jotai";
@@ -14,6 +15,7 @@ export const useFrustumCheck = (camera: PerspectiveCamera, scene: Scene) => {
   const diameter = useAtomValue(diameterAtom);
   const [visibleExoplanet, setVisibleExoplanet] = useAtom(visibleExoplanetAtom);
   const setVisibleStarCount = useSetAtom(visibleStarCountAtom);
+  const setDiameterPlus1Cnt = useSetAtom(diameterPlus1CntAtom);
 
   // init value
   const prevCamMatrix = useRef(new Matrix4());
@@ -101,6 +103,13 @@ export const useFrustumCheck = (camera: PerspectiveCamera, scene: Scene) => {
                   (starName) => starName !== null && starName !== undefined
                 ).length
           );
+          setDiameterPlus1Cnt(
+            () =>
+              objectsInView
+                .map((mesh) => mesh.userData.diameterPlus1Obj)
+                .filter((bool) => bool !== null && bool !== undefined && bool)
+                .length
+          );
         }
         prevCamMatrix.current.copy(currentCameraMatrix);
         prevDiameter.current = diameter;
@@ -120,6 +129,7 @@ export const useFrustumCheck = (camera: PerspectiveCamera, scene: Scene) => {
     canvasSize.width,
     diameter,
     scene,
+    setDiameterPlus1Cnt,
     setVisibleExoplanet,
     setVisibleStarCount,
     visibleExoplanet.length,
