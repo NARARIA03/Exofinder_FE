@@ -69,7 +69,7 @@ export default function ExoplanetInfo({ planetDatas }: Props) {
   if (!zoomPlanetNames) return null;
 
   return (
-    <div className="fixed w-96 top-5 left-5 bg-white bg-opacity-40 rounded-xl z-50">
+    <div className="fixed w-96 top-5 left-5 bg-slate-400 rounded-xl z-50">
       <div className="flex flex-row items-center m-2">
         <GrCaretPrevious
           className={`w-8 h-8 m-1 border border-black p-1 ${

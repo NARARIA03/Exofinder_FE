@@ -63,7 +63,7 @@
     "starRadius": 4.9
   },
   "2MASS J19383260+4603591": {
-    "planets": ["2MASS J19383260+4603591 b"],
+    "planets": ["2MASS J19383260+4603591 b", "Kepler-451 c", "Kepler-451 d"],
     "ra": 294.6359173,
     "dec": 46.0664076,
     "distance": 396.332,
@@ -174,6 +174,13 @@
     "distance": 44.0304,
     "starRadius": 11.0
   },
+  "AB Aur": {
+    "planets": ["AB Aur b"],
+    "ra": 73.9410446,
+    "dec": 30.5510888,
+    "distance": 162.127,
+    "starRadius": 2.96
+  },
   "AF Lep": {
     "planets": ["AF Lep b"],
     "ra": 81.7699216,
@@ -182,7 +189,7 @@
     "starRadius": 1.25
   },
   "AU Mic": {
-    "planets": ["AU Mic b", "AU Mic c"],
+    "planets": ["AU Mic b", "AU Mic c", "AU Mic d"],
     "ra": 311.2911369,
     "dec": -31.34245,
     "distance": 9.7221,
@@ -573,6 +580,13 @@
     "distance": 30.5225,
     "starRadius": 0.42
   },
+  "DENIS-P J082303.1-491201": {
+    "planets": ["DENIS-P J082303.1-491201 b"],
+    "ra": 125.7620668,
+    "dec": -49.2003008,
+    "distance": 0.0,
+    "starRadius": 0.784570379
+  },
   "DMPP-1": {
     "planets": ["DMPP-1 b", "DMPP-1 c", "DMPP-1 d", "DMPP-1 e"],
     "ra": 86.7761233,
@@ -607,6 +621,13 @@
     "dec": 17.9615717,
     "distance": 305.684,
     "starRadius": 0.01
+  },
+  "DS Tuc A": {
+    "planets": ["DS Tuc A b"],
+    "ra": 354.9154673,
+    "dec": -69.196043,
+    "distance": 44.0622,
+    "starRadius": 0.96
   },
   "EPIC 201170410": {
     "planets": ["EPIC 201170410.02"],
@@ -910,7 +931,7 @@
     "starRadius": 0.43
   },
   "GJ 367": {
-    "planets": ["GJ 367 b"],
+    "planets": ["GJ 367 b", "GJ 367 c", "GJ 367 d"],
     "ra": 146.121464,
     "dec": -45.7790165,
     "distance": 9.41263,
@@ -1012,7 +1033,7 @@
     "ra": 191.981531,
     "dec": 9.7494181,
     "distance": 8.07426,
-    "starRadius": 0.34
+    "starRadius": 0.32
   },
   "GJ 514": {
     "planets": ["GJ 514 b"],
@@ -1048,6 +1069,19 @@
     "dec": 25.7419719,
     "distance": 10.3796,
     "starRadius": 0.5
+  },
+  "GJ 667 C": {
+    "planets": [
+      "GJ 667 C b",
+      "GJ 667 C c",
+      "GJ 667 C e",
+      "GJ 667 C f",
+      "GJ 667 C g"
+    ],
+    "ra": 259.7510609,
+    "dec": -34.9977651,
+    "distance": 7.24396,
+    "starRadius": 0.347279019
   },
   "GJ 674": {
     "planets": ["GJ 674 b"],
@@ -1302,7 +1336,7 @@
     "starRadius": 0.77
   },
   "HAT-P-2": {
-    "planets": ["HAT-P-2 b"],
+    "planets": ["HAT-P-2 b", "HAT-P-2 c"],
     "ra": 245.1514324,
     "dec": 41.0479601,
     "distance": 127.774,
@@ -2268,7 +2302,7 @@
     "starRadius": 10.3
   },
   "HD 102329": {
-    "planets": ["HD 102329 b"],
+    "planets": ["HD 102329 b", "HD 102329 c"],
     "ra": 176.6941567,
     "dec": 3.4742143,
     "distance": 217.107,
@@ -2497,6 +2531,13 @@
     "distance": 116.506,
     "starRadius": 11.16
   },
+  "HD 109833": {
+    "planets": ["HD 109833 b", "HD 109833 c"],
+    "ra": 189.7758591,
+    "dec": -74.5740205,
+    "distance": 79.5561,
+    "starRadius": 1.0
+  },
   "HD 109988": {
     "planets": ["HD 109988 b"],
     "ra": 189.8154662,
@@ -2666,7 +2707,7 @@
     "starRadius": 1.21
   },
   "HD 116029": {
-    "planets": ["HD 116029 b"],
+    "planets": ["HD 116029 b", "HD 116029 c"],
     "ra": 200.1646905,
     "dec": 24.6484725,
     "distance": 123.245,
@@ -3260,7 +3301,7 @@
     "starRadius": 5.14
   },
   "HD 152843": {
-    "planets": ["HD 152843 b"],
+    "planets": ["HD 152843 b", "HD 152843 c"],
     "ra": 253.7848853,
     "dec": 20.491524,
     "distance": 107.898,
@@ -3657,6 +3698,13 @@
     "dec": 4.2649344,
     "distance": 129.603,
     "starRadius": 4.19
+  },
+  "HD 175607": {
+    "planets": ["HD 175607 b"],
+    "ra": 285.2742901,
+    "dec": -66.1943379,
+    "distance": 40.3303,
+    "starRadius": 0.7
   },
   "HD 17674": {
     "planets": ["HD 17674 b"],
@@ -4505,6 +4553,13 @@
     "distance": 50.6078,
     "starRadius": 1.85
   },
+  "HD 222237": {
+    "planets": ["HD 222237 b"],
+    "ra": 354.9078642,
+    "dec": -72.7253271,
+    "distance": 11.4469,
+    "starRadius": 0.71
+  },
   "HD 222582": {
     "planets": ["HD 222582 b"],
     "ra": 355.4640788,
@@ -5023,7 +5078,7 @@
     "starRadius": 2.03
   },
   "HD 39091": {
-    "planets": ["HD 39091 b", "pi Men c"],
+    "planets": ["HD 39091 b", "pi Men c", "pi Men d"],
     "ra": 84.2992798,
     "dec": -80.4646041,
     "distance": 18.2702,
@@ -5069,6 +5124,20 @@
     "dec": 44.2597855,
     "distance": 34.0883,
     "starRadius": 1.21
+  },
+  "HD 41004 A": {
+    "planets": ["HD 41004 A b"],
+    "ra": 89.9566041,
+    "dec": -48.2394189,
+    "distance": 36.69117,
+    "starRadius": 0.85
+  },
+  "HD 41004 B": {
+    "planets": ["HD 41004 B b"],
+    "ra": 89.9565956,
+    "dec": -48.2394114,
+    "distance": 41.5504,
+    "starRadius": 1.04
   },
   "HD 4113": {
     "planets": ["HD 4113 b"],
@@ -6093,14 +6162,14 @@
     "starRadius": 11.21
   },
   "HD 99492": {
-    "planets": ["HD 99492 b"],
+    "planets": ["HD 99492 b", "HD 99492 c"],
     "ra": 171.689687,
     "dec": 3.0071331,
     "distance": 18.2038,
     "starRadius": 0.82
   },
   "HD 99706": {
-    "planets": ["HD 99706 b"],
+    "planets": ["HD 99706 b", "HD 99706 c"],
     "ra": 172.1261621,
     "dec": 43.9662025,
     "distance": 146.6,
@@ -6160,7 +6229,7 @@
     "ra": 353.9543517,
     "dec": 0.4447043,
     "distance": 62.4491,
-    "starRadius": 0.72
+    "starRadius": 0.76
   },
   "HIP 12961": {
     "planets": ["HIP 12961 b"],
@@ -6224,6 +6293,13 @@
     "dec": -4.3326006,
     "distance": 66.3217,
     "starRadius": 1.52
+  },
+  "HIP 41378": {
+    "planets": ["HIP 41378 d"],
+    "ra": 126.6158279,
+    "dec": 10.0803708,
+    "distance": 106.289,
+    "starRadius": 1.34
   },
   "HIP 4845": {
     "planets": ["HIP 4845 b"],
@@ -6323,6 +6399,13 @@
     "distance": 35.4438,
     "starRadius": 0.69
   },
+  "HIP 67522": {
+    "planets": ["HIP 67522 b", "HIP 67522 c"],
+    "ra": 207.526001,
+    "dec": -40.8358961,
+    "distance": 127.28,
+    "starRadius": 1.38
+  },
   "HIP 67537": {
     "planets": ["HIP 67537 b"],
     "ra": 207.5808445,
@@ -6378,6 +6461,13 @@
     "dec": -18.4013844,
     "distance": 101.694,
     "starRadius": 0.96
+  },
+  "HIP 86221": {
+    "planets": ["HIP 86221 b"],
+    "ra": 264.294875,
+    "dec": 27.896391,
+    "distance": 29.4898,
+    "starRadius": 1.002541284
   },
   "HIP 90988": {
     "planets": ["HIP 90988 b"],
@@ -6477,6 +6567,13 @@
     "distance": 37.6604,
     "starRadius": 0.65
   },
+  "HU Aqr": {
+    "planets": ["HU Aqr AB b", "HU Aqr AB c"],
+    "ra": 316.9921976,
+    "dec": -5.2948694,
+    "distance": 192.1980787,
+    "starRadius": 0.962801957
+  },
   "IC 4651 9122": {
     "planets": ["IC 4651 9122 b"],
     "ra": 261.2086139,
@@ -6504,6 +6601,13 @@
     "dec": 18.9338205,
     "distance": 188.33,
     "starRadius": 0.76
+  },
+  "K2-102": {
+    "planets": ["K2-102 b"],
+    "ra": 130.0558953,
+    "dec": 19.7787519,
+    "distance": 188.175,
+    "starRadius": 0.71
   },
   "K2-104": {
     "planets": ["K2-104 b"],
@@ -7358,6 +7462,13 @@
     "dec": 40.6512848,
     "distance": 1274.01,
     "starRadius": 1.24
+  },
+  "KIC 7917485": {
+    "planets": ["KIC 7917485 b"],
+    "ra": 299.4346094,
+    "dec": 43.6326069,
+    "distance": 1382.89,
+    "starRadius": 2.01
   },
   "KIC 9663113": {
     "planets": ["KIC 9663113 b", "Kepler-458 c"],
@@ -11530,7 +11641,7 @@
     "starRadius": 0.67
   },
   "Kepler-1513": {
-    "planets": ["Kepler-1513 b"],
+    "planets": ["Kepler-1513 b", "Kepler-1513 c"],
     "ra": 289.7917561,
     "dec": 39.2852655,
     "distance": 349.247,
@@ -12772,6 +12883,13 @@
     "distance": 651.117,
     "starRadius": 1.13
   },
+  "Kepler-1676": {
+    "planets": ["Kepler-1676 b"],
+    "ra": 287.2368778,
+    "dec": 43.5671665,
+    "distance": 514.0436516,
+    "starRadius": 1.06
+  },
   "Kepler-1677": {
     "planets": ["Kepler-1677 b"],
     "ra": 298.493273,
@@ -12996,7 +13114,7 @@
     "starRadius": 1.7
   },
   "Kepler-1705": {
-    "planets": ["Kepler-1705 b"],
+    "planets": ["Kepler-1705 b", "Kepler-1705 c"],
     "ra": 301.5785316,
     "dec": 44.3121639,
     "distance": 1633.49,
@@ -13226,6 +13344,13 @@
     "distance": 1430.0,
     "starRadius": 0.97
   },
+  "Kepler-1737": {
+    "planets": ["Kepler-1737 b"],
+    "ra": 297.0148111,
+    "dec": 47.486417,
+    "distance": 660.085207,
+    "starRadius": 0.88
+  },
   "Kepler-1738": {
     "planets": ["Kepler-1738 b"],
     "ra": 296.1313474,
@@ -13366,6 +13491,13 @@
     "distance": 982.383,
     "starRadius": 0.92
   },
+  "Kepler-1756": {
+    "planets": ["Kepler-1756 b"],
+    "ra": 294.364904,
+    "dec": 40.7208898,
+    "distance": 645.2083809,
+    "starRadius": 0.81
+  },
   "Kepler-1757": {
     "planets": ["Kepler-1757 b"],
     "ra": 297.7397823,
@@ -13393,6 +13525,13 @@
     "dec": 43.8532104,
     "distance": 527.321,
     "starRadius": 0.89
+  },
+  "Kepler-1760": {
+    "planets": ["Kepler-1760 b"],
+    "ra": 284.1326058,
+    "dec": 48.8251452,
+    "distance": 545.0043893,
+    "starRadius": 0.9
   },
   "Kepler-1761": {
     "planets": ["Kepler-1761 b"],
@@ -13653,6 +13792,13 @@
     "distance": 561.229,
     "starRadius": 0.82
   },
+  "Kepler-1795": {
+    "planets": ["Kepler-1795 b"],
+    "ra": 286.4792568,
+    "dec": 39.2698793,
+    "distance": 563.7674531,
+    "starRadius": 0.69
+  },
   "Kepler-1796": {
     "planets": ["Kepler-1796 b"],
     "ra": 301.5430397,
@@ -13785,6 +13931,13 @@
     "dec": 40.2832525,
     "distance": 1409.19,
     "starRadius": 1.1
+  },
+  "Kepler-1813": {
+    "planets": ["Kepler-1813 b"],
+    "ra": 292.2399069,
+    "dec": 48.5115214,
+    "distance": 660.3892575,
+    "starRadius": 0.79
   },
   "Kepler-1814": {
     "planets": ["Kepler-1814 b", "Kepler-1814 c"],
@@ -14100,6 +14253,13 @@
     "dec": 37.3869915,
     "distance": 423.348,
     "starRadius": 0.76
+  },
+  "Kepler-1855": {
+    "planets": ["Kepler-1855 b"],
+    "ra": 283.4018628,
+    "dec": 41.5161554,
+    "distance": 206.871184,
+    "starRadius": 0.36
   },
   "Kepler-1856": {
     "planets": ["Kepler-1856 b"],
@@ -14444,7 +14604,7 @@
     "starRadius": 0.74
   },
   "Kepler-19": {
-    "planets": ["Kepler-19 b", "Kepler-19 c"],
+    "planets": ["Kepler-19 b", "Kepler-19 c", "Kepler-19 d"],
     "ra": 290.4209694,
     "dec": 37.8516556,
     "distance": 218.562,
@@ -14526,6 +14686,13 @@
     "dec": 45.3230937,
     "distance": 594.464,
     "starRadius": 0.79
+  },
+  "Kepler-1910": {
+    "planets": ["Kepler-1910 b"],
+    "ra": 296.6171677,
+    "dec": 41.2811677,
+    "distance": 443.506511,
+    "starRadius": 0.64
   },
   "Kepler-1911": {
     "planets": ["Kepler-1911 b"],
@@ -14786,6 +14953,13 @@
     "distance": 1076.48,
     "starRadius": 0.97
   },
+  "Kepler-1945": {
+    "planets": ["Kepler-1945 b"],
+    "ra": 281.8980828,
+    "dec": 42.2858185,
+    "distance": 244.7372073,
+    "starRadius": 0.8
+  },
   "Kepler-1946": {
     "planets": ["Kepler-1946 b"],
     "ra": 282.3355387,
@@ -14926,6 +15100,13 @@
     "distance": 492.847,
     "starRadius": 0.98
   },
+  "Kepler-1964": {
+    "planets": ["Kepler-1964 b"],
+    "ra": 297.0588033,
+    "dec": 49.4784362,
+    "distance": 706.4802086,
+    "starRadius": 0.7
+  },
   "Kepler-1965": {
     "planets": ["Kepler-1965 b"],
     "ra": 292.5147146,
@@ -15037,6 +15218,20 @@
     "dec": 39.9121864,
     "distance": 424.428,
     "starRadius": 0.87
+  },
+  "Kepler-1984": {
+    "planets": ["Kepler-1984 b"],
+    "ra": 291.2850446,
+    "dec": 40.7300225,
+    "distance": 130.4367592,
+    "starRadius": 0.42
+  },
+  "Kepler-1985": {
+    "planets": ["Kepler-1985 b"],
+    "ra": 293.5663715,
+    "dec": 42.1325825,
+    "distance": 869.1605379,
+    "starRadius": 0.97
   },
   "Kepler-1986": {
     "planets": ["Kepler-1986 b"],
@@ -16978,7 +17173,7 @@
     "starRadius": 1.09
   },
   "Kepler-432": {
-    "planets": ["Kepler-432 b"],
+    "planets": ["Kepler-432 b", "Kepler-432 c"],
     "ra": 293.2822344,
     "dec": 48.2859173,
     "distance": 848.023,
@@ -21338,6 +21533,34 @@
     "distance": 817.192,
     "starRadius": 39.59
   },
+  "NGC 2682 Sand 978": {
+    "planets": ["NGC 2682 Sand 978 b"],
+    "ra": 132.8228085,
+    "dec": 11.7562959,
+    "distance": 821.918,
+    "starRadius": 21.02
+  },
+  "NGC 2682 YBP 1194": {
+    "planets": ["NGC 2682 YBP 1194 b"],
+    "ra": 132.7533077,
+    "dec": 11.8146537,
+    "distance": 872.92,
+    "starRadius": 0.99
+  },
+  "NGC 2682 YBP 1514": {
+    "planets": ["NGC 2682 YBP 1514 b"],
+    "ra": 132.7531307,
+    "dec": 11.8865128,
+    "distance": 914.221,
+    "starRadius": 0.89
+  },
+  "NGC 2682 YBP 401": {
+    "planets": ["NGC 2682 YBP 401 b"],
+    "ra": 132.8293081,
+    "dec": 11.6710271,
+    "distance": 830.822,
+    "starRadius": 1.22
+  },
   "NGTS-1": {
     "planets": ["NGTS-1 b"],
     "ra": 82.7142134,
@@ -21506,6 +21729,13 @@
     "distance": 609.128,
     "starRadius": 1.38
   },
+  "NN Ser": {
+    "planets": ["NN Ser c", "NN Ser d"],
+    "ra": 238.2337015,
+    "dec": 12.9120871,
+    "distance": 515.818,
+    "starRadius": 0.00597389943
+  },
   "NSVS 14256825": {
     "planets": ["NSVS 14256825 b"],
     "ra": 305.001946,
@@ -21514,11 +21744,32 @@
     "starRadius": 0.19
   },
   "NY Vir": {
-    "planets": ["NY Vir b"],
+    "planets": ["NY Vir b", "NY Vir c"],
     "ra": 204.7005847,
     "dec": -2.0303873,
     "distance": 544.024,
     "starRadius": 0.15
+  },
+  "OGLE-2006-BLG-109L": {
+    "planets": ["OGLE-2006-BLG-109L c"],
+    "ra": 268.143792,
+    "dec": -30.0877778,
+    "distance": 1188555.033,
+    "starRadius": 1.002541284
+  },
+  "OGLE-2016-BLG-1190L": {
+    "planets": ["OGLE-2016-BLG-1190L b"],
+    "ra": 269.717926,
+    "dec": -27.6135559,
+    "distance": 31642145.44,
+    "starRadius": 1.087643968
+  },
+  "OGLE-2018-BLG-0740L": {
+    "planets": ["OGLE-2018-BLG-0740L b"],
+    "ra": 272.1769583,
+    "dec": -29.8358056,
+    "distance": 3200.0,
+    "starRadius": 0.975874475
   },
   "OGLE-TR-10": {
     "planets": ["OGLE-TR-10 b"],
@@ -21570,7 +21821,7 @@
     "starRadius": 1.74
   },
   "PDS 70": {
-    "planets": ["PDS 70 b"],
+    "planets": ["PDS 70 b", "PDS 70 c"],
     "ra": 212.0421402,
     "dec": -41.3980405,
     "distance": 113.064,
@@ -21589,6 +21840,27 @@
     "dec": 51.962683,
     "distance": 343.863,
     "starRadius": 0.95
+  },
+  "PSR B0329+54": {
+    "planets": ["PSR B0329+54 b"],
+    "ra": 53.2472749,
+    "dec": 54.5791636,
+    "distance": 504.9331206,
+    "starRadius": 1.70323779
+  },
+  "PSR B1257+12": {
+    "planets": ["PSR B1257+12 b", "PSR B1257+12 c", "PSR B1257+12 d"],
+    "ra": 195.0149029,
+    "dec": 12.6823534,
+    "distance": 84021.4538,
+    "starRadius": 1.70323779
+  },
+  "PSR J2322-2650": {
+    "planets": ["PSR J2322-2650 b"],
+    "ra": 350.6443481,
+    "dec": -26.8495331,
+    "distance": 9237.189335,
+    "starRadius": 1.70323779
   },
   "PZ Tel": {
     "planets": ["PZ Tel b"],
@@ -21687,6 +21959,20 @@
     "dec": 60.9641194,
     "distance": 213.771,
     "starRadius": 0.7
+  },
+  "ROXs 12": {
+    "planets": ["ROXs 12 b"],
+    "ra": 246.6167993,
+    "dec": -25.446695,
+    "distance": 136.65,
+    "starRadius": 1.07
+  },
+  "ROXs 42 B": {
+    "planets": ["ROXs 42 B b"],
+    "ra": 247.8125493,
+    "dec": -24.545577,
+    "distance": 143.59,
+    "starRadius": 1.34
   },
   "RR Cae": {
     "planets": ["RR Cae b"],
@@ -21911,6 +22197,13 @@
     "dec": -65.5088568,
     "distance": 138.411,
     "starRadius": 1.03
+  },
+  "TOI-1224": {
+    "planets": ["TOI-1224 c"],
+    "ra": 37.1978356,
+    "dec": -80.8991053,
+    "distance": 37.3312,
+    "starRadius": 0.4
   },
   "TOI-1231": {
     "planets": ["TOI-1231 b"],
@@ -22177,13 +22470,6 @@
     "dec": 61.2589289,
     "distance": 91.9362,
     "starRadius": 1.02
-  },
-  "TOI-1452": {
-    "planets": ["TOI-1452 b"],
-    "ra": 290.1739741,
-    "dec": 73.1951082,
-    "distance": 30.5212,
-    "starRadius": 0.28
   },
   "TOI-1467": {
     "planets": ["TOI-1467 b"],
@@ -22570,6 +22856,13 @@
     "distance": 47.3444,
     "starRadius": 0.33
   },
+  "TOI-2018": {
+    "planets": ["TOI-2018 b"],
+    "ra": 229.8374423,
+    "dec": 29.2078771,
+    "distance": 27.9956,
+    "starRadius": 0.62
+  },
   "TOI-2019": {
     "planets": ["TOI-2019 b"],
     "ra": 234.4317651,
@@ -22583,6 +22876,13 @@
     "dec": 82.2454143,
     "distance": 335.985,
     "starRadius": 1.46
+  },
+  "TOI-2048": {
+    "planets": ["TOI-2048 b"],
+    "ra": 237.9241066,
+    "dec": 52.3063083,
+    "distance": 116.567,
+    "starRadius": 0.79
   },
   "TOI-2076": {
     "planets": ["TOI-2076 b", "TOI-2076 c", "TOI-2076 d"],
@@ -22696,6 +22996,13 @@
     "distance": 116.685,
     "starRadius": 1.64
   },
+  "TOI-2184": {
+    "planets": ["TOI-2184 b"],
+    "ra": 100.8331246,
+    "dec": -66.9476563,
+    "distance": 788.317,
+    "starRadius": 2.9
+  },
   "TOI-2193 A": {
     "planets": ["TOI-2193 A b"],
     "ra": 313.691232,
@@ -22751,6 +23058,13 @@
     "dec": 58.7060934,
     "distance": 42.409,
     "starRadius": 0.46
+  },
+  "TOI-2337": {
+    "planets": ["TOI-2337 b"],
+    "ra": 290.6198948,
+    "dec": 60.8539035,
+    "distance": 536.046,
+    "starRadius": 3.22
   },
   "TOI-2338": {
     "planets": ["TOI-2338 b"],
@@ -22819,7 +23133,7 @@
     "planets": ["TOI-2406 b"],
     "ra": 8.8060544,
     "dec": -3.3720833,
-    "distance": 55.419,
+    "distance": 0.0,
     "starRadius": 0.2
   },
   "TOI-2416": {
@@ -22941,6 +23255,13 @@
     "distance": 344.045,
     "starRadius": 1.34
   },
+  "TOI-2669": {
+    "planets": ["TOI-2669 b"],
+    "ra": 134.7226445,
+    "dec": -13.3125792,
+    "distance": 393.443,
+    "starRadius": 4.1
+  },
   "TOI-269": {
     "planets": ["TOI-269 b"],
     "ra": 75.8462827,
@@ -22954,6 +23275,13 @@
     "dec": -51.9573937,
     "distance": 22.4793,
     "starRadius": 0.38
+  },
+  "TOI-2714": {
+    "planets": ["TOI-2714 b"],
+    "ra": 61.4012482,
+    "dec": -14.9267458,
+    "distance": 597.873,
+    "starRadius": 1.25
   },
   "TOI-2796": {
     "planets": ["TOI-2796 b"],
@@ -22989,6 +23317,20 @@
     "dec": -60.6663348,
     "distance": 59.2293,
     "starRadius": 0.78
+  },
+  "TOI-2977": {
+    "planets": ["TOI-2977 b"],
+    "ra": 143.9265177,
+    "dec": -60.3574758,
+    "distance": 328.9879567,
+    "starRadius": 1.07
+  },
+  "TOI-2981": {
+    "planets": ["TOI-2981 b"],
+    "ra": 163.487394,
+    "dec": -25.5245988,
+    "distance": 527.789,
+    "starRadius": 1.08
   },
   "TOI-3023": {
     "planets": ["TOI-3023 b"],
@@ -23059,6 +23401,13 @@
     "dec": -49.3352226,
     "distance": 277.899,
     "starRadius": 1.42
+  },
+  "TOI-3540 A": {
+    "planets": ["TOI-3540 A b"],
+    "ra": 328.9113712,
+    "dec": 28.1794996,
+    "distance": 234.3149507,
+    "starRadius": 1.23
   },
   "TOI-3568": {
     "planets": ["TOI-3568 b"],
@@ -23235,12 +23584,26 @@
     "distance": 32.5686,
     "starRadius": 0.73
   },
+  "TOI-4329": {
+    "planets": ["TOI-4329 b"],
+    "ra": 329.5639152,
+    "dec": 71.1316048,
+    "distance": 717.128,
+    "starRadius": 2.31
+  },
   "TOI-4377": {
     "planets": ["TOI-4377 b"],
     "ra": 164.9324709,
     "dec": -82.2213501,
     "distance": 455.82,
     "starRadius": 3.52
+  },
+  "TOI-4379": {
+    "planets": ["TOI-4379 b"],
+    "ra": 252.0478813,
+    "dec": -32.4337532,
+    "distance": 645.158,
+    "starRadius": 1.98
   },
   "TOI-4406": {
     "planets": ["TOI-4406 b"],
@@ -23285,11 +23648,18 @@
     "starRadius": 3.55
   },
   "TOI-4562": {
-    "planets": ["TOI-4562 b"],
+    "planets": ["TOI-4562 b", "TOI-4562 c"],
     "ra": 112.0100593,
     "dec": -63.5177788,
     "distance": 339.605,
     "starRadius": 1.15
+  },
+  "TOI-4582": {
+    "planets": ["TOI-4582 b"],
+    "ra": 256.8601374,
+    "dec": 68.8656263,
+    "distance": 383.846,
+    "starRadius": 2.5
   },
   "TOI-4600": {
     "planets": ["TOI-4600 b", "TOI-4600 c"],
@@ -23347,8 +23717,15 @@
     "distance": 80.1423,
     "starRadius": 0.36
   },
+  "TOI-4914": {
+    "planets": ["TOI-4914 b"],
+    "ra": 204.5426717,
+    "dec": -28.1429206,
+    "distance": 299.89,
+    "starRadius": 1.0
+  },
   "TOI-500": {
-    "planets": ["TOI-500 b"],
+    "planets": ["TOI-500 b", "TOI-500 c", "TOI-500 d", "TOI-500 e"],
     "ra": 106.559098,
     "dec": -47.5878156,
     "distance": 47.3924,
@@ -23446,7 +23823,7 @@
     "starRadius": 0.19
   },
   "TOI-544": {
-    "planets": ["TOI-544 b"],
+    "planets": ["TOI-544 b", "TOI-544 c"],
     "ra": 82.2900716,
     "dec": -0.3428983,
     "distance": 41.1166,
@@ -23508,6 +23885,13 @@
     "distance": 165.393,
     "starRadius": 0.94
   },
+  "TOI-6029": {
+    "planets": ["TOI-6029 b"],
+    "ra": 8.3862555,
+    "dec": 61.8607659,
+    "distance": 603.119,
+    "starRadius": 2.34
+  },
   "TOI-6034": {
     "planets": ["TOI-6034 b"],
     "ra": 317.9001392,
@@ -23535,6 +23919,13 @@
     "dec": -46.4842959,
     "distance": 123.297,
     "starRadius": 1.42
+  },
+  "TOI-6255": {
+    "planets": ["TOI-6255 b"],
+    "ra": 331.5031606,
+    "dec": 39.2988284,
+    "distance": 20.3167,
+    "starRadius": 0.37
   },
   "TOI-628": {
     "planets": ["TOI-628 b"],
@@ -23849,6 +24240,13 @@
     "distance": 130.111,
     "starRadius": 2.0
   },
+  "VHS J125601.92-125723.9": {
+    "planets": ["VHS J125601.92-125723.9 b"],
+    "ra": 194.008964,
+    "dec": -12.956031,
+    "distance": 12.7,
+    "starRadius": 0.130516548
+  },
   "WASP-1": {
     "planets": ["WASP-1 b"],
     "ra": 5.1669536,
@@ -23906,7 +24304,7 @@
     "starRadius": 1.31
   },
   "WASP-107": {
-    "planets": ["WASP-107 b"],
+    "planets": ["WASP-107 b", "WASP-107 c"],
     "ra": 188.3864277,
     "dec": -10.1462141,
     "distance": 64.7414,
@@ -23918,6 +24316,13 @@
     "dec": 30.6733817,
     "distance": 124.73,
     "starRadius": 0.89
+  },
+  "WASP-110": {
+    "planets": ["WASP-110 b"],
+    "ra": 305.8724366,
+    "dec": -44.0587001,
+    "distance": 274.96,
+    "starRadius": 0.86
   },
   "WASP-113": {
     "planets": ["WASP-113 b"],
@@ -23990,7 +24395,7 @@
     "starRadius": 1.02
   },
   "WASP-126": {
-    "planets": ["WASP-126 b"],
+    "planets": ["WASP-126 b", "WASP-126 c"],
     "ra": 63.374706,
     "dec": -69.2265926,
     "distance": 216.526,
@@ -24505,7 +24910,7 @@
     "ra": 217.3266477,
     "dec": -3.4444994,
     "distance": 213.982,
-    "starRadius": 0.9
+    "starRadius": 0.92
   },
   "WASP-4": {
     "planets": ["WASP-4 b"],
@@ -25081,6 +25486,13 @@
     "distance": 20.4332,
     "starRadius": 45.1
   },
+  "b Cen A": {
+    "planets": ["b Cen AB b"],
+    "ra": 220.4897992,
+    "dec": -37.7936323,
+    "distance": 98.0935,
+    "starRadius": 10.19186818
+  },
   "bet Cnc": {
     "planets": ["bet Cnc b"],
     "ra": 124.1286379,
@@ -25178,6 +25590,13 @@
     "dec": 26.0067142,
     "distance": 32.6081,
     "starRadius": 11.4
+  },
+  "mu2 Sco": {
+    "planets": ["mu2 Sco b"],
+    "ra": 253.0838724,
+    "dec": -38.0176339,
+    "distance": 0.0,
+    "starRadius": 5.6
   },
   "nu Oct A": {
     "planets": ["nu Oct A b"],

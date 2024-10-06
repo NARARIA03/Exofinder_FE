@@ -37,12 +37,12 @@ export default function SideSettingBar(): React.JSX.Element {
 
   return (
     <div className="absolute right-4 top-10 w-60 z-50">
-      <div className="bg-white rounded-xl bg-opacity-40">
+      <div className="bg-slate-400 rounded-xl">
         <div className="flex justify-between">
           <div className="w-60 pt-4 flex flex-col justify-center items-center">
             <p className="text-xl mb-6 font-semibold">HWO Settings</p>
             {clickExoplanetName === "" ? (
-              <>
+              <div>
                 <div className="w-full px-2 mb-4">
                   <label htmlFor="zoom" className="block text-black text-md">
                     Zoom <QuestionComp text={ZOOM_TIP} />: {camZoom}
@@ -96,7 +96,7 @@ export default function SideSettingBar(): React.JSX.Element {
                       className={`text-sm ml-2 px-1 py-0.5 ${
                         observationDate === "Mar"
                           ? "bg-yellow-300"
-                          : "bg-gray-400"
+                          : "bg-slate-600"
                       }`}
                       onClick={() => setObservationDate("Mar")}
                     >
@@ -106,7 +106,7 @@ export default function SideSettingBar(): React.JSX.Element {
                       className={`text-sm px-1 py-0.5 ${
                         observationDate === "Sep"
                           ? "bg-yellow-300"
-                          : "bg-gray-400"
+                          : "bg-slate-600"
                       } `}
                       onClick={() => setObservationDate("Sep")}
                     >
@@ -114,9 +114,9 @@ export default function SideSettingBar(): React.JSX.Element {
                     </button>
                   </div>
                 </div>
-              </>
+              </div>
             ) : (
-              <>
+              <div>
                 <div className="w-full flex flex-col gap-2 justify-center items-center mb-4">
                   <label
                     className="pl-[0.15rem] mr-2 hover:cursor-pointer"
@@ -137,7 +137,7 @@ export default function SideSettingBar(): React.JSX.Element {
                     disabled={!ableCorona}
                   />
                 </div>
-              </>
+              </div>
             )}
 
             <div className="self-start ml-2 mt-8">

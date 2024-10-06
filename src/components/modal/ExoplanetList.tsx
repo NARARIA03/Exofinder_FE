@@ -37,7 +37,7 @@ export default function ExoplanetList() {
 
   return (
     <div>
-      <div className="absolute left-4 bottom-14 w-48 z-50 h-80 rounded-xl bg-white bg-opacity-40">
+      <div className="absolute left-4 bottom-14 w-48 z-50 h-80 rounded-xl bg-slate-400">
         <div className="text-sm font-semibold p-2 m-1 ">
           Number of observed <QuestionComp text={OBSERVED_TIP} />
           <p>planets: {uniqueVisibleExoplanets.length}</p>

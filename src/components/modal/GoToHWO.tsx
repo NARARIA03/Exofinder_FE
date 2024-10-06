@@ -25,7 +25,7 @@ export default function GoToHWO() {
 
   return (
     <button
-      className="absolute bottom-10 left-10 p-4 bg-white bg-opacity-40 border-none rounded-xl cursor-pointer font-semibold"
+      className="absolute bottom-10 left-10 p-4 bg-slate-400 border-none rounded-xl cursor-pointer font-semibold"
       onClick={handleClick}
     >
       Go back HWO

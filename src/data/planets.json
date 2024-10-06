@@ -503,6 +503,20 @@
     "discYear": "2013",
     "discFacility": "Lick Observatory"
   },
+  "AB Aur b": {
+    "hostName": "AB Aur",
+    "discoveryMethod": "Imaging",
+    "ra": 73.9410446,
+    "dec": 30.5510888,
+    "distance": 162.127,
+    "orbitalPeriod": 909.9098961,
+    "semiMajorAxis": 93.9,
+    "eccentricity": 0.4,
+    "planetRadius": 12.5,
+    "starRadius": 2.96,
+    "discYear": "2022",
+    "discFacility": "Subaru Telescope"
+  },
   "AF Lep b": {
     "hostName": "AF Lep",
     "discoveryMethod": "Imaging",
@@ -544,6 +558,20 @@
     "starRadius": 0.82,
     "discYear": "2021",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
+  "AU Mic d": {
+    "hostName": "AU Mic",
+    "discoveryMethod": "Transit Timing Variations",
+    "ra": 311.2911369,
+    "dec": -31.34245,
+    "distance": 9.7221,
+    "orbitalPeriod": 12.73596,
+    "semiMajorAxis": 5.453656633,
+    "eccentricity": 0.00305,
+    "planetRadius": 1.02,
+    "starRadius": 0.74,
+    "discYear": "2023",
+    "discFacility": "Multiple Observatories"
   },
   "BD+03 2562 b": {
     "hostName": "BD+03 2562",
@@ -1427,6 +1455,20 @@
     "discYear": "2018",
     "discFacility": "Multiple Facilities"
   },
+  "DENIS-P J082303.1-491201 b": {
+    "hostName": "DENIS-P J082303.1-491201",
+    "discoveryMethod": "Astrometry",
+    "ra": 125.7620668,
+    "dec": -49.2003008,
+    "distance": 0.0,
+    "orbitalPeriod": 246.36,
+    "semiMajorAxis": 0.36,
+    "eccentricity": 0.345,
+    "planetRadius": 11.9,
+    "starRadius": 0.784570379,
+    "discYear": "2013",
+    "discFacility": "Paranal Observatory"
+  },
   "DMPP-1 b": {
     "hostName": "DMPP-1",
     "discoveryMethod": "Radial Velocity",
@@ -1538,6 +1580,20 @@
     "starRadius": 0.01,
     "discYear": "2009",
     "discFacility": "Yunnan Astronomical Observatory"
+  },
+  "DS Tuc A b": {
+    "hostName": "DS Tuc A",
+    "discoveryMethod": "Transit",
+    "ra": 354.9154673,
+    "dec": -69.196043,
+    "distance": 44.0622,
+    "orbitalPeriod": 8.138268,
+    "semiMajorAxis": 4.045957579,
+    "eccentricity": 0.0,
+    "planetRadius": 5.7,
+    "starRadius": 0.96,
+    "discYear": "2019",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
   "EPIC 201170410.02": {
     "hostName": "EPIC 201170410",
@@ -2505,6 +2561,34 @@
     "discYear": "2021",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
+  "GJ 367 c": {
+    "hostName": "GJ 367",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 146.121464,
+    "dec": -45.7790165,
+    "distance": 9.41263,
+    "orbitalPeriod": 11.5301,
+    "semiMajorAxis": 5.103742044,
+    "eccentricity": 0.09,
+    "planetRadius": 1.86,
+    "starRadius": 0.46,
+    "discYear": "2023",
+    "discFacility": "La Silla Observatory"
+  },
+  "GJ 367 d": {
+    "hostName": "GJ 367",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 146.121464,
+    "dec": -45.7790165,
+    "distance": 9.41263,
+    "orbitalPeriod": 34.369,
+    "semiMajorAxis": 10.57088295,
+    "eccentricity": 0.14,
+    "planetRadius": 2.33,
+    "starRadius": 0.46,
+    "discYear": "2023",
+    "discFacility": "La Silla Observatory"
+  },
   "GJ 3779 b": {
     "hostName": "GJ 3779",
     "discoveryMethod": "Radial Velocity",
@@ -2763,11 +2847,11 @@
     "ra": 191.981531,
     "dec": 9.7494181,
     "distance": 8.07426,
-    "orbitalPeriod": 1.4671205,
-    "semiMajorAxis": 0.01713,
-    "eccentricity": 0.0,
-    "planetRadius": 1.343,
-    "starRadius": 0.34,
+    "orbitalPeriod": 1.46712127,
+    "semiMajorAxis": 0.01714,
+    "eccentricity": 0.00086,
+    "planetRadius": 1.289,
+    "starRadius": 0.32,
     "discYear": "2021",
     "discFacility": "Calar Alto Observatory"
   },
@@ -2868,6 +2952,76 @@
     "starRadius": 0.5,
     "discYear": "2009",
     "discFacility": "W. M. Keck Observatory"
+  },
+  "GJ 667 C b": {
+    "hostName": "GJ 667 C",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 259.7510609,
+    "dec": -34.9977651,
+    "distance": 7.24396,
+    "orbitalPeriod": 7.203,
+    "semiMajorAxis": 0.050431,
+    "eccentricity": 0.2,
+    "planetRadius": 2.25,
+    "starRadius": 0.347279019,
+    "discYear": "2012",
+    "discFacility": "La Silla Observatory"
+  },
+  "GJ 667 C c": {
+    "hostName": "GJ 667 C",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 259.7510609,
+    "dec": -34.9977651,
+    "distance": 7.24396,
+    "orbitalPeriod": 28.14,
+    "semiMajorAxis": 0.125,
+    "eccentricity": 0.02,
+    "planetRadius": 1.77,
+    "starRadius": 0.347279019,
+    "discYear": "2013",
+    "discFacility": "La Silla Observatory"
+  },
+  "GJ 667 C e": {
+    "hostName": "GJ 667 C",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 259.7510609,
+    "dec": -34.9977651,
+    "distance": 7.24396,
+    "orbitalPeriod": 62.24,
+    "semiMajorAxis": 0.213,
+    "eccentricity": 0.02,
+    "planetRadius": 1.45,
+    "starRadius": 0.347279019,
+    "discYear": "2013",
+    "discFacility": "La Silla Observatory"
+  },
+  "GJ 667 C f": {
+    "hostName": "GJ 667 C",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 259.7510609,
+    "dec": -34.9977651,
+    "distance": 7.24396,
+    "orbitalPeriod": 39.026,
+    "semiMajorAxis": 0.156,
+    "eccentricity": 0.03,
+    "planetRadius": 1.45,
+    "starRadius": 0.347279019,
+    "discYear": "2013",
+    "discFacility": "La Silla Observatory"
+  },
+  "GJ 667 C g": {
+    "hostName": "GJ 667 C",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 259.7510609,
+    "dec": -34.9977651,
+    "distance": 7.24396,
+    "orbitalPeriod": 256.2,
+    "semiMajorAxis": 0.549,
+    "eccentricity": 0.08,
+    "planetRadius": 1.99,
+    "starRadius": 0.347279019,
+    "discYear": "2013",
+    "discFacility": "La Silla Observatory"
   },
   "GJ 674 b": {
     "hostName": "GJ 674",
@@ -3582,6 +3736,20 @@
     "starRadius": 1.39,
     "discYear": "2007",
     "discFacility": "HATNet"
+  },
+  "HAT-P-2 c": {
+    "hostName": "HAT-P-2",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 245.1514324,
+    "dec": 41.0479601,
+    "distance": 127.774,
+    "orbitalPeriod": 8500.0,
+    "semiMajorAxis": 416.4977093,
+    "eccentricity": 0.37,
+    "planetRadius": 12.4,
+    "starRadius": 1.42,
+    "discYear": "2023",
+    "discFacility": "Multiple Observatories"
   },
   "HAT-P-20 b": {
     "hostName": "HAT-P-20",
@@ -5599,6 +5767,20 @@
     "discYear": "2011",
     "discFacility": "W. M. Keck Observatory"
   },
+  "HD 102329 c": {
+    "hostName": "HD 102329",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 176.6941567,
+    "dec": 3.4742143,
+    "distance": 217.107,
+    "orbitalPeriod": 1123.0,
+    "semiMajorAxis": 108.0404798,
+    "eccentricity": 0.209,
+    "planetRadius": 13.5,
+    "starRadius": 6.3,
+    "discYear": "2018",
+    "discFacility": "W. M. Keck Observatory"
+  },
   "HD 102365 b": {
     "hostName": "HD 102365",
     "discoveryMethod": "Radial Velocity",
@@ -6173,6 +6355,34 @@
     "discYear": "2021",
     "discFacility": "Okayama Astrophysical Observatory"
   },
+  "HD 109833 b": {
+    "hostName": "HD 109833",
+    "discoveryMethod": "Transit",
+    "ra": 189.7758591,
+    "dec": -74.5740205,
+    "distance": 79.5561,
+    "orbitalPeriod": 9.188526,
+    "semiMajorAxis": 4.386962268,
+    "eccentricity": 0.18,
+    "planetRadius": 2.888,
+    "starRadius": 1.0,
+    "discYear": "2022",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
+  "HD 109833 c": {
+    "hostName": "HD 109833",
+    "discoveryMethod": "Transit",
+    "ra": 189.7758591,
+    "dec": -74.5740205,
+    "distance": 79.5561,
+    "orbitalPeriod": 13.900148,
+    "semiMajorAxis": 5.78113285,
+    "eccentricity": 0.3,
+    "planetRadius": 2.59,
+    "starRadius": 1.0,
+    "discYear": "2022",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
   "HD 109988 b": {
     "hostName": "HD 109988",
     "discoveryMethod": "Radial Velocity",
@@ -6633,6 +6843,20 @@
     "planetRadius": 13.6,
     "starRadius": 4.89,
     "discYear": "2011",
+    "discFacility": "W. M. Keck Observatory"
+  },
+  "HD 116029 c": {
+    "hostName": "HD 116029",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 200.1646905,
+    "dec": 24.6484725,
+    "distance": 123.245,
+    "orbitalPeriod": 907.0,
+    "semiMajorAxis": 93.69969805,
+    "eccentricity": 0.038,
+    "planetRadius": 13.7,
+    "starRadius": 4.6,
+    "discYear": "2018",
     "discFacility": "W. M. Keck Observatory"
   },
   "HD 117207 b": {
@@ -8245,6 +8469,20 @@
     "discYear": "2021",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
+  "HD 152843 c": {
+    "hostName": "HD 152843",
+    "discoveryMethod": "Transit",
+    "ra": 253.7848853,
+    "dec": 20.491524,
+    "distance": 107.898,
+    "orbitalPeriod": 24.38,
+    "semiMajorAxis": 8.407930907,
+    "eccentricity": 0.115,
+    "planetRadius": 5.83,
+    "starRadius": 1.43,
+    "discYear": "2021",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
   "HD 15337 b": {
     "hostName": "HD 15337",
     "discoveryMethod": "Transit",
@@ -9294,6 +9532,20 @@
     "starRadius": 4.19,
     "discYear": "2007",
     "discFacility": "W. M. Keck Observatory"
+  },
+  "HD 175607 b": {
+    "hostName": "HD 175607",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 285.2742901,
+    "dec": -66.1943379,
+    "distance": 40.3303,
+    "orbitalPeriod": 29.01,
+    "semiMajorAxis": 9.441300468,
+    "eccentricity": 0.11,
+    "planetRadius": 2.94,
+    "starRadius": 0.7,
+    "discYear": "2015",
+    "discFacility": "La Silla Observatory"
   },
   "HD 17674 b": {
     "hostName": "HD 17674",
@@ -11591,6 +11843,20 @@
     "discYear": "2011",
     "discFacility": "Haute-Provence Observatory"
   },
+  "HD 222237 b": {
+    "hostName": "HD 222237",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 354.9078642,
+    "dec": -72.7253271,
+    "distance": 11.4469,
+    "orbitalPeriod": 14892.0,
+    "semiMajorAxis": 10.8,
+    "eccentricity": 0.56,
+    "planetRadius": 12.8,
+    "starRadius": 0.71,
+    "discYear": "2024",
+    "discFacility": "Multiple Observatories"
+  },
   "HD 222582 b": {
     "hostName": "HD 222582",
     "discoveryMethod": "Radial Velocity",
@@ -13200,6 +13466,34 @@
     "starRadius": 1.21,
     "discYear": "2002",
     "discFacility": "Multiple Observatories"
+  },
+  "HD 41004 A b": {
+    "hostName": "HD 41004 A",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 89.9566041,
+    "dec": -48.2394189,
+    "distance": 36.69117,
+    "orbitalPeriod": 963.0,
+    "semiMajorAxis": 97.51786655,
+    "eccentricity": 0.74,
+    "planetRadius": 13.2,
+    "starRadius": 0.85,
+    "discYear": "2004",
+    "discFacility": "La Silla Observatory"
+  },
+  "HD 41004 B b": {
+    "hostName": "HD 41004 B",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 89.9565956,
+    "dec": -48.2394114,
+    "distance": 41.5504,
+    "orbitalPeriod": 1.3283,
+    "semiMajorAxis": 1.208363083,
+    "eccentricity": 0.081,
+    "planetRadius": 12.1,
+    "starRadius": 1.04,
+    "discYear": "2003",
+    "discFacility": "La Silla Observatory"
   },
   "HD 4113 b": {
     "hostName": "HD 4113",
@@ -15917,6 +16211,20 @@
     "discYear": "2004",
     "discFacility": "W. M. Keck Observatory"
   },
+  "HD 99492 c": {
+    "hostName": "HD 99492",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 171.689687,
+    "dec": 3.0071331,
+    "distance": 18.2038,
+    "orbitalPeriod": 95.233,
+    "semiMajorAxis": 20.85410922,
+    "eccentricity": 0.063,
+    "planetRadius": 4.42,
+    "starRadius": 0.82,
+    "discYear": "2023",
+    "discFacility": "Roque de los Muchachos Observatory"
+  },
   "HD 99706 b": {
     "hostName": "HD 99706",
     "discoveryMethod": "Radial Velocity",
@@ -15929,6 +16237,20 @@
     "planetRadius": 13.7,
     "starRadius": 5.52,
     "discYear": "2011",
+    "discFacility": "W. M. Keck Observatory"
+  },
+  "HD 99706 c": {
+    "hostName": "HD 99706",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 172.1261621,
+    "dec": 43.9662025,
+    "distance": 146.6,
+    "orbitalPeriod": 1278.0,
+    "semiMajorAxis": 117.7661749,
+    "eccentricity": 0.411,
+    "planetRadius": 12.8,
+    "starRadius": 5.4,
+    "discYear": "2018",
     "discFacility": "W. M. Keck Observatory"
   },
   "HIP 105854 b": {
@@ -16049,11 +16371,11 @@
     "ra": 353.9543517,
     "dec": 0.4447043,
     "distance": 62.4491,
-    "orbitalPeriod": 9.0949,
-    "semiMajorAxis": 0.07765,
-    "eccentricity": 0.089,
-    "planetRadius": 2.53,
-    "starRadius": 0.72,
+    "orbitalPeriod": 9.1004157,
+    "semiMajorAxis": 0.0792,
+    "eccentricity": 0.215,
+    "planetRadius": 2.469,
+    "starRadius": 0.76,
     "discYear": "2014",
     "discFacility": "K2"
   },
@@ -16224,6 +16546,20 @@
     "starRadius": 1.52,
     "discYear": "2024",
     "discFacility": "Multiple Observatories"
+  },
+  "HIP 41378 d": {
+    "hostName": "HIP 41378",
+    "discoveryMethod": "Transit",
+    "ra": 126.6158279,
+    "dec": 10.0803708,
+    "distance": 106.289,
+    "orbitalPeriod": 1114.0,
+    "semiMajorAxis": 107.4624639,
+    "eccentricity": 0.0,
+    "planetRadius": 3.96,
+    "starRadius": 1.34,
+    "discYear": "2016",
+    "discFacility": "K2"
   },
   "HIP 4845 b": {
     "hostName": "HIP 4845",
@@ -16491,6 +16827,34 @@
     "discYear": "2023",
     "discFacility": "European Space Agency (ESA) Gaia Satellite"
   },
+  "HIP 67522 b": {
+    "hostName": "HIP 67522",
+    "discoveryMethod": "Transit",
+    "ra": 207.526001,
+    "dec": -40.8358961,
+    "distance": 127.28,
+    "orbitalPeriod": 6.9594731,
+    "semiMajorAxis": 0.0748,
+    "eccentricity": 0.064,
+    "planetRadius": 9.987,
+    "starRadius": 1.38,
+    "discYear": "2020",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
+  "HIP 67522 c": {
+    "hostName": "HIP 67522",
+    "discoveryMethod": "Transit",
+    "ra": 207.526001,
+    "dec": -40.8358961,
+    "distance": 127.28,
+    "orbitalPeriod": 14.334892,
+    "semiMajorAxis": 0.1228,
+    "eccentricity": 0.077,
+    "planetRadius": 7.936,
+    "starRadius": 1.38,
+    "discYear": "2024",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
   "HIP 67537 b": {
     "hostName": "HIP 67537",
     "discoveryMethod": "Radial Velocity",
@@ -16644,6 +17008,20 @@
     "starRadius": 7.83,
     "discYear": "2016",
     "discFacility": "Multiple Observatories"
+  },
+  "HIP 86221 b": {
+    "hostName": "HIP 86221",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 264.294875,
+    "dec": 27.896391,
+    "distance": 29.4898,
+    "orbitalPeriod": 2.224,
+    "semiMajorAxis": 0.031,
+    "eccentricity": 0.086,
+    "planetRadius": 14.0,
+    "starRadius": 1.002541284,
+    "discYear": "2021",
+    "discFacility": "Cerro Tololo Inter-American Observatory"
   },
   "HIP 90988 b": {
     "hostName": "HIP 90988",
@@ -16925,6 +17303,34 @@
     "discYear": "2024",
     "discFacility": "McDonald Observatory"
   },
+  "HU Aqr AB b": {
+    "hostName": "HU Aqr",
+    "discoveryMethod": "Eclipse Timing Variations",
+    "ra": 316.9921976,
+    "dec": -5.2948694,
+    "distance": 192.1980787,
+    "orbitalPeriod": 2390.0,
+    "semiMajorAxis": 3.6,
+    "eccentricity": 0.0,
+    "planetRadius": 12.8,
+    "starRadius": 0.962801957,
+    "discYear": "2011",
+    "discFacility": "Yunnan Astronomical Observatory"
+  },
+  "HU Aqr AB c": {
+    "hostName": "HU Aqr",
+    "discoveryMethod": "Eclipse Timing Variations",
+    "ra": 316.9921976,
+    "dec": -5.2948694,
+    "distance": 192.1980787,
+    "orbitalPeriod": 4368.0,
+    "semiMajorAxis": 5.4,
+    "eccentricity": 0.51,
+    "planetRadius": 12.9,
+    "starRadius": 0.962801957,
+    "discYear": "2011",
+    "discFacility": "Yunnan Astronomical Observatory"
+  },
   "IC 4651 9122 b": {
     "hostName": "IC 4651 9122",
     "discoveryMethod": "Radial Velocity",
@@ -16978,6 +17384,20 @@
     "eccentricity": 0.1,
     "planetRadius": 2.0,
     "starRadius": 0.76,
+    "discYear": "2016",
+    "discFacility": "K2"
+  },
+  "K2-102 b": {
+    "hostName": "K2-102",
+    "discoveryMethod": "Transit",
+    "ra": 130.0558953,
+    "dec": 19.7787519,
+    "distance": 188.175,
+    "orbitalPeriod": 9.915615,
+    "semiMajorAxis": 4.615439939,
+    "eccentricity": 0.1,
+    "planetRadius": 1.3,
+    "starRadius": 0.71,
     "discYear": "2016",
     "discFacility": "K2"
   },
@@ -19261,6 +19681,20 @@
     "planetRadius": 6.4,
     "starRadius": 1.24,
     "discYear": "2015",
+    "discFacility": "Kepler"
+  },
+  "KIC 7917485 b": {
+    "hostName": "KIC 7917485",
+    "discoveryMethod": "Pulsation Timing Variations",
+    "ra": 299.4346094,
+    "dec": 43.6326069,
+    "distance": 1382.89,
+    "orbitalPeriod": 840.0,
+    "semiMajorAxis": 89.02654597,
+    "eccentricity": 0.15,
+    "planetRadius": 12.4,
+    "starRadius": 2.01,
+    "discYear": "2016",
     "discFacility": "Kepler"
   },
   "KIC 9663113 b": {
@@ -29693,6 +30127,20 @@
     "discYear": "2016",
     "discFacility": "Kepler"
   },
+  "Kepler-1513 c": {
+    "hostName": "Kepler-1513",
+    "discoveryMethod": "Transit Timing Variations",
+    "ra": 289.7917561,
+    "dec": 39.2852655,
+    "distance": 349.247,
+    "orbitalPeriod": 841.4,
+    "semiMajorAxis": 89.1254369,
+    "eccentricity": 0.125,
+    "planetRadius": 11.0,
+    "starRadius": 0.95,
+    "discYear": "2023",
+    "discFacility": "Multiple Observatories"
+  },
   "Kepler-1514 b": {
     "hostName": "Kepler-1514",
     "discoveryMethod": "Transit",
@@ -32717,6 +33165,20 @@
     "discYear": "2020",
     "discFacility": "Kepler"
   },
+  "Kepler-1676 b": {
+    "hostName": "Kepler-1676",
+    "discoveryMethod": "Transit",
+    "ra": 287.2368778,
+    "dec": 43.5671665,
+    "distance": 514.0436516,
+    "orbitalPeriod": 29.9221,
+    "semiMajorAxis": 0.1954,
+    "eccentricity": 0.0,
+    "planetRadius": 3.377,
+    "starRadius": 1.06,
+    "discYear": "2020",
+    "discFacility": "Kepler"
+  },
   "Kepler-1677 b": {
     "hostName": "Kepler-1677",
     "discoveryMethod": "Transit",
@@ -33263,6 +33725,20 @@
     "discYear": "2014",
     "discFacility": "Kepler"
   },
+  "Kepler-1705 c": {
+    "hostName": "Kepler-1705",
+    "discoveryMethod": "Transit",
+    "ra": 301.5785316,
+    "dec": 44.3121639,
+    "distance": 1633.49,
+    "orbitalPeriod": 11.28,
+    "semiMajorAxis": 5.029668936,
+    "eccentricity": 0.028,
+    "planetRadius": 2.05,
+    "starRadius": 1.26,
+    "discYear": "2021",
+    "discFacility": "Kepler"
+  },
   "Kepler-1708 b": {
     "hostName": "Kepler-1708",
     "discoveryMethod": "Transit",
@@ -33795,6 +34271,20 @@
     "discYear": "2021",
     "discFacility": "Kepler"
   },
+  "Kepler-1737 b": {
+    "hostName": "Kepler-1737",
+    "discoveryMethod": "Transit",
+    "ra": 297.0148111,
+    "dec": 47.486417,
+    "distance": 660.085207,
+    "orbitalPeriod": 64.61750031,
+    "semiMajorAxis": 0.297,
+    "eccentricity": 0.0,
+    "planetRadius": 5.395,
+    "starRadius": 0.88,
+    "discYear": "2021",
+    "discFacility": "Kepler"
+  },
   "Kepler-1738 b": {
     "hostName": "Kepler-1738",
     "discoveryMethod": "Transit",
@@ -34117,6 +34607,20 @@
     "discYear": "2021",
     "discFacility": "Kepler"
   },
+  "Kepler-1756 b": {
+    "hostName": "Kepler-1756",
+    "discoveryMethod": "Transit",
+    "ra": 294.364904,
+    "dec": 40.7208898,
+    "distance": 645.2083809,
+    "orbitalPeriod": 2.35575008,
+    "semiMajorAxis": 0.0319,
+    "eccentricity": 0.0,
+    "planetRadius": 1.472,
+    "starRadius": 0.81,
+    "discYear": "2021",
+    "discFacility": "Kepler"
+  },
   "Kepler-1757 b": {
     "hostName": "Kepler-1757",
     "discoveryMethod": "Transit",
@@ -34213,6 +34717,20 @@
     "planetRadius": 1.45,
     "starRadius": 0.83,
     "discYear": "2016",
+    "discFacility": "Kepler"
+  },
+  "Kepler-1760 b": {
+    "hostName": "Kepler-1760",
+    "discoveryMethod": "Transit",
+    "ra": 284.1326058,
+    "dec": 48.8251452,
+    "distance": 545.0043893,
+    "orbitalPeriod": 38.3260994,
+    "semiMajorAxis": 0.2084,
+    "eccentricity": 0.0,
+    "planetRadius": 2.29,
+    "starRadius": 0.9,
+    "discYear": "2021",
     "discFacility": "Kepler"
   },
   "Kepler-1761 b": {
@@ -34789,6 +35307,20 @@
     "discYear": "2021",
     "discFacility": "Kepler"
   },
+  "Kepler-1795 b": {
+    "hostName": "Kepler-1795",
+    "discoveryMethod": "Transit",
+    "ra": 286.4792568,
+    "dec": 39.2698793,
+    "distance": 563.7674531,
+    "orbitalPeriod": 13.36019993,
+    "semiMajorAxis": 0.1002,
+    "eccentricity": 0.0,
+    "planetRadius": 1.663,
+    "starRadius": 0.69,
+    "discYear": "2021",
+    "discFacility": "Kepler"
+  },
   "Kepler-1796 b": {
     "hostName": "Kepler-1796",
     "discoveryMethod": "Transit",
@@ -35136,6 +35668,20 @@
     "eccentricity": 0.0,
     "planetRadius": 2.325,
     "starRadius": 1.1,
+    "discYear": "2021",
+    "discFacility": "Kepler"
+  },
+  "Kepler-1813 b": {
+    "hostName": "Kepler-1813",
+    "discoveryMethod": "Transit",
+    "ra": 292.2399069,
+    "dec": 48.5115214,
+    "distance": 660.3892575,
+    "orbitalPeriod": 2.81816006,
+    "semiMajorAxis": 0.0364,
+    "eccentricity": 0.0,
+    "planetRadius": 1.413,
+    "starRadius": 0.79,
     "discYear": "2021",
     "discFacility": "Kepler"
   },
@@ -35864,6 +36410,20 @@
     "eccentricity": 0.0,
     "planetRadius": 2.587,
     "starRadius": 0.76,
+    "discYear": "2021",
+    "discFacility": "Kepler"
+  },
+  "Kepler-1855 b": {
+    "hostName": "Kepler-1855",
+    "discoveryMethod": "Transit",
+    "ra": 283.4018628,
+    "dec": 41.5161554,
+    "distance": 206.871184,
+    "orbitalPeriod": 0.72733098,
+    "semiMajorAxis": 0.0115,
+    "eccentricity": 0.0,
+    "planetRadius": 1.216,
+    "starRadius": 0.36,
     "discYear": "2021",
     "discFacility": "Kepler"
   },
@@ -36707,6 +37267,20 @@
     "discYear": "2011",
     "discFacility": "Kepler"
   },
+  "Kepler-19 d": {
+    "hostName": "Kepler-19",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 290.4209694,
+    "dec": 37.8516556,
+    "distance": 218.562,
+    "orbitalPeriod": 62.95,
+    "semiMajorAxis": 15.82451796,
+    "eccentricity": 0.05,
+    "planetRadius": 5.06,
+    "starRadius": 0.86,
+    "discYear": "2017",
+    "discFacility": "Roque de los Muchachos Observatory"
+  },
   "Kepler-190 b": {
     "hostName": "Kepler-190",
     "discoveryMethod": "Transit",
@@ -36915,6 +37489,20 @@
     "planetRadius": 2.28,
     "starRadius": 0.8,
     "discYear": "2016",
+    "discFacility": "Kepler"
+  },
+  "Kepler-1910 b": {
+    "hostName": "Kepler-1910",
+    "discoveryMethod": "Transit",
+    "ra": 296.6171677,
+    "dec": 41.2811677,
+    "distance": 443.506511,
+    "orbitalPeriod": 5.68876982,
+    "semiMajorAxis": 0.0536,
+    "eccentricity": 0.0,
+    "planetRadius": 1.184,
+    "starRadius": 0.64,
+    "discYear": "2021",
     "discFacility": "Kepler"
   },
   "Kepler-1911 b": {
@@ -37519,6 +38107,20 @@
     "discYear": "2021",
     "discFacility": "Kepler"
   },
+  "Kepler-1945 b": {
+    "hostName": "Kepler-1945",
+    "discoveryMethod": "Transit",
+    "ra": 281.8980828,
+    "dec": 42.2858185,
+    "distance": 244.7372073,
+    "orbitalPeriod": 6.08003998,
+    "semiMajorAxis": 0.0597,
+    "eccentricity": 0.0,
+    "planetRadius": 1.289,
+    "starRadius": 0.8,
+    "discYear": "2021",
+    "discFacility": "Kepler"
+  },
   "Kepler-1946 b": {
     "hostName": "Kepler-1946",
     "discoveryMethod": "Transit",
@@ -37841,6 +38443,20 @@
     "discYear": "2021",
     "discFacility": "Kepler"
   },
+  "Kepler-1964 b": {
+    "hostName": "Kepler-1964",
+    "discoveryMethod": "Transit",
+    "ra": 297.0588033,
+    "dec": 49.4784362,
+    "distance": 706.4802086,
+    "orbitalPeriod": 2.44082999,
+    "semiMajorAxis": 0.0322,
+    "eccentricity": 0.0,
+    "planetRadius": 1.781,
+    "starRadius": 0.7,
+    "discYear": "2021",
+    "discFacility": "Kepler"
+  },
   "Kepler-1965 b": {
     "hostName": "Kepler-1965",
     "discoveryMethod": "Transit",
@@ -38146,6 +38762,34 @@
     "eccentricity": 0.0,
     "planetRadius": 2.33,
     "starRadius": 0.87,
+    "discYear": "2023",
+    "discFacility": "Kepler"
+  },
+  "Kepler-1984 b": {
+    "hostName": "Kepler-1984",
+    "discoveryMethod": "Transit",
+    "ra": 291.2850446,
+    "dec": 40.7300225,
+    "distance": 130.4367592,
+    "orbitalPeriod": 1.99281234,
+    "semiMajorAxis": 0.0238,
+    "eccentricity": 0.0,
+    "planetRadius": 6.81,
+    "starRadius": 0.42,
+    "discYear": "2023",
+    "discFacility": "Kepler"
+  },
+  "Kepler-1985 b": {
+    "hostName": "Kepler-1985",
+    "discoveryMethod": "Transit",
+    "ra": 293.5663715,
+    "dec": 42.1325825,
+    "distance": 869.1605379,
+    "orbitalPeriod": 3.42064689,
+    "semiMajorAxis": 0.0426,
+    "eccentricity": 0.0,
+    "planetRadius": 2.27,
+    "starRadius": 0.97,
     "discYear": "2023",
     "discFacility": "Kepler"
   },
@@ -47263,6 +47907,20 @@
     "discYear": "2015",
     "discFacility": "Kepler"
   },
+  "Kepler-432 c": {
+    "hostName": "Kepler-432",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 293.2822344,
+    "dec": 48.2859173,
+    "distance": 848.023,
+    "orbitalPeriod": 406.2,
+    "semiMajorAxis": 54.84789267,
+    "eccentricity": 0.498,
+    "planetRadius": 13.3,
+    "starRadius": 4.06,
+    "discYear": "2015",
+    "discFacility": "Fred Lawrence Whipple Observatory"
+  },
   "Kepler-433 b": {
     "hostName": "Kepler-433",
     "discoveryMethod": "Transit",
@@ -47710,6 +48368,34 @@
     "starRadius": 1.64,
     "discYear": "2015",
     "discFacility": "Kepler"
+  },
+  "Kepler-451 c": {
+    "hostName": "2MASS J19383260+4603591",
+    "discoveryMethod": "Eclipse Timing Variations",
+    "ra": 294.6359173,
+    "dec": 46.0664076,
+    "distance": 396.332,
+    "orbitalPeriod": 1460.0,
+    "semiMajorAxis": 128.6970436,
+    "eccentricity": 0.29,
+    "planetRadius": 13.5,
+    "starRadius": 0.2,
+    "discYear": "2022",
+    "discFacility": "Multiple Observatories"
+  },
+  "Kepler-451 d": {
+    "hostName": "2MASS J19383260+4603591",
+    "discoveryMethod": "Eclipse Timing Variations",
+    "ra": 294.6359173,
+    "dec": 46.0664076,
+    "distance": 396.332,
+    "orbitalPeriod": 43.0,
+    "semiMajorAxis": 12.27379797,
+    "eccentricity": 0.0,
+    "planetRadius": 13.5,
+    "starRadius": 0.2,
+    "discYear": "2022",
+    "discFacility": "Multiple Observatories"
   },
   "Kepler-452 b": {
     "hostName": "Kepler-452",
@@ -58309,6 +58995,62 @@
     "discYear": "2014",
     "discFacility": "Multiple Observatories"
   },
+  "NGC 2682 Sand 978 b": {
+    "hostName": "NGC 2682 Sand 978",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 132.8228085,
+    "dec": 11.7562959,
+    "distance": 821.918,
+    "orbitalPeriod": 511.21,
+    "semiMajorAxis": 63.93414973,
+    "eccentricity": 0.16,
+    "planetRadius": 13.3,
+    "starRadius": 21.02,
+    "discYear": "2017",
+    "discFacility": "Multiple Observatories"
+  },
+  "NGC 2682 YBP 1194 b": {
+    "hostName": "NGC 2682 YBP 1194",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 132.7533077,
+    "dec": 11.8146537,
+    "distance": 872.92,
+    "orbitalPeriod": 6.959,
+    "semiMajorAxis": 3.645003008,
+    "eccentricity": 0.3,
+    "planetRadius": 12.3,
+    "starRadius": 0.99,
+    "discYear": "2014",
+    "discFacility": "Multiple Observatories"
+  },
+  "NGC 2682 YBP 1514 b": {
+    "hostName": "NGC 2682 YBP 1514",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 132.7531307,
+    "dec": 11.8865128,
+    "distance": 914.221,
+    "orbitalPeriod": 5.118,
+    "semiMajorAxis": 2.969843205,
+    "eccentricity": 0.28,
+    "planetRadius": 14.0,
+    "starRadius": 0.89,
+    "discYear": "2014",
+    "discFacility": "Multiple Observatories"
+  },
+  "NGC 2682 YBP 401 b": {
+    "hostName": "NGC 2682 YBP 401",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 132.8293081,
+    "dec": 11.6710271,
+    "distance": 830.822,
+    "orbitalPeriod": 4.087,
+    "semiMajorAxis": 2.556248625,
+    "eccentricity": 0.15,
+    "planetRadius": 14.3,
+    "starRadius": 1.22,
+    "discYear": "2016",
+    "discFacility": "La Silla Observatory"
+  },
   "NGTS-1 b": {
     "hostName": "NGTS-1",
     "discoveryMethod": "Transit",
@@ -58645,6 +59387,34 @@
     "discYear": "2019",
     "discFacility": "Next-Generation Transit Survey (NGTS)"
   },
+  "NN Ser c": {
+    "hostName": "NN Ser",
+    "discoveryMethod": "Eclipse Timing Variations",
+    "ra": 238.2337015,
+    "dec": 12.9120871,
+    "distance": 515.818,
+    "orbitalPeriod": 5573.55,
+    "semiMajorAxis": 5.35,
+    "eccentricity": 0.08,
+    "planetRadius": 12.6,
+    "starRadius": 0.00597389943,
+    "discYear": "2010",
+    "discFacility": "Multiple Observatories"
+  },
+  "NN Ser d": {
+    "hostName": "NN Ser",
+    "discoveryMethod": "Eclipse Timing Variations",
+    "ra": 238.2337015,
+    "dec": 12.9120871,
+    "distance": 515.818,
+    "orbitalPeriod": 2883.5,
+    "semiMajorAxis": 3.43,
+    "eccentricity": 0.19,
+    "planetRadius": 13.3,
+    "starRadius": 0.00597389943,
+    "discYear": "2010",
+    "discFacility": "Multiple Observatories"
+  },
   "NSVS 14256825 b": {
     "hostName": "NSVS 14256825",
     "discoveryMethod": "Eclipse Timing Variations",
@@ -58672,6 +59442,62 @@
     "starRadius": 0.15,
     "discYear": "2011",
     "discFacility": "Multiple Observatories"
+  },
+  "NY Vir c": {
+    "hostName": "NY Vir",
+    "discoveryMethod": "Eclipse Timing Variations",
+    "ra": 204.7005847,
+    "dec": -2.0303873,
+    "distance": 544.024,
+    "orbitalPeriod": 8799.0,
+    "semiMajorAxis": 426.2086031,
+    "eccentricity": 0.15,
+    "planetRadius": 12.8,
+    "starRadius": 0.15,
+    "discYear": "2019",
+    "discFacility": "Winer Observatory"
+  },
+  "OGLE-2006-BLG-109L c": {
+    "hostName": "OGLE-2006-BLG-109L",
+    "discoveryMethod": "Microlensing",
+    "ra": 268.143792,
+    "dec": -30.0877778,
+    "distance": 1188555.033,
+    "orbitalPeriod": 4927.5,
+    "semiMajorAxis": 4.5,
+    "eccentricity": 0.15,
+    "planetRadius": 11.1,
+    "starRadius": 1.002541284,
+    "discYear": "2008",
+    "discFacility": "OGLE"
+  },
+  "OGLE-2016-BLG-1190L b": {
+    "hostName": "OGLE-2016-BLG-1190L",
+    "discoveryMethod": "Microlensing",
+    "ra": 269.717926,
+    "dec": -27.6135559,
+    "distance": 31642145.44,
+    "orbitalPeriod": 1220.0,
+    "semiMajorAxis": 2.17,
+    "eccentricity": 0.42,
+    "planetRadius": 12.3,
+    "starRadius": 1.087643968,
+    "discYear": "2017",
+    "discFacility": "OGLE"
+  },
+  "OGLE-2018-BLG-0740L b": {
+    "hostName": "OGLE-2018-BLG-0740L",
+    "discoveryMethod": "Microlensing",
+    "ra": 272.1769583,
+    "dec": -29.8358056,
+    "distance": 3200.0,
+    "orbitalPeriod": 5480.0,
+    "semiMajorAxis": 5.0,
+    "eccentricity": 0.0,
+    "planetRadius": 12.9,
+    "starRadius": 0.975874475,
+    "discYear": "2019",
+    "discFacility": "OGLE"
   },
   "OGLE-TR-10 b": {
     "hostName": "OGLE-TR-10",
@@ -58785,6 +59611,20 @@
     "discYear": "2018",
     "discFacility": "Paranal Observatory"
   },
+  "PDS 70 c": {
+    "hostName": "PDS 70",
+    "discoveryMethod": "Imaging",
+    "ra": 212.0421402,
+    "dec": -41.3980405,
+    "distance": 113.064,
+    "orbitalPeriod": 198.2523644,
+    "semiMajorAxis": 34.0,
+    "eccentricity": 0.11,
+    "planetRadius": 22.866,
+    "starRadius": 1.06,
+    "discYear": "2019",
+    "discFacility": "European Southern Observatory"
+  },
   "PH1 b": {
     "hostName": "PH1",
     "discoveryMethod": "Transit",
@@ -58812,6 +59652,76 @@
     "starRadius": 0.95,
     "discYear": "2013",
     "discFacility": "Kepler"
+  },
+  "PSR B0329+54 b": {
+    "hostName": "PSR B0329+54",
+    "discoveryMethod": "Pulsar Timing",
+    "ra": 53.2472749,
+    "dec": 54.5791636,
+    "distance": 504.9331206,
+    "orbitalPeriod": 10140.0,
+    "semiMajorAxis": 10.26,
+    "eccentricity": 0.236,
+    "planetRadius": 1.22,
+    "starRadius": 1.70323779,
+    "discYear": "2017",
+    "discFacility": "Multiple Facilities"
+  },
+  "PSR B1257+12 b": {
+    "hostName": "PSR B1257+12",
+    "discoveryMethod": "Pulsar Timing",
+    "ra": 195.0149029,
+    "dec": 12.6823534,
+    "distance": 84021.4538,
+    "orbitalPeriod": 25.262,
+    "semiMajorAxis": 0.19,
+    "eccentricity": 0.0,
+    "planetRadius": 0.338,
+    "starRadius": 1.70323779,
+    "discYear": "1994",
+    "discFacility": "Arecibo Observatory"
+  },
+  "PSR B1257+12 c": {
+    "hostName": "PSR B1257+12",
+    "discoveryMethod": "Pulsar Timing",
+    "ra": 195.0149029,
+    "dec": 12.6823534,
+    "distance": 84021.4538,
+    "orbitalPeriod": 66.5419,
+    "semiMajorAxis": 0.36,
+    "eccentricity": 0.0186,
+    "planetRadius": 1.91,
+    "starRadius": 1.70323779,
+    "discYear": "1992",
+    "discFacility": "Arecibo Observatory"
+  },
+  "PSR B1257+12 d": {
+    "hostName": "PSR B1257+12",
+    "discoveryMethod": "Pulsar Timing",
+    "ra": 195.0149029,
+    "dec": 12.6823534,
+    "distance": 84021.4538,
+    "orbitalPeriod": 98.2114,
+    "semiMajorAxis": 0.46,
+    "eccentricity": 0.0264,
+    "planetRadius": 1.8,
+    "starRadius": 1.70323779,
+    "discYear": "1992",
+    "discFacility": "Arecibo Observatory"
+  },
+  "PSR J2322-2650 b": {
+    "hostName": "PSR J2322-2650",
+    "discoveryMethod": "Pulsar Timing",
+    "ra": 350.6443481,
+    "dec": -26.8495331,
+    "distance": 9237.189335,
+    "orbitalPeriod": 0.322964,
+    "semiMajorAxis": 0.0102,
+    "eccentricity": 0.0017,
+    "planetRadius": 13.9,
+    "starRadius": 1.70323779,
+    "discYear": "2017",
+    "discFacility": "Parkes Observatory"
   },
   "PZ Tel b": {
     "hostName": "PZ Tel",
@@ -59022,6 +59932,34 @@
     "starRadius": 0.7,
     "discYear": "2019",
     "discFacility": "Qatar"
+  },
+  "ROXs 12 b": {
+    "hostName": "ROXs 12",
+    "discoveryMethod": "Imaging",
+    "ra": 246.6167993,
+    "dec": -25.446695,
+    "distance": 136.65,
+    "orbitalPeriod": 3043.189117,
+    "semiMajorAxis": 210.0,
+    "eccentricity": 0.83,
+    "planetRadius": 12.2,
+    "starRadius": 1.07,
+    "discYear": "2013",
+    "discFacility": "W. M. Keck Observatory"
+  },
+  "ROXs 42 B b": {
+    "hostName": "ROXs 42 B",
+    "discoveryMethod": "Imaging",
+    "ra": 247.8125493,
+    "dec": -24.545577,
+    "distance": 143.59,
+    "orbitalPeriod": 1967.204362,
+    "semiMajorAxis": 157.0,
+    "eccentricity": 0.58,
+    "planetRadius": 12.5,
+    "starRadius": 1.34,
+    "discYear": "2013",
+    "discFacility": "Multiple Observatories"
   },
   "RR Cae b": {
     "hostName": "RR Cae",
@@ -59609,6 +60547,20 @@
     "planetRadius": 2.91,
     "starRadius": 1.03,
     "discYear": "2023",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
+  "TOI-1224 c": {
+    "hostName": "TOI-1224",
+    "discoveryMethod": "Transit",
+    "ra": 37.1978356,
+    "dec": -80.8991053,
+    "distance": 37.3312,
+    "orbitalPeriod": 17.945466,
+    "semiMajorAxis": 6.854406031,
+    "eccentricity": 0.0,
+    "planetRadius": 2.884,
+    "starRadius": 0.4,
+    "discYear": "2024",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
   "TOI-1231 b": {
@@ -60351,20 +61303,6 @@
     "planetRadius": 2.611,
     "starRadius": 1.02,
     "discYear": "2024",
-    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
-  },
-  "TOI-1452 b": {
-    "hostName": "TOI-1452",
-    "discoveryMethod": "Transit",
-    "ra": 290.1739741,
-    "dec": 73.1951082,
-    "distance": 30.5212,
-    "orbitalPeriod": 11.06201,
-    "semiMajorAxis": 0.061,
-    "eccentricity": 0.0,
-    "planetRadius": 1.672,
-    "starRadius": 0.28,
-    "discYear": "2022",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
   "TOI-1467 b": {
@@ -61291,6 +62229,20 @@
     "discYear": "2023",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
+  "TOI-2018 b": {
+    "hostName": "TOI-2018",
+    "discoveryMethod": "Transit",
+    "ra": 229.8374423,
+    "dec": 29.2078771,
+    "distance": 27.9956,
+    "orbitalPeriod": 7.435583,
+    "semiMajorAxis": 3.809576367,
+    "eccentricity": 0.0,
+    "planetRadius": 2.268,
+    "starRadius": 0.62,
+    "discYear": "2023",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
   "TOI-2019 b": {
     "hostName": "TOI-2019",
     "discoveryMethod": "Transit",
@@ -61316,6 +62268,20 @@
     "eccentricity": 0.394,
     "planetRadius": 11.893,
     "starRadius": 1.46,
+    "discYear": "2022",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
+  "TOI-2048 b": {
+    "hostName": "TOI-2048",
+    "discoveryMethod": "Transit",
+    "ra": 237.9241066,
+    "dec": 52.3063083,
+    "distance": 116.567,
+    "orbitalPeriod": 13.79019,
+    "semiMajorAxis": 5.750604501,
+    "eccentricity": 0.13,
+    "planetRadius": 2.61,
+    "starRadius": 0.79,
     "discYear": "2022",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
@@ -61627,6 +62593,20 @@
     "discYear": "2022",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
+  "TOI-2184 b": {
+    "hostName": "TOI-2184",
+    "discoveryMethod": "Transit",
+    "ra": 100.8331246,
+    "dec": -66.9476563,
+    "distance": 788.317,
+    "orbitalPeriod": 6.90683,
+    "semiMajorAxis": 3.626763011,
+    "eccentricity": 0.08,
+    "planetRadius": 11.4,
+    "starRadius": 2.9,
+    "discYear": "2022",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
   "TOI-2193 A b": {
     "hostName": "TOI-2193 A",
     "discoveryMethod": "Transit",
@@ -61751,6 +62731,20 @@
     "planetRadius": 1.74,
     "starRadius": 0.46,
     "discYear": "2021",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
+  "TOI-2337 b": {
+    "hostName": "TOI-2337",
+    "discoveryMethod": "Transit",
+    "ra": 290.6198948,
+    "dec": 60.8539035,
+    "distance": 536.046,
+    "orbitalPeriod": 2.99432,
+    "semiMajorAxis": 2.077457466,
+    "eccentricity": 0.019,
+    "planetRadius": 10.088,
+    "starRadius": 3.22,
+    "discYear": "2022",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
   "TOI-2338 b": {
@@ -61898,7 +62892,7 @@
     "discoveryMethod": "Transit",
     "ra": 8.8060544,
     "dec": -3.3720833,
-    "distance": 55.419,
+    "distance": 0.0,
     "orbitalPeriod": 3.0766891,
     "semiMajorAxis": 0.02267,
     "eccentricity": 0.17,
@@ -62159,6 +63153,20 @@
     "discYear": "2023",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
+  "TOI-2669 b": {
+    "hostName": "TOI-2669",
+    "discoveryMethod": "Transit",
+    "ra": 134.7226445,
+    "dec": -13.3125792,
+    "distance": 393.443,
+    "orbitalPeriod": 6.2034,
+    "semiMajorAxis": 3.376135411,
+    "eccentricity": 0.09,
+    "planetRadius": 19.728,
+    "starRadius": 4.1,
+    "discYear": "2022",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
   "TOI-269 b": {
     "hostName": "TOI-269",
     "discoveryMethod": "Transit",
@@ -62213,6 +63221,20 @@
     "planetRadius": 2.133,
     "starRadius": 0.38,
     "discYear": "2019",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
+  "TOI-2714 b": {
+    "hostName": "TOI-2714",
+    "discoveryMethod": "Transit",
+    "ra": 61.4012482,
+    "dec": -14.9267458,
+    "distance": 597.873,
+    "orbitalPeriod": 2.499387,
+    "semiMajorAxis": 0.036,
+    "eccentricity": 0.164,
+    "planetRadius": 13.72,
+    "starRadius": 1.25,
+    "discYear": "2024",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
   "TOI-2796 b": {
@@ -62296,6 +63318,34 @@
     "eccentricity": 0.0,
     "planetRadius": 1.88,
     "starRadius": 0.78,
+    "discYear": "2024",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
+  "TOI-2977 b": {
+    "hostName": "TOI-2977",
+    "discoveryMethod": "Transit",
+    "ra": 143.9265177,
+    "dec": -60.3574758,
+    "distance": 328.9879567,
+    "orbitalPeriod": 2.3505614,
+    "semiMajorAxis": 0.03386,
+    "eccentricity": 0.0,
+    "planetRadius": 13.159,
+    "starRadius": 1.07,
+    "discYear": "2023",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
+  "TOI-2981 b": {
+    "hostName": "TOI-2981",
+    "discoveryMethod": "Transit",
+    "ra": 163.487394,
+    "dec": -25.5245988,
+    "distance": 527.789,
+    "orbitalPeriod": 3.601501,
+    "semiMajorAxis": 0.048,
+    "eccentricity": 0.035,
+    "planetRadius": 13.4,
+    "starRadius": 1.08,
     "discYear": "2024",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
@@ -62437,6 +63487,20 @@
     "planetRadius": 12.229,
     "starRadius": 1.42,
     "discYear": "2023",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
+  "TOI-3540 A b": {
+    "hostName": "TOI-3540 A",
+    "discoveryMethod": "Transit",
+    "ra": 328.9113712,
+    "dec": 28.1794996,
+    "distance": 234.3149507,
+    "orbitalPeriod": 3.119999,
+    "semiMajorAxis": 0.04289,
+    "eccentricity": 0.0,
+    "planetRadius": 23.539,
+    "starRadius": 1.23,
+    "discYear": "2022",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
   "TOI-3568 b": {
@@ -62887,6 +63951,20 @@
     "discYear": "2021",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
+  "TOI-4329 b": {
+    "hostName": "TOI-4329",
+    "discoveryMethod": "Transit",
+    "ra": 329.5639152,
+    "dec": 71.1316048,
+    "distance": 717.128,
+    "orbitalPeriod": 2.9223,
+    "semiMajorAxis": 2.044010859,
+    "eccentricity": 0.068,
+    "planetRadius": 16.813,
+    "starRadius": 2.31,
+    "discYear": "2022",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
   "TOI-4377 b": {
     "hostName": "TOI-4377",
     "discoveryMethod": "Transit",
@@ -62899,6 +63977,20 @@
     "planetRadius": 15.11,
     "starRadius": 3.52,
     "discYear": "2023",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
+  "TOI-4379 b": {
+    "hostName": "TOI-4379",
+    "discoveryMethod": "Transit",
+    "ra": 252.0478813,
+    "dec": -32.4337532,
+    "distance": 645.158,
+    "orbitalPeriod": 3.25352,
+    "semiMajorAxis": 2.195679703,
+    "eccentricity": 0.018,
+    "planetRadius": 16.69,
+    "starRadius": 1.98,
+    "discYear": "2024",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
   "TOI-4406 b": {
@@ -63019,11 +64111,39 @@
     "ra": 112.0100593,
     "dec": -63.5177788,
     "distance": 339.605,
-    "orbitalPeriod": 225.11781,
+    "orbitalPeriod": 225.1064,
     "semiMajorAxis": 0.768,
     "eccentricity": 0.76,
     "planetRadius": 12.53,
     "starRadius": 1.15,
+    "discYear": "2023",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
+  "TOI-4562 c": {
+    "hostName": "TOI-4562",
+    "discoveryMethod": "Transit Timing Variations",
+    "ra": 112.0100593,
+    "dec": -63.5177788,
+    "distance": 339.605,
+    "orbitalPeriod": 3990.0,
+    "semiMajorAxis": 5.219,
+    "eccentricity": 0.122,
+    "planetRadius": 12.8,
+    "starRadius": 1.15,
+    "discYear": "2024",
+    "discFacility": "Multiple Observatories"
+  },
+  "TOI-4582 b": {
+    "hostName": "TOI-4582",
+    "discoveryMethod": "Transit",
+    "ra": 256.8601374,
+    "dec": 68.8656263,
+    "distance": 383.846,
+    "orbitalPeriod": 31.034,
+    "semiMajorAxis": 9.875486596,
+    "eccentricity": 0.51,
+    "planetRadius": 10.536,
+    "starRadius": 2.5,
     "discYear": "2023",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
@@ -63153,6 +64273,20 @@
     "discYear": "2023",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
+  "TOI-4914 b": {
+    "hostName": "TOI-4914",
+    "discoveryMethod": "Transit",
+    "ra": 204.5426717,
+    "dec": -28.1429206,
+    "distance": 299.89,
+    "orbitalPeriod": 10.60057,
+    "semiMajorAxis": 0.098,
+    "eccentricity": 0.408,
+    "planetRadius": 12.87,
+    "starRadius": 1.0,
+    "discYear": "2024",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
   "TOI-500 b": {
     "hostName": "TOI-500",
     "discoveryMethod": "Transit",
@@ -63166,6 +64300,48 @@
     "starRadius": 0.68,
     "discYear": "2022",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
+  "TOI-500 c": {
+    "hostName": "TOI-500",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 106.559098,
+    "dec": -47.5878156,
+    "distance": 47.3924,
+    "orbitalPeriod": 6.6356,
+    "semiMajorAxis": 3.531182246,
+    "eccentricity": 0.072,
+    "planetRadius": 2.09,
+    "starRadius": 0.68,
+    "discYear": "2022",
+    "discFacility": "La Silla Observatory"
+  },
+  "TOI-500 d": {
+    "hostName": "TOI-500",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 106.559098,
+    "dec": -47.5878156,
+    "distance": 47.3924,
+    "orbitalPeriod": 26.233,
+    "semiMajorAxis": 8.828738214,
+    "eccentricity": 0.016,
+    "planetRadius": 6.35,
+    "starRadius": 0.68,
+    "discYear": "2022",
+    "discFacility": "La Silla Observatory"
+  },
+  "TOI-500 e": {
+    "hostName": "TOI-500",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 106.559098,
+    "dec": -47.5878156,
+    "distance": 47.3924,
+    "orbitalPeriod": 61.3,
+    "semiMajorAxis": 15.54677511,
+    "eccentricity": 0.073,
+    "planetRadius": 3.99,
+    "starRadius": 0.68,
+    "discYear": "2022",
+    "discFacility": "La Silla Observatory"
   },
   "TOI-5126 b": {
     "hostName": "TOI-5126",
@@ -63391,6 +64567,20 @@
     "discYear": "2022",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
+  "TOI-544 c": {
+    "hostName": "TOI-544",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 82.2900716,
+    "dec": -0.3428983,
+    "distance": 41.1166,
+    "orbitalPeriod": 50.089,
+    "semiMajorAxis": 13.58818885,
+    "eccentricity": 0.32,
+    "planetRadius": 4.92,
+    "starRadius": 0.62,
+    "discYear": "2023",
+    "discFacility": "La Silla Observatory"
+  },
   "TOI-5542 b": {
     "hostName": "TOI-5542",
     "discoveryMethod": "Transit",
@@ -63545,6 +64735,20 @@
     "discYear": "2023",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
+  "TOI-6029 b": {
+    "hostName": "TOI-6029",
+    "discoveryMethod": "Transit",
+    "ra": 8.3862555,
+    "dec": 61.8607659,
+    "distance": 603.119,
+    "orbitalPeriod": 5.7987,
+    "semiMajorAxis": 3.2276549,
+    "eccentricity": 0.091,
+    "planetRadius": 14.392,
+    "starRadius": 2.34,
+    "discYear": "2024",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
   "TOI-6034 b": {
     "hostName": "TOI-6034",
     "discoveryMethod": "Transit",
@@ -63599,6 +64803,20 @@
     "planetRadius": 9.236,
     "starRadius": 1.42,
     "discYear": "2023",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
+  "TOI-6255 b": {
+    "hostName": "TOI-6255",
+    "discoveryMethod": "Transit",
+    "ra": 331.5031606,
+    "dec": 39.2988284,
+    "distance": 20.3167,
+    "orbitalPeriod": 0.23818244,
+    "semiMajorAxis": 0.384243468,
+    "eccentricity": 0.0,
+    "planetRadius": 1.079,
+    "starRadius": 0.37,
+    "discYear": "2024",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
   "TOI-628 b": {
@@ -64511,6 +65729,20 @@
     "discYear": "2016",
     "discFacility": "Multiple Observatories"
   },
+  "VHS J125601.92-125723.9 b": {
+    "hostName": "VHS J125601.92-125723.9",
+    "discoveryMethod": "Imaging",
+    "ra": 194.008964,
+    "dec": -12.956031,
+    "distance": 12.7,
+    "orbitalPeriod": 5800000.0,
+    "semiMajorAxis": 350.0,
+    "eccentricity": 0.68,
+    "planetRadius": 13.675,
+    "starRadius": 0.130516548,
+    "discYear": "2015",
+    "discFacility": "Paranal Observatory"
+  },
   "WASP-1 b": {
     "hostName": "WASP-1",
     "discoveryMethod": "Transit",
@@ -64637,6 +65869,20 @@
     "discYear": "2017",
     "discFacility": "SuperWASP-South"
   },
+  "WASP-107 c": {
+    "hostName": "WASP-107",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 188.3864277,
+    "dec": -10.1462141,
+    "distance": 64.7414,
+    "orbitalPeriod": 1088.0,
+    "semiMajorAxis": 105.7838243,
+    "eccentricity": 0.28,
+    "planetRadius": 13.2,
+    "starRadius": 0.67,
+    "discYear": "2020",
+    "discFacility": "Multiple Observatories"
+  },
   "WASP-11 b": {
     "hostName": "WASP-11",
     "discoveryMethod": "Transit",
@@ -64650,6 +65896,20 @@
     "starRadius": 0.89,
     "discYear": "2008",
     "discFacility": "SuperWASP"
+  },
+  "WASP-110 b": {
+    "hostName": "WASP-110",
+    "discoveryMethod": "Transit",
+    "ra": 305.8724366,
+    "dec": -44.0587001,
+    "distance": 274.96,
+    "orbitalPeriod": 3.77840121,
+    "semiMajorAxis": 2.42589527,
+    "eccentricity": 0.0,
+    "planetRadius": 13.877,
+    "starRadius": 0.86,
+    "discYear": "2021",
+    "discFacility": "Paranal Observatory"
   },
   "WASP-113 b": {
     "hostName": "WASP-113",
@@ -64804,6 +66064,20 @@
     "starRadius": 1.27,
     "discYear": "2016",
     "discFacility": "SuperWASP-South"
+  },
+  "WASP-126 c": {
+    "hostName": "WASP-126",
+    "discoveryMethod": "Transit Timing Variations",
+    "ra": 63.374706,
+    "dec": -69.2265926,
+    "distance": 216.526,
+    "orbitalPeriod": 7.63,
+    "semiMajorAxis": 3.875695886,
+    "eccentricity": 0.05,
+    "planetRadius": 9.38,
+    "starRadius": 1.27,
+    "discYear": "2019",
+    "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
   },
   "WASP-127 b": {
     "hostName": "WASP-127",
@@ -65861,11 +67135,11 @@
     "ra": 217.3266477,
     "dec": -3.4444994,
     "distance": 213.982,
-    "orbitalPeriod": 4.055259,
+    "orbitalPeriod": 4.0552842,
     "semiMajorAxis": 0.0486,
     "eccentricity": 0.0,
-    "planetRadius": 14.235,
-    "starRadius": 0.9,
+    "planetRadius": 14.93,
+    "starRadius": 0.92,
     "discYear": "2011",
     "discFacility": "SuperWASP"
   },
@@ -67143,6 +68417,20 @@
     "discYear": "2015",
     "discFacility": "Multiple Observatories"
   },
+  "b Cen AB b": {
+    "hostName": "b Cen A",
+    "discoveryMethod": "Imaging",
+    "ra": 220.4897992,
+    "dec": -37.7936323,
+    "distance": 98.0935,
+    "orbitalPeriod": 1790000.0,
+    "semiMajorAxis": 556.0,
+    "eccentricity": 0.4,
+    "planetRadius": 12.4,
+    "starRadius": 10.19186818,
+    "discYear": "2021",
+    "discFacility": "Paranal Observatory"
+  },
   "bet Cnc b": {
     "hostName": "bet Cnc",
     "discoveryMethod": "Radial Velocity",
@@ -67381,6 +68669,20 @@
     "discYear": "2014",
     "discFacility": "Bohyunsan Optical Astronomical Observatory"
   },
+  "mu2 Sco b": {
+    "hostName": "mu2 Sco",
+    "discoveryMethod": "Imaging",
+    "ra": 253.0838724,
+    "dec": -38.0176339,
+    "distance": 0.0,
+    "orbitalPeriod": 3773.974168,
+    "semiMajorAxis": 242.4,
+    "eccentricity": 0.56,
+    "planetRadius": 12.3,
+    "starRadius": 5.6,
+    "discYear": "2022",
+    "discFacility": "Paranal Observatory"
+  },
   "nu Oct A b": {
     "hostName": "nu Oct A",
     "discoveryMethod": "Radial Velocity",
@@ -67478,6 +68780,20 @@
     "starRadius": 1.19,
     "discYear": "2018",
     "discFacility": "Transiting Exoplanet Survey Satellite (TESS)"
+  },
+  "pi Men d": {
+    "hostName": "HD 39091",
+    "discoveryMethod": "Radial Velocity",
+    "ra": 84.2992798,
+    "dec": -80.4646041,
+    "distance": 18.2702,
+    "orbitalPeriod": 124.64,
+    "semiMajorAxis": 24.95197693,
+    "eccentricity": 0.22,
+    "planetRadius": 3.72,
+    "starRadius": 1.19,
+    "discYear": "2022",
+    "discFacility": "La Silla Observatory"
   },
   "psi1 Dra B b": {
     "hostName": "psi1 Dra B",
