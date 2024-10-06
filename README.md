@@ -2,7 +2,7 @@
 
 ---
 
-## Theme: Navigator for the Habitable Worlds Observatory (HWO): Mapping the Characterizable Exoplanets in our Galaxy
+## Theme: Navigator for the Habitable Worlds Observatory (HWO)_ Mapping the Characterizable Exoplanets in our Galaxy
 
 ---
 
