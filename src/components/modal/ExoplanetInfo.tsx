@@ -1,7 +1,10 @@
 import { PlanetData } from "@@types/dataTypes";
 import { getPlanetHabitable } from "@apis/getPlanetHabitable";
 import QuestionComp from "@components/tooltip/QuestionComp";
-import { PREV_NEXT_BTN_TOOLTIP } from "@constants/tooltip";
+import {
+  EXOPLANET_INFO_TOOLTIP,
+  PREV_NEXT_BTN_TOOLTIP,
+} from "@constants/tooltip";
 import {
   habitableDataAtom,
   selectedExoplanetNameAtom,
@@ -24,6 +27,7 @@ export default function ExoplanetInfo({ planetDatas }: Props) {
   );
   const [habitableData, setHabitableData] = useAtom(habitableDataAtom);
   const [idx, setIdx] = useState<number>(0);
+  const [detailExoplanetInfo, setDetailExoplanetInfo] = useState<string>("");
 
   const handleNextBtn = () => {
     if (!zoomPlanetNames) return;
@@ -38,6 +42,34 @@ export default function ExoplanetInfo({ planetDatas }: Props) {
       setIdx((prev) => prev - 1);
     }
   };
+
+  useEffect(() => {
+    if (habitableData) {
+      if (parseFloat(habitableData[idx].habitablePercent) > 0) {
+        setDetailExoplanetInfo(
+          `The semi-major axis of the planet ${habitableData[idx].plName} is ${
+            habitableData[idx].plOrbsmax
+          } AU, which exists within the Goldilocks zone range f [${
+            habitableData[idx].innerBoundHabitableZone
+          } AU to ${
+            habitableData[idx].outerBoundHabitableZone
+          } AU] of the host star. Finally, the probability of habitable planet based on the planet eccentricity and density is ${(
+            parseFloat(habitableData[idx].habitablePercent) * 100
+          ).toFixed(2)}%”.`
+        );
+      } else if (habitableData[idx].habitablePercent === "0") {
+        setDetailExoplanetInfo(
+          `The semi-major axis of the planet ${habitableData[idx].plName} is ${habitableData[idx].plOrbsmax} AU, which does not belong within the Goldilocks zone range f [${habitableData[idx].innerBoundHabitableZone} AU to ${habitableData[idx].outerBoundHabitableZone} AU] of the host star. As a result, the probability of habitable planet is extremely small.`
+        );
+      } else if (habitableData[idx].habitablePercent === "-1") {
+        setDetailExoplanetInfo(
+          `${habitableData[idx].plName} planet does not have the essential parameters to calculate the probability of a habitable zone. Try your hand at indirect probability estimation`
+        );
+      }
+    } else {
+      setDetailExoplanetInfo("");
+    }
+  }, [habitableData, idx]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -166,9 +198,21 @@ export default function ExoplanetInfo({ planetDatas }: Props) {
           <p className="text-xl font-bold ml-2">
             :{" "}
             {habitableData?.find((data) => data.plName === zoomPlanetNames[idx])
-              ?.habitablePercent || "???"}
+              ?.habitablePercent
+              ? (
+                  parseFloat(
+                    habitableData.find(
+                      (data) => data.plName === zoomPlanetNames[idx]
+                    )?.habitablePercent || "0"
+                  ) * 100
+                ).toFixed(2) + "%"
+              : "???"}{" "}
+            <QuestionComp text={EXOPLANET_INFO_TOOLTIP} />
           </p>
         </div>
+        <p className="mt-3 py-1 underline underline-offset-4">
+          {detailExoplanetInfo}
+        </p>
       </div>
     </div>
   );

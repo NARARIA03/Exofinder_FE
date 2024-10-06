@@ -23,6 +23,7 @@ export const getPlanetHabitable = async (hostName: string | undefined) => {
       `${import.meta.env.VITE_API_URL}/systems?hostName=${hostName}`
     );
     if (data.data.isSuccess) {
+      console.log(data.data.result[0].habitablePercent);
       return data.data.result;
     }
     return null;

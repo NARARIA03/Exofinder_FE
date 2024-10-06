@@ -43,6 +43,7 @@ export default function ExoplanetList() {
           <p> stars: {visibleStarCount}</p>
           <p>planets: {uniqueVisibleExoplanets.length}</p>
         </div>
+        <button onClick={() => handleClick("GJ 687 b")}>Test Data</button>
         <ul className="bg-opacity-30 overflow-scroll h-64 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent scroll-pt-12">
           {uniqueVisibleExoplanets.map((name, idx) => (
             <li

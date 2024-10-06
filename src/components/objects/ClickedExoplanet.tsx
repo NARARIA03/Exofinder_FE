@@ -61,7 +61,7 @@ export default function ClickedExoplanet({
       semiMajorAxis,
       eccentricity,
       hostPos,
-      semiMajorAxis * 10000 + 500000
+      semiMajorAxis * 10000 + 1500000
     );
   }, [eccentricity, hostPos, semiMajorAxis]);
 

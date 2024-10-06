@@ -20,3 +20,6 @@ export const PREV_NEXT_BTN_TOOLTIP =
 
 export const POSITION_TOOLTIP =
   "The HWO telescope is located at the L2 Lagrange point, which changes position as the Earth orbits the Sun. Since the orbit of the L2 point is much shorter compared to the distance from the Solar System to exoplanets, the observation date doesn't significantly affect exoplanet observation but has a major impact on Earth's position. Try changing the observation date to locate Earth!";
+
+export const EXOPLANET_INFO_TOOLTIP =
+  "The range of the habitable zone is defined by the following process. First, the absolute magnitude of the host star is calculated based on the distance from the HWO to the exoplanet system and the apparent magnitude of the host star. Then a radiative correction is applied according to the spectral type of the host star, and the luminosity of the host star is derived. Finally, the inner and outer boundaries are determined using the luminosity.";
