@@ -64,12 +64,12 @@ export default function ExoplanetList() {
   return (
     <div>
       <div className="absolute left-4 bottom-14 w-80 z-50 h-80 rounded-xl bg-slate-400">
-        <div className="text-sm font-semibold p-2 m-1 w-full">
-          Number of observed <QuestionComp text={OBSERVED_TIP} />
-          <p> stars: {visibleStarCount}</p>
-          <p>planets: {uniqueVisibleExoplanets.length}</p>
+        <div className="text-base font-semibold p-2 m-1 mb-8 w-full">
+          Number of observed stars: {visibleStarCount}{" "}
+          <QuestionComp text={OBSERVED_TIP} />
+          <p>Number of observed planets: {uniqueVisibleExoplanets.length} </p>
         </div>
-        <div className="absolute top-14 right-2">
+        <div className="absolute top-16 right-2">
           <button onClick={handleDesc}>
             <FaCaretSquareDown
               size={24}
@@ -84,7 +84,7 @@ export default function ExoplanetList() {
           </button>
         </div>
 
-        <ul className="bg-opacity-30 overflow-y-scroll max-h-56 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent scroll-pt-12">
+        <ul className="bg-opacity-30 overflow-y-scroll max-h-52 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent scroll-pt-12">
           {uniqueVisibleExoplanets.map((obj, idx) => (
             <li
               className="text-black p-2 m-1 cursor-pointer flex justify-between border rounded-xl"
