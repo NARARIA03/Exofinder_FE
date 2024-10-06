@@ -15,10 +15,12 @@ export type PlanetData = {
   ra: number;
   dec: number;
   orbitalPeriod: number;
+  orbitInclination: number;
 };
 
 export type StarData = {
   starName: string;
+  hostSpecType: string;
   coordinate: [number, number, number];
   planets: string[];
   ra: number;

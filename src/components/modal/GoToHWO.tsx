@@ -28,7 +28,7 @@ export default function GoToHWO() {
       className="absolute bottom-10 left-10 p-4 bg-slate-400 border-none rounded-xl cursor-pointer font-semibold"
       onClick={handleClick}
     >
-      Go back HWO
+      Go back to HWO
     </button>
   );
 }

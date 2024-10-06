@@ -21,6 +21,7 @@ export const initPlanetData = (starDatas: StarData[]) => {
         ra,
         dec,
         orbitalPeriod,
+        orbitInclination,
       } = planetsData[planetName];
 
       const orbitPath = getPlanetOrbit(
@@ -45,6 +46,7 @@ export const initPlanetData = (starDatas: StarData[]) => {
         ra: ra,
         dec: dec,
         orbitalPeriod: orbitalPeriod,
+        orbitInclination: orbitInclination,
       });
     });
   });

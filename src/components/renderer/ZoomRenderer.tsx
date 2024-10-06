@@ -1,5 +1,6 @@
 import { PlanetData, StarData } from "@@types/dataTypes";
 import ClickedExoplanet from "@components/objects/ClickedExoplanet";
+import { useStarMaterials } from "@hooks/useStarMaterials";
 import { useThree } from "@react-three/fiber";
 import {
   ableCoronaOnAtom,
@@ -11,7 +12,7 @@ import {
   zoomPlanetNamesAtom,
 } from "@store/jotai";
 import { useAtom, useAtomValue, useSetAtom } from "jotai";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
 
 interface Props {
@@ -26,18 +27,19 @@ export default function ZoomRenderer({
   controlRef,
 }: Props) {
   const zoomedStarGeo = useMemo(
-    () => new THREE.SphereGeometry(10000, 16, 16),
+    () => new THREE.SphereGeometry(7000, 16, 16),
     []
   );
-  const zoomedBrightnessStarMat = useMemo(
-    () =>
-      new THREE.MeshStandardMaterial({
-        color: "#ff0",
-        emissive: "#ff0",
-        emissiveIntensity: 2,
-      }),
-    []
-  );
+  const {
+    starMatO,
+    starMatB,
+    starMatA,
+    starMatF,
+    starMatG,
+    starMatK,
+    starMatM,
+    starMatDefault,
+  } = useStarMaterials();
 
   const zoomedNoBrightnessStarMat = useMemo(
     () =>
@@ -55,6 +57,8 @@ export default function ZoomRenderer({
   const setHoverExoplanetName = useSetAtom(hoverExoplanetNameAtom);
   const setZoomPlanetNames = useSetAtom(zoomPlanetNamesAtom);
   const [ableCoronaOn, setAbleCoronaOn] = useAtom(ableCoronaOnAtom);
+
+  const meshRef = useRef<THREE.Mesh>(null);
 
   // get hostData, systemPlanetDatas and maxSemiMajorAxis
   const { hostData, systemPlanetDatas, maxSemiMajorAxis } = useMemo(() => {
@@ -142,14 +146,102 @@ export default function ZoomRenderer({
   return (
     <mesh>
       <mesh
+        ref={meshRef}
         position={hostData.coordinate}
         geometry={zoomedStarGeo}
         material={
           ableCoronaOn
             ? isCoronaOn
               ? zoomedNoBrightnessStarMat
-              : zoomedBrightnessStarMat
-            : zoomedBrightnessStarMat
+              : hostData.hostSpecType &&
+                typeof hostData.hostSpecType === "string"
+              ? (() => {
+                  const specType = hostData.hostSpecType.slice(0, 1);
+                  switch (specType) {
+                    case "O":
+                      if (meshRef.current) {
+                        meshRef.current.userData = { specType: "O" };
+                      }
+                      return starMatO;
+                    case "B":
+                      if (meshRef.current) {
+                        meshRef.current.userData = { specType: "B" };
+                      }
+                      return starMatB;
+                    case "A":
+                      if (meshRef.current) {
+                        meshRef.current.userData = { specType: "A" };
+                      }
+                      return starMatA;
+                    case "F":
+                      if (meshRef.current) {
+                        meshRef.current.userData = { specType: "F" };
+                      }
+                      return starMatF;
+                    case "G":
+                      if (meshRef.current) {
+                        meshRef.current.userData = { specType: "G" };
+                      }
+                      return starMatG;
+                    case "K":
+                      if (meshRef.current) {
+                        meshRef.current.userData = { specType: "K" };
+                      }
+                      return starMatK;
+                    case "M":
+                      if (meshRef.current) {
+                        meshRef.current.userData = { specType: "M" };
+                      }
+                      return starMatM;
+                    default:
+                      return starMatDefault;
+                  }
+                })()
+              : starMatDefault
+            : hostData.hostSpecType && typeof hostData.hostSpecType === "string"
+            ? (() => {
+                const specType = hostData.hostSpecType.slice(0, 1);
+                switch (specType) {
+                  case "O":
+                    if (meshRef.current) {
+                      meshRef.current.userData = { specType: "O" };
+                    }
+                    return starMatO;
+                  case "B":
+                    if (meshRef.current) {
+                      meshRef.current.userData = { specType: "B" };
+                    }
+                    return starMatB;
+                  case "A":
+                    if (meshRef.current) {
+                      meshRef.current.userData = { specType: "A" };
+                    }
+                    return starMatA;
+                  case "F":
+                    if (meshRef.current) {
+                      meshRef.current.userData = { specType: "F" };
+                    }
+                    return starMatF;
+                  case "G":
+                    if (meshRef.current) {
+                      meshRef.current.userData = { specType: "G" };
+                    }
+                    return starMatG;
+                  case "K":
+                    if (meshRef.current) {
+                      meshRef.current.userData = { specType: "K" };
+                    }
+                    return starMatK;
+                  case "M":
+                    if (meshRef.current) {
+                      meshRef.current.userData = { specType: "M" };
+                    }
+                    return starMatM;
+                  default:
+                    return starMatDefault;
+                }
+              })()
+            : starMatDefault
         }
       />
       {systemPlanetDatas.map((planetData) => (

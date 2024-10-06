@@ -40,15 +40,10 @@ export default function ExoplanetList() {
       <div className="absolute left-4 bottom-14 w-48 z-50 h-80 rounded-xl bg-slate-400">
         <div className="text-sm font-semibold p-2 m-1 ">
           Number of observed <QuestionComp text={OBSERVED_TIP} />
-          <p>planets: {uniqueVisibleExoplanets.length}</p>
           <p> stars: {visibleStarCount}</p>
+          <p>planets: {uniqueVisibleExoplanets.length}</p>
         </div>
-        <button
-          className="text-sm border"
-          onClick={() => handleClick("AF Lep b")}
-        >
-          discovery Imaging method test
-        </button>
+        <button onClick={() => handleClick("30 Ari B b")}>30 Ari B b</button>
         <ul className="bg-opacity-30 overflow-scroll h-64 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent scroll-pt-12">
           {uniqueVisibleExoplanets.map((name, idx) => (
             <li

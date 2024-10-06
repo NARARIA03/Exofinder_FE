@@ -19,7 +19,7 @@ export default function ClickedExoplanet({
   isSelect,
 }: Props) {
   const planetGeo = useMemo(
-    () => new THREE.SphereGeometry(1000 * planetData.planetRadius, 16, 16),
+    () => new THREE.SphereGeometry(400 * planetData.planetRadius, 16, 16),
     [planetData.planetRadius]
   );
   const planetCoronaMat = useMemo(

@@ -9,6 +9,7 @@ export const planets: {
     dec: number;
     distance: number;
     orbitalPeriod: number;
+    orbitInclination: number;
     semiMajorAxis: number;
     eccentricity: number;
     planetRadius: number;
@@ -21,6 +22,7 @@ export const planets: {
 export const systems: {
   [key: string]: {
     planets: string[];
+    hostSpecType: string;
     ra: number;
     dec: number;
     distance: number;

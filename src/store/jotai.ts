@@ -31,3 +31,5 @@ export const habitableDataAtom = atom<
 export const observationDateAtom = atom<"Mar" | "Sep">("Mar");
 
 export const diameterPlus1CntAtom = atom<number>(0);
+
+export const hoverSpecTypeAtom = atom<string>("");

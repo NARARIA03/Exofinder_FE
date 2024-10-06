@@ -3,6 +3,7 @@ import ExoplanetInfo from "@components/modal/ExoplanetInfo";
 import ExoplanetList from "@components/modal/ExoplanetList";
 import GoToHWO from "@components/modal/GoToHWO";
 import SideSettingBar from "@components/modal/SideSettingBar";
+import SpecType from "@components/modal/SpecType";
 import MainRenderer from "@components/renderer/MainRenderer";
 import Postprocessing from "@components/renderer/PostProcessing";
 import ZoomRenderer from "@components/renderer/ZoomRenderer";
@@ -55,6 +56,7 @@ export default function App() {
         </ErrorBoundary>
         <ExoplanetList />
         <GoToHWO />
+        <SpecType />
         <ExoplanetInfo planetDatas={planetDatas} />
       </Suspense>
     </div>
