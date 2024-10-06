@@ -667,7 +667,7 @@
     "planets": ["DENIS-P J082303.1-491201 b"],
     "ra": 125.7620668,
     "dec": -49.2003008,
-    "distance": 0.0,
+    "distance": 20.77,
     "starRadius": 0.784570379,
     "hostSpecType": "L1.5"
   },
@@ -24832,7 +24832,7 @@
     "planets": ["OGLE-2006-BLG-109L c"],
     "ra": 268.143792,
     "dec": -30.0877778,
-    "distance": 1188555.033,
+    "distance": 1510.0,
     "starRadius": 1.002541284,
     "hostSpecType": "K"
   },
@@ -24840,7 +24840,7 @@
     "planets": ["OGLE-2016-BLG-1190L b"],
     "ra": 269.717926,
     "dec": -27.6135559,
-    "distance": 31642145.44,
+    "distance": 6770.0,
     "starRadius": 1.087643968,
     "hostSpecType": "G"
   },
@@ -24944,7 +24944,7 @@
     "planets": ["PSR B1257+12 b", "PSR B1257+12 c", "PSR B1257+12 d"],
     "ra": 195.0149029,
     "dec": 12.6823534,
-    "distance": 84021.4538,
+    "distance": 600.0,
     "starRadius": 1.70323779,
     "hostSpecType": "A"
   },
@@ -24952,7 +24952,7 @@
     "planets": ["PSR J2322-2650 b"],
     "ra": 350.6443481,
     "dec": -26.8495331,
-    "distance": 9237.189335,
+    "distance": 230.0,
     "starRadius": 1.70323779,
     "hostSpecType": "A"
   },
@@ -25650,6 +25650,14 @@
     "distance": 91.9362,
     "starRadius": 1.02,
     "hostSpecType": "G"
+  },
+  "TOI-1452": {
+    "planets": ["TOI-1452 b"],
+    "ra": 290.1739741,
+    "dec": 73.1951082,
+    "distance": 30.5212,
+    "starRadius": 0.28,
+    "hostSpecType": "M4 &#177 0.5 V"
   },
   "TOI-1467": {
     "planets": ["TOI-1467 b"],
@@ -26407,7 +26415,7 @@
     "planets": ["TOI-2406 b"],
     "ra": 8.8060544,
     "dec": -3.3720833,
-    "distance": 0.0,
+    "distance": 55.419,
     "starRadius": 0.2,
     "hostSpecType": "M4 V"
   },
@@ -29214,14 +29222,6 @@
     "distance": 32.6081,
     "starRadius": 11.4,
     "hostSpecType": "K2 III"
-  },
-  "mu2 Sco": {
-    "planets": ["mu2 Sco b"],
-    "ra": 253.0838724,
-    "dec": -38.0176339,
-    "distance": 0.0,
-    "starRadius": 5.6,
-    "hostSpecType": "B2 IV"
   },
   "nu Oct A": {
     "planets": ["nu Oct A b"],
