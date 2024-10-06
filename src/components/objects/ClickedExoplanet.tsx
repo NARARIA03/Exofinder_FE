@@ -1,11 +1,15 @@
 import * as THREE from "three";
 import { PlanetData } from "@@types/dataTypes";
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { getPlanetOrbit } from "@utils/getPlanetOrbit";
 import { useFrame } from "@react-three/fiber";
 import { Line, Text } from "@react-three/drei";
-import { useAtomValue } from "jotai";
-import { ableCoronaOnAtom, isCoronaOnAtom } from "@store/jotai";
+import { useAtom, useAtomValue } from "jotai";
+import {
+  ableCoronaOnAtom,
+  habitableDataAtom,
+  isCoronaOnAtom,
+} from "@store/jotai";
 
 interface Props {
   planetData: PlanetData;
@@ -19,7 +23,7 @@ export default function ClickedExoplanet({
   isSelect,
 }: Props) {
   const planetGeo = useMemo(
-    () => new THREE.SphereGeometry(800 * planetData.planetRadius, 16, 16),
+    () => new THREE.SphereGeometry(10000 * planetData.planetRadius, 16, 16),
     [planetData.planetRadius]
   );
   const planetCoronaMat = useMemo(
@@ -49,7 +53,8 @@ export default function ClickedExoplanet({
   );
 
   const isCoronaOn = useAtomValue(isCoronaOnAtom);
-  const ableCoronaOn = useAtomValue(ableCoronaOnAtom);
+  const [isCorona, setIsCorona] = useState<boolean>(false);
+  const habitableData = useAtomValue(habitableDataAtom);
 
   const semiMajorAxis =
     planetData.semiMajorAxis > 1
@@ -70,6 +75,17 @@ export default function ClickedExoplanet({
   const curOrbitIdxRef = useRef<number>(randomIdx);
   const planetMeshRef = useRef<THREE.Mesh>(null);
   const textRef = useRef<THREE.Mesh>(null);
+
+  useEffect(() => {
+    const isCoronaGraph = habitableData?.find(
+      (data) => data.plName === planetData.planetName
+    )?.coronaGraphAffect;
+    if (isCoronaGraph && isCoronaGraph === "1") {
+      setIsCorona(true);
+    } else if (isCoronaGraph === "0") {
+      setIsCorona(false);
+    }
+  }, [habitableData, planetData.planetName]);
 
   useFrame(() => {
     if (planetMeshRef.current) {
@@ -106,7 +122,7 @@ export default function ClickedExoplanet({
           ref={planetMeshRef}
           geometry={planetGeo}
           material={
-            ableCoronaOn
+            isCorona
               ? isCoronaOn
                 ? planetCoronaMat
                 : planetNoCoronaMat

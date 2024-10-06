@@ -11,7 +11,7 @@ import {
   selectedExoplanetNameAtom,
   zoomPlanetNamesAtom,
 } from "@store/jotai";
-import { useAtom, useAtomValue, useSetAtom } from "jotai";
+import { useAtomValue, useSetAtom } from "jotai";
 import { useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
 import gsap from "gsap";
@@ -54,7 +54,7 @@ export default function ZoomRenderer({
   const setCamZoom = useSetAtom(camZoomAtom);
   const setHoverExoplanetName = useSetAtom(hoverExoplanetNameAtom);
   const setZoomPlanetNames = useSetAtom(zoomPlanetNamesAtom);
-  const [ableCoronaOn, setAbleCoronaOn] = useAtom(ableCoronaOnAtom);
+  const ableCoronaOn = useAtomValue(ableCoronaOnAtom);
 
   const meshRef = useRef<THREE.Mesh>(null);
   const coronaRef = useRef<THREE.Mesh>(null);
@@ -104,18 +104,6 @@ export default function ZoomRenderer({
     const coronaRadius = hostData.starRadius * 10000;
     return new THREE.SphereGeometry(coronaRadius, 16, 16);
   }, [hostData]);
-
-  useEffect(() => {
-    if (
-      systemPlanetDatas.some(
-        (planetData) => planetData.discoveryMethod === "Imaging"
-      )
-    ) {
-      setAbleCoronaOn(true);
-    } else {
-      setAbleCoronaOn(false);
-    }
-  }, [systemPlanetDatas, setAbleCoronaOn]);
 
   // click, go to hwo camera moving logic
   useEffect(() => {

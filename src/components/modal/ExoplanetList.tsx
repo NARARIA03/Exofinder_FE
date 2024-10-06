@@ -46,15 +46,15 @@ export default function ExoplanetList() {
         <button onClick={() => handleClick("GJ 687 b")}>Habitable Ex</button>
         <button onClick={() => handleClick("AB Aur b")}>Corona Ex</button>
         <ul className="bg-opacity-30 overflow-scroll h-64 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent scroll-pt-12">
-          {uniqueVisibleExoplanets.map((name, idx) => (
+          {uniqueVisibleExoplanets.map((obj, idx) => (
             <li
               className="text-black p-2 m-1 cursor-pointer"
-              key={`${name}${idx}`}
-              onMouseEnter={() => handleMouseEnter(name)}
+              key={`${obj.planetName}${idx}`}
+              onMouseEnter={() => handleMouseEnter(obj.planetName)}
               onMouseLeave={handleMouseLeave}
-              onClick={() => handleClick(name)}
+              onClick={() => handleClick(obj.planetName)}
             >
-              {name}
+              {obj.planetName}
             </li>
           ))}
         </ul>

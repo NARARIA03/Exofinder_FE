@@ -39,16 +39,18 @@ export default function MainRenderer({ starDatas, planetDatas }: Props) {
         <Star key={`${starData.starName}`} starData={starData} />
       ))}
       {planetDatas.map((planetData) => {
-        if (getSNR(planetData, diameter) && getESMAX(planetData, diameter)) {
+        const snr = getSNR(planetData, diameter);
+        const esMax = getESMAX(planetData, diameter);
+        if (snr > 5 && esMax > planetData.distance) {
           return (
             <Fragment key={planetData.planetName}>
-              <Exoplanet planetData={planetData} />
+              <Exoplanet planetData={planetData} snr={snr} esMax={esMax} />
               <Orbit planetData={planetData} color="green" />
             </Fragment>
           );
         } else if (
-          getSNR(planetData, diameter + 1) &&
-          getESMAX(planetData, diameter + 1)
+          getSNR(planetData, diameter + 1) > 5 &&
+          getESMAX(planetData, diameter + 1) > planetData.distance
         ) {
           return (
             <Fragment key={planetData.planetName}>

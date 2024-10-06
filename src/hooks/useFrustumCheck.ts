@@ -96,9 +96,17 @@ export const useFrustumCheck = (camera: PerspectiveCamera, scene: Scene) => {
         if (objectsInView.length !== visibleExoplanet.length) {
           setVisibleExoplanet(() =>
             objectsInView
-              .map((mesh) => mesh.userData.planetName)
+              .map((mesh) => {
+                const planetName = mesh.userData.planetName;
+                const difficult = mesh.userData.difficult;
+                return { planetName, difficult };
+              })
               .filter(
-                (planetName) => planetName !== null && planetName !== undefined
+                ({ planetName, difficult }) =>
+                  planetName !== null &&
+                  planetName !== undefined &&
+                  difficult !== null &&
+                  difficult !== undefined
               )
           );
           setVisibleStarCount(

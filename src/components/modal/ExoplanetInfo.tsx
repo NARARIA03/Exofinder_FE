@@ -6,6 +6,7 @@ import {
   PREV_NEXT_BTN_TOOLTIP,
 } from "@constants/tooltip";
 import {
+  diameterAtom,
   habitableDataAtom,
   selectedExoplanetNameAtom,
   zoomPlanetNamesAtom,
@@ -25,6 +26,7 @@ export default function ExoplanetInfo({ planetDatas }: Props) {
   const [selectedExoplanetName, setSelectedExoplanetName] = useAtom(
     selectedExoplanetNameAtom
   );
+  const diameter = useAtomValue(diameterAtom);
   const [habitableData, setHabitableData] = useAtom(habitableDataAtom);
   const [idx, setIdx] = useState<number>(0);
   const [detailExoplanetInfo, setDetailExoplanetInfo] = useState<string>("");
@@ -77,7 +79,8 @@ export default function ExoplanetInfo({ planetDatas }: Props) {
         const data = await getPlanetHabitable(
           planetDatas.find(
             (planetData) => planetData.planetName === zoomPlanetNames[0]
-          )?.hostName
+          )?.hostName,
+          diameter
         );
         if (data) {
           setHabitableData(data);
@@ -87,7 +90,7 @@ export default function ExoplanetInfo({ planetDatas }: Props) {
     if (zoomPlanetNames) {
       fetchData();
     }
-  }, [planetDatas, setHabitableData, zoomPlanetNames]);
+  }, [diameter, planetDatas, setHabitableData, zoomPlanetNames]);
 
   useEffect(() => {
     if (zoomPlanetNames) {
@@ -198,7 +201,9 @@ export default function ExoplanetInfo({ planetDatas }: Props) {
           <p className="text-xl font-bold ml-2">
             :{" "}
             {habitableData?.find((data) => data.plName === zoomPlanetNames[idx])
-              ?.habitablePercent
+              ?.habitablePercent !== undefined &&
+            habitableData.find((data) => data.plName === zoomPlanetNames[idx])
+              ?.habitablePercent !== "-1"
               ? (
                   parseFloat(
                     habitableData.find(

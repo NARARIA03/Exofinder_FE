@@ -7,9 +7,5 @@ export const getSNR = (planetData: PlanetData, diameter: number) => {
     ((planetData.starRadius * planetData.planetRadius * (diameter / 6)) /
       ((planetData.distance / 10) * planetData.semiMajorAxis)) **
       2;
-  if (snr > 5) {
-    return true;
-  } else {
-    return false;
-  }
+  return snr;
 };

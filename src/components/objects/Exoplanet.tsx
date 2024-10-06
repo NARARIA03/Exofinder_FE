@@ -8,9 +8,11 @@ import gsap from "gsap";
 
 interface Props {
   planetData: PlanetData;
+  snr: number;
+  esMax: number;
 }
 
-function Exoplanet({ planetData }: Props) {
+function Exoplanet({ planetData, snr, esMax }: Props) {
   const planetGeo = useMemo(() => new THREE.SphereGeometry(300, 8, 8), []);
   const planetMat = useMemo(
     () =>
@@ -28,9 +30,33 @@ function Exoplanet({ planetData }: Props) {
 
   useEffect(() => {
     if (meshRef.current) {
-      meshRef.current.userData = { planetName: planetData.planetName };
+      let difficult = 0;
+      if (
+        (5 < snr && snr < 10) ||
+        (esMax * 0.8 < planetData.distance && planetData.distance < esMax)
+      ) {
+        difficult = 3;
+      } else if (
+        (10 < snr && snr < 20) ||
+        (esMax * 0.5 < planetData.distance && planetData.distance < esMax * 0.8)
+      ) {
+        difficult = 2;
+      } else if (20 < snr || esMax * 0.5 < planetData.distance) {
+        difficult = 1;
+      }
+
+      if (difficult !== 0) {
+        meshRef.current.userData = {
+          ...meshRef.current.userData,
+          difficult: difficult,
+        };
+      }
+      meshRef.current.userData = {
+        ...meshRef.current.userData,
+        planetName: planetData.planetName,
+      };
     }
-  }, [planetData]);
+  }, [esMax, planetData, snr]);
 
   useEffect(() => {
     if (meshRef.current) {
