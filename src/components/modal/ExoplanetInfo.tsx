@@ -166,7 +166,7 @@ export default function ExoplanetInfo({ planetDatas }: Props) {
           <ImEarth className="w-8 h-8 ml-1" />
           <p className="text-xl font-bold ml-2">
             :{" "}
-            {habitableData?.find((data) => data.planet === zoomPlanetNames[idx])
+            {habitableData?.find((data) => data.plName === zoomPlanetNames[idx])
               ?.habitablePercent || "???"}
           </p>
         </div>

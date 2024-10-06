@@ -22,8 +22,13 @@ export const ableCoronaOnAtom = atom<boolean>(false);
 
 export const habitableDataAtom = atom<
   | {
-      planet: string;
-      habitablePercent: string | number;
+      plName: string;
+      plOrbsmax: string;
+      stSpectype: string;
+      stBrightness: string;
+      innerBoundHabitableZone: string;
+      outerBoundHabitableZone: string;
+      habitablePercent: string;
     }[]
   | null
 >(null);

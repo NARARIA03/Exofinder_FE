@@ -4,7 +4,15 @@ interface Response {
   isSuccess: boolean;
   code: string;
   message: string;
-  result: { planet: string; habitablePercent: string | number }[];
+  result: {
+    plName: string;
+    plOrbsmax: string;
+    stSpectype: string;
+    stBrightness: string;
+    innerBoundHabitableZone: string;
+    outerBoundHabitableZone: string;
+    habitablePercent: string;
+  }[];
   success: boolean;
 }
 
