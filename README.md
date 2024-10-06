@@ -1,50 +1,72 @@
-# React + TypeScript + Vite
+# 2024 NASA Space Apps Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## Theme: Navigator for the Habitable Worlds Observatory (HWO): Mapping the Characterizable Exoplanets in our Galaxy
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## implements this
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Star and Exoplanet Visualization Page
 
-- Configure the top-level `parserOptions` property like this:
+1. **Coordinate Calculation:**
+   - Visualize stars and exoplanets using NASA Exoplanet Archive data.
+     - Use RA, DEC, and Distance data to calculate the coordinates of exoplanetary systems.
+     - Calculate the orbital paths of exoplanets based on semiMajorAxis and eccentricity values.
+2. **Star and Exoplanet Visualization:**
+   - All host stars are visualized by default.
+   - For exoplanets, only those that meet the conditions of SNR > 5 and ESmax > Distance are visualized.
+3. **HWO Settings Panel:**
+   - When the user adjusts the Diameter value in the HWO Settings, the number of visualized exoplanets changes in real-time, with observable planets displayed in green orbits and non-observable planets displayed in red orbits.
+   - Green orbits indicate planets that are observable at the current Diameter, while red orbits indicate planets that would be observable if the Diameter is increased by 1m.
+   - The number of additional exoplanets that become observable when the Diameter is increased by 1m is calculated in real-time, and users can view this information in the HWO Settings panel.
+   - The Zoom setting allows users to zoom in or out, and the number of observable planets and their names are updated in real-time as the zoom changes.
+   - As the user rotates the view, the RA and DEC values update in real-time, reflecting the current direction HWO is facing.
+   - HWO is planned to be located at the second Lagrange point (L2), and to make the visualization more realistic, Earth’s position is shown for March and September, reflecting HWO’s location.
+   - A "What is HWO?" clickable element is placed to help users learn more about HWO, linking to the official NASA website.
+4. **Observed Panel:**
+   - When the user hovers over an exoplanet name, a highlight effect is applied to visually emphasize the selected exoplanet.
+   - The number of exoplanets and stars visible in HWO’s current field of view is calculated and displayed in real-time.
+   - Clicking on an exoplanet name zooms in on the corresponding planetary system and provides more detailed information.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+### Planetary System Zoom Page
+
+1. **Star and Exoplanet Visualization:**
+   - The host star, exoplanets, and their orbits are visualized at a closer, scaled view, showing the real-time orbital motion of the planets around the host star.
+   - The selected exoplanet’s orbital path is highlighted in yellow, while the other exoplanet orbits are shown in white.
+2. **Planet Information Panel:**
+   - Information about the selected exoplanet, including the planet’s name (planetName), host star’s name (hostName), location (RA, DEC, Distance), summary, and Earth similarity score (calculated by team members and received via the backend), is displayed.
+   - If multiple exoplanets exist in the same system, the user can switch between exoplanets using the previous/next buttons.
+3. **HWO Settings Panel:**
+   - If there are exoplanets observed using Direct Imaging in the zoomed-in system, the corona graph can be activated.
+   - When the corona graph is activated, the brightness of the host star is suppressed, making the planets more visible.
+   - For exoplanets not observed by Direct Imaging but detected through other methods, the planets are visualized virtually, and the corona graph cannot be activated.
+4. **Go back to HWO Button:**
+   - A "Go back to HWO" button is provided to return to the star and exoplanet visualization page.
+
+---
+
+## Tech Stack
+
+- Build & Bundler: `Vite`
+- Framework: `React`
+- Language: `TypeScript`
+- CSS & Styling: `tailwindCSS`
+- Global statement manager: `Jotai`
+- Http request: `axios`
+- WebGL (3D): `Three`, `@react-three/fiber`, `@react-three/drei`, `gsap`
+- Icons: `react-icons`
+- Deploy: `gh-pages`
+
+---
+
+## How To Start
+
+```shell
+yarn
+echo "VITE_API_URL=..." >> .env
+yarn dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-});
-```
+---
