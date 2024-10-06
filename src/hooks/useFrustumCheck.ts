@@ -3,6 +3,8 @@ import { Box3, Frustum, Matrix4, Mesh, PerspectiveCamera, Scene } from "three";
 import {
   diameterAtom,
   diameterPlus1CntAtom,
+  hoverSpecTypeAtom,
+  spectralCountAtom,
   visibleExoplanetAtom,
   visibleStarCountAtom,
 } from "../store/jotai";
@@ -13,6 +15,9 @@ import { useThree } from "@react-three/fiber";
 export const useFrustumCheck = (camera: PerspectiveCamera, scene: Scene) => {
   const { size: canvasSize } = useThree();
   const diameter = useAtomValue(diameterAtom);
+  const hoverSpecType = useAtomValue(hoverSpecTypeAtom);
+  const setSpectralCount = useSetAtom(spectralCountAtom);
+
   const [visibleExoplanet, setVisibleExoplanet] = useAtom(visibleExoplanetAtom);
   const setVisibleStarCount = useSetAtom(visibleStarCountAtom);
   const setDiameterPlus1Cnt = useSetAtom(diameterPlus1CntAtom);
@@ -29,7 +34,8 @@ export const useFrustumCheck = (camera: PerspectiveCamera, scene: Scene) => {
       // camera diff || diameter diff -> update visibleExoplanet state
       if (
         !currentCameraMatrix.equals(prevCamMatrix.current) ||
-        diameter !== prevDiameter.current
+        diameter !== prevDiameter.current ||
+        hoverSpecType
       ) {
         const frustum = new Frustum();
         const cameraViewProjectionMatrix = new Matrix4();
@@ -110,7 +116,19 @@ export const useFrustumCheck = (camera: PerspectiveCamera, scene: Scene) => {
                 .filter((bool) => bool !== null && bool !== undefined && bool)
                 .length
           );
+          setSpectralCount(
+            () =>
+              objectsInView
+                .map((mesh) => mesh.userData.specType)
+                .filter(
+                  (specType) =>
+                    specType !== null &&
+                    specType !== undefined &&
+                    specType === hoverSpecType
+                ).length
+          );
         }
+
         prevCamMatrix.current.copy(currentCameraMatrix);
         prevDiameter.current = diameter;
       }
@@ -128,8 +146,10 @@ export const useFrustumCheck = (camera: PerspectiveCamera, scene: Scene) => {
     canvasSize.height,
     canvasSize.width,
     diameter,
+    hoverSpecType,
     scene,
     setDiameterPlus1Cnt,
+    setSpectralCount,
     setVisibleExoplanet,
     setVisibleStarCount,
     visibleExoplanet.length,
