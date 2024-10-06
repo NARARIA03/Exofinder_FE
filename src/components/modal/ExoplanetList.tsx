@@ -62,8 +62,8 @@ export default function ExoplanetList() {
   if (clickExoplanetName) return null;
 
   return (
-    <div>
-      <div className="absolute left-4 bottom-14 w-80 z-50 h-80 rounded-xl bg-slate-400">
+    <div className="h-full">
+      <div className="absolute left-4 bottom-14 w-80 z-50 rounded-xl bg-slate-400">
         <div className="text-base font-semibold p-2 m-1 mb-8 w-full">
           Number of observed stars: {visibleStarCount}{" "}
           <QuestionComp text={OBSERVED_TIP} />
@@ -81,6 +81,14 @@ export default function ExoplanetList() {
               size={24}
               className={`mx-1 ${!isASC && "text-slate-700"}`}
             />
+          </button>
+        </div>
+        <div className="w-full flex justify-center items-center flex-col">
+          <button onClick={() => handleClick("GJ 687 b")}>
+            Habitable Example
+          </button>
+          <button onClick={() => handleClick("AB Aur b")}>
+            Corona Example
           </button>
         </div>
 
