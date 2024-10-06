@@ -2,7 +2,7 @@
 
 ---
 
-## Theme: Navigator for the Habitable Worlds Observatory (HWO)_ Mapping the Characterizable Exoplanets in our Galaxy
+## Theme: Navigator for the Habitable Worlds Observatory (HWO)\_ Mapping the Characterizable Exoplanets in our Galaxy
 
 ---
 
@@ -25,7 +25,10 @@
    - As the user rotates the view, the RA and DEC values update in real-time, reflecting the current direction HWO is facing.
    - HWO is planned to be located at the second Lagrange point (L2), and to make the visualization more realistic, Earth’s position is shown for March and September, reflecting HWO’s location.
    - A "What is HWO?" clickable element is placed to help users learn more about HWO, linking to the official NASA website.
-4. **Observed Panel:**
+4. **Spectrum type Panel:**
+   - In general, stars are divided into spectral types from O to M depending on their effective temperature. O-type stars are hotter and more luminous, while M-type stars have lower effective temperatures and smaller luminosities. Therefore, stars are visualized using different colors based on their spectral type.
+   - Stars appear relatively fainter as their distance from the telescope increases. Based on this characteristic, we linearly decreased the sharpness with distance for all stars.
+5. **Observed Panel:**
    - When the user hovers over an exoplanet name, a highlight effect is applied to visually emphasize the selected exoplanet.
    - The number of exoplanets and stars visible in HWO’s current field of view is calculated and displayed in real-time.
    - Clicking on an exoplanet name zooms in on the corresponding planetary system and provides more detailed information.
@@ -42,11 +45,11 @@
    - If there are exoplanets observed using Direct Imaging in the zoomed-in system, the corona graph can be activated.
    - For exoplanets not observed by Direct Imaging but detected through other methods, the planets are visualized virtually, and the corona graph cannot be activated.
    - 3-1. **Coronagraph:**
-        - The number of exoplanets detected using coronagraphs is currently limited, but improved hardware capabilities of the Habitable Worlds Observatory (HWO) are expected to significantly increase this number.
-        - The effective area for the coronagraph method was estimated based on distances and signal-to-noise ratio (SNR) values of previously observed exoplanets.
-        - In the accompanying figure, blue points indicate planets observed with existing coronagraphic methods, while green points represent exoplanets detected by alternative methods.
-        - The red area was determined using Kernel Density Estimation (KDE) for potential observations with the coronagraph.
-        - During visualization, clicking the Corona Graph button blocks the star's light, allowing the observation of obscured planets, but only within the predefined area.
+     - The number of exoplanets detected using coronagraphs is currently limited, but improved hardware capabilities of the Habitable Worlds Observatory (HWO) are expected to significantly increase this number.
+     - The effective area for the coronagraph method was estimated based on distances and signal-to-noise ratio (SNR) values of previously observed exoplanets.
+     - In the accompanying figure, blue points indicate planets observed with existing coronagraphic methods, while green points represent exoplanets detected by alternative methods.
+     - The red area was determined using Kernel Density Estimation (KDE) for potential observations with the coronagraph.
+     - During visualization, clicking the Corona Graph button blocks the star's light, allowing the observation of obscured planets, but only within the predefined area.
 4. **Go back to HWO Button:**
    - A "Go back to HWO" button is provided to return to the star and exoplanet visualization page.
 
