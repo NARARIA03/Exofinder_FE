@@ -4,12 +4,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { getPlanetOrbit } from "@utils/getPlanetOrbit";
 import { useFrame } from "@react-three/fiber";
 import { Line, Text } from "@react-three/drei";
-import { useAtom, useAtomValue } from "jotai";
-import {
-  ableCoronaOnAtom,
-  habitableDataAtom,
-  isCoronaOnAtom,
-} from "@store/jotai";
+import { useAtomValue } from "jotai";
+import { habitableDataAtom, isCoronaOnAtom } from "@store/jotai";
 
 interface Props {
   planetData: PlanetData;
