@@ -1,9 +1,14 @@
 import QuestionComp from "@components/tooltip/QuestionComp";
-import { hoverSpecTypeAtom, spectralCountAtom } from "@store/jotai";
+import {
+  clickExoplanetNameAtom,
+  hoverSpecTypeAtom,
+  spectralCountAtom,
+} from "@store/jotai";
 import { useAtomValue, useSetAtom } from "jotai";
 
 export default function SpecType() {
   const setHoverSpecType = useSetAtom(hoverSpecTypeAtom);
+  const clickExoplanetName = useAtomValue(clickExoplanetNameAtom);
   const spectralCount = useAtomValue(spectralCountAtom);
   const specType = ["O", "B", "A", "F", "G", "K", "M"];
 
@@ -14,6 +19,8 @@ export default function SpecType() {
   const handleMouseLeave = () => {
     setHoverSpecType("");
   };
+
+  if (clickExoplanetName) return null;
 
   return (
     <div className="fixed flex p-3 flex-col top-3 left-3 bg-slate-400 rounded-xl justify-center items-start z-50">
