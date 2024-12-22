@@ -8,50 +8,42 @@
 
 ## implements this
 
-### Star and Exoplanet Visualization Page
+### HWO 화면
 
-1. **Coordinate Calculation:**
-   - Visualize stars and exoplanets using NASA Exoplanet Archive data.
-     - Use RA, DEC, and Distance data to calculate the coordinates of exoplanetary systems.
-     - Calculate the orbital paths of exoplanets based on semiMajorAxis and eccentricity values.
-2. **Star and Exoplanet Visualization:**
-   - All host stars are visualized by default.
-   - For exoplanets, only those that meet the conditions of SNR > 5 and ESmax > Distance are visualized.
-3. **HWO Settings Panel:**
-   - When the user adjusts the Diameter value in the HWO Settings, the number of visualized exoplanets changes in real-time, with observable planets displayed in green orbits and non-observable planets displayed in red orbits.
-   - Green orbits indicate planets that are observable at the current Diameter, while red orbits indicate planets that would be observable if the Diameter is increased by 1m.
-   - The number of additional exoplanets that become observable when the Diameter is increased by 1m is calculated in real-time, and users can view this information in the HWO Settings panel.
-   - The Zoom setting allows users to zoom in or out, and the number of observable planets and their names are updated in real-time as the zoom changes.
-   - As the user rotates the view, the RA and DEC values update in real-time, reflecting the current direction HWO is facing.
-   - HWO is planned to be located at the second Lagrange point (L2), and to make the visualization more realistic, Earth’s position is shown for March and September, reflecting HWO’s location.
-   - A "What is HWO?" clickable element is placed to help users learn more about HWO, linking to the official NASA website.
-4. **Spectrum type Panel:**
-   - In general, stars are divided into spectral types from O to M depending on their effective temperature. O-type stars are hotter and more luminous, while M-type stars have lower effective temperatures and smaller luminosities. Therefore, stars are visualized using different colors based on their spectral type.
-   - Stars appear relatively fainter as their distance from the telescope increases. Based on this characteristic, we linearly decreased the sharpness with distance for all stars.
-5. **Observed Panel:**
-   - When the user hovers over an exoplanet name, a highlight effect is applied to visually emphasize the selected exoplanet.
-   - The number of exoplanets and stars visible in HWO’s current field of view is calculated and displayed in real-time.
-   - Clicking on an exoplanet name zooms in on the corresponding planetary system and provides more detailed information.
+1. **좌표 계산:**
+    - NASA Exoplanet Archive 데이터를 활용해 별과 외계 행성을 시각화합니다.
+        - RA, DEC, Distance 데이터를 사용해 외계 항성계의 좌표를 계산합니다.
+        - semiMajorAxis와 eccentricity를 기반으로 외계 행성의 공전 궤도를 계산합니다.
+2. **중심별 및 외계 행성 시각화:**
+    - 모든 중심별은 기본적으로 시각화합니다.
+    - 모든 외계 행성에 대해, SNR > 5 및 ESmax > Distance 조건을 만족하는 경우만 시각화합니다.
+3. **HWO Settings 패널:**
+    - 사용자가 HWO Settings에서 Diameter 값을 조절하면 실시간으로 시각화되는 행성의 수가 변경되고, 관측 가능한 행성들이 초록색 궤도로, 관측 불가능한 행성들이 빨간색 궤도로 시각화됩니다.
+    - 초록색 궤도는 현재 Diameter 값으로 관측 가능한 행성을, 빨간색 궤도는 Diameter를 1m 키웠을 때 관측 가능한 행성을 의미합니다.
+    - Diameter를 1m 키웠을 때 추가로 관측 가능한 외계 행성의 수를 실시간으로 계산하여, 사용자가 이를 HWO Settings 패널에서 확인할 수 있습니다.
+    - Zoom 설정을 통해 시각을 확대하거나 축소할 수 있으며, 확대/축소에 따라 관측 가능한 행성의 수와 이름이 실시간으로 변경됩니다.
+    - 화면을 회전할 때 RA와 DEC 값이 실시간으로 업데이트되어, 현재 HWO가 바라보고 있는 방향을 나타냅니다.
+    - HWO는 제2 라그랑주 지점(L2)에 위치할 예정이므로, 3월과 9월을 기준으로 지구의 위치를 시각화하여 현실적인 HWO 망원경의 위치를 사용자에게 전달합니다.
+    - "What is HWO?" 클릭 요소를 배치해 사용자가 HWO에 대해 더 알고 싶을 경우 NASA 공식 사이트로 이동할 수 있도록 돕습니다.
+4. **Observed 패널:**
+    - 외계 행성 이름에 마우스를 올리면 해당 행성에 강조 효과가 적용되어 시각적으로 표시됩니다.
+    - 현재 HWO의 시야에 들어오는 외계 행성 및 중심별의 수를 실시간으로 계산해 보여줍니다.
+    - 외계 행성 이름을 클릭하면 해당 항성계로 확대되어 더 자세한 정보를 제공합니다.
 
-### Planetary System Zoom Page
+### 외계 항성계 시각화 화면
 
-1. **Star and Exoplanet Visualization:**
-   - The host star, exoplanets, and their orbits are visualized at a closer, scaled view, showing the real-time orbital motion of the planets around the host star.
-   - The selected exoplanet’s orbital path is highlighted in yellow, while the other exoplanet orbits are shown in white.
-2. **Planet Information Panel:**
-   - Information about the selected exoplanet, including the planet’s name (planetName), host star’s name (hostName), location (RA, DEC, Distance), summary, and Earth similarity score (calculated by team members and received via the backend), is displayed.
-   - If multiple exoplanets exist in the same system, the user can switch between exoplanets using the previous/next buttons.
-3. **HWO Settings Panel:**
-   - If there are exoplanets observed using Direct Imaging in the zoomed-in system, the corona graph can be activated.
-   - For exoplanets not observed by Direct Imaging but detected through other methods, the planets are visualized virtually, and the corona graph cannot be activated.
-   - 3-1. **Coronagraph:**
-     - The number of exoplanets detected using coronagraphs is currently limited, but improved hardware capabilities of the Habitable Worlds Observatory (HWO) are expected to significantly increase this number.
-     - The effective area for the coronagraph method was estimated based on distances and signal-to-noise ratio (SNR) values of previously observed exoplanets.
-     - In the accompanying figure, blue points indicate planets observed with existing coronagraphic methods, while green points represent exoplanets detected by alternative methods.
-     - The red area was determined using Kernel Density Estimation (KDE) for potential observations with the coronagraph.
-     - During visualization, clicking the Corona Graph button blocks the star's light, allowing the observation of obscured planets, but only within the predefined area.
-4. **Go back to HWO Button:**
-   - A "Go back to HWO" button is provided to return to the star and exoplanet visualization page.
+1. **중심별 및 외계 행성 시각화:**
+    - 중심별과 외계 행성, 그리고 공전 궤도를 확대된 비율로 시각화하며, 행성들이 중심별을 공전하는 모습이 실시간으로 표시됩니다.
+    - 선택된 행성의 공전 궤도는 노란색으로, 선택되지 않은 행성들의 궤도는 하얀색으로 표시됩니다.
+2. **행성 정보 패널:**
+    - 선택된 행성의 이름(planetName), 중심별 이름(hostName), 위치(RA, DEC, Distance), 요약 정보, 그리고 지구 유사도(팀원들이 계산하여 백엔드로부터 전달받은 값)를 보여줍니다.
+    - 한 별에 여러 외계 행성이 있을 경우, 이전/다음 버튼을 통해 선택된 행성을 변경할 수 있습니다.
+3. **HWO Settings 패널:**
+    - 확대된 항성계 내에서 Direct Imaging 방식으로 관측된 외계 행성이 있을 경우, 코로나 그래프를 활성화할 수 있습니다.
+    - 코로나 그래프를 활성화하면 중심별의 밝기가 억제되어 행성이 더 잘 보이게 됩니다.
+    - Direct Imaging 방식이 아닌 다른 방식으로 관측된 외계 행성은 가상의 모습으로 시각화되며, 이 경우 코로나 그래프를 사용할 수 없습니다.
+4. **Go back to HWO 버튼:**
+    - 별과 외계 행성 시각화 페이지로 돌아가는 "Go back to HWO" 버튼을 제공합니다.
 
 ---
 
