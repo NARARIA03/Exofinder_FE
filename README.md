@@ -22,7 +22,7 @@
 
 ### NASA의 외계 행성 데이터셋을 활용해 행성/항성의 좌표를 계산하고, HWO 망원경의 1인칭 시점을 구현
 
-1.  `useMemo`, `React.memo`, `useCallback`을 활용해 변하지 않는 값과 컴포넌트들을 최상위 컴포넌트에서 계산 및 메모이제이션해 fps를 3-10 -> 18-42로 약 **425~500%** 개선
+1.  `useMemo`, `React.memo`, `useCallback`을 활용해 변하지 않는 값과 컴포넌트들을 최상위 컴포넌트에서 계산 및 메모이제이션해 fps를 3-10 -> 18-42로 약 361% 개선
     | Before | After |
     | ---------------------------------------- | -------------------------------------- |
     | ![Before](./docs/before_memoization.gif) | ![After](./docs/after_memoization.gif) |
